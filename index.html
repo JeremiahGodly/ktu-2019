@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Backlog Recovery Dashboard — Engineering student study tracker">
+  <title>Backlog Recovery | EEE Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+  <!-- Sidebar navigation -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-icon">⚡</span>
+      <div>
+        <h1>Backlog Recovery</h1>
+        <p>EEE · KTU 2019</p>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <a href="#dashboard" class="nav-link active" data-section="dashboard">
+        <span class="nav-icon">📊</span> Dashboard
+      </a>
+      <a href="#subjects" class="nav-link" data-section="subjects">
+        <span class="nav-icon">📚</span> Subjects
+      </a>
+      <a href="#categories" class="nav-link" data-section="categories">
+        <span class="nav-icon">🗂️</span> Categories
+      </a>
+      <a href="#planner" class="nav-link" data-section="planner">
+        <span class="nav-icon">📅</span> Study Planner
+      </a>
+      <a href="#pyq" class="nav-link" data-section="pyq">
+        <span class="nav-icon">📝</span> PYQ Tracker
+      </a>
+      <a href="#notes" class="nav-link" data-section="notes">
+        <span class="nav-icon">📒</span> Notes
+      </a>
+      <a href="#pomodoro" class="nav-link" data-section="pomodoro">
+        <span class="nav-icon">🍅</span> Pomodoro
+      </a>
+      <a href="#settings" class="nav-link" data-section="settings">
+        <span class="nav-icon">⚙️</span> Settings
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <p class="quote-label">Daily Motivation</p>
+      <blockquote id="sidebarQuote">Loading...</blockquote>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main-content">
+    <header class="top-bar">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <div class="top-bar-title">
+        <h2 id="pageTitle">Dashboard</h2>
+        <p id="pageSubtitle">Your recovery command center</p>
+      </div>
+      <div class="exam-countdown-mini" id="examCountdownMini">
+        <span class="countdown-label">Exams in</span>
+        <span class="countdown-value" id="daysLeftMini">—</span>
+        <span class="countdown-unit">days</span>
+      </div>
+    </header>
+
+    <!-- ========== DASHBOARD ========== -->
+    <section id="dashboard" class="section active">
+      <div class="stats-grid">
+        <article class="stat-card glass">
+          <div class="stat-icon">📋</div>
+          <div class="stat-info">
+            <span class="stat-value" id="statTotal">0</span>
+            <span class="stat-label">Total Backlogs</span>
+          </div>
+        </article>
+        <article class="stat-card glass success">
+          <div class="stat-icon">✅</div>
+          <div class="stat-info">
+            <span class="stat-value" id="statCompleted">0</span>
+            <span class="stat-label">Completed</span>
+          </div>
+        </article>
+        <article class="stat-card glass warning">
+          <div class="stat-icon">⏳</div>
+          <div class="stat-info">
+            <span class="stat-value" id="statPending">0</span>
+            <span class="stat-label">Pending</span>
+          </div>
+        </article>
+        <article class="stat-card glass accent">
+          <div class="stat-icon">📈</div>
+          <div class="stat-info">
+            <span class="stat-value" id="statProgress">0%</span>
+            <span class="stat-label">Progress</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="dashboard-row">
+        <article class="card glass countdown-card">
+          <h3>🎯 November Exam Countdown</h3>
+          <div class="countdown-display" id="examCountdown">
+            <div class="countdown-block"><span id="cdDays">00</span><small>Days</small></div>
+            <div class="countdown-block"><span id="cdHours">00</span><small>Hours</small></div>
+            <div class="countdown-block"><span id="cdMins">00</span><small>Mins</small></div>
+            <div class="countdown-block"><span id="cdSecs">00</span><small>Secs</small></div>
+          </div>
+          <p class="exam-date-text">Target: <strong id="examDateDisplay">Nov 15, 2026</strong></p>
+        </article>
+
+        <article class="card glass progress-overview-card">
+          <h3>Overall Recovery Progress</h3>
+          <div class="progress-ring-container">
+            <svg class="progress-ring" viewBox="0 0 120 120">
+              <circle class="progress-ring-bg" cx="60" cy="60" r="52"/>
+              <circle class="progress-ring-fill" id="progressRing" cx="60" cy="60" r="52"/>
+            </svg>
+            <span class="progress-ring-text" id="progressRingText">0%</span>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar">
+              <div class="progress-fill" id="overallProgressBar" style="width: 0%"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <article class="card glass">
+        <h3>Subject Status Overview</h3>
+        <div class="chart-bars" id="statusChart"></div>
+      </article>
+
+      <article class="card glass">
+        <h3>Quick Subject Snapshot</h3>
+        <div class="subject-snapshot" id="subjectSnapshot"></div>
+      </article>
+    </section>
+
+    <!-- ========== SUBJECTS ========== -->
+    <section id="subjects" class="section">
+      <article class="card glass">
+        <h3>Add / Edit Subject</h3>
+        <form id="subjectForm" class="subject-form">
+          <input type="hidden" id="subjectId">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="subjectName">Subject Name</label>
+              <input type="text" id="subjectName" placeholder="e.g. Control Systems" required>
+            </div>
+            <div class="form-group">
+              <label for="subjectDifficulty">Difficulty</label>
+              <select id="subjectDifficulty" required>
+                <option value="Easy">Easy</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Dangerous">Dangerous</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="subjectModules">Number of Modules</label>
+              <input type="number" id="subjectModules" min="1" max="20" value="5" required>
+            </div>
+            <div class="form-group">
+              <label for="subjectInternal">Internal Marks Status</label>
+              <select id="subjectInternal" required>
+                <option value="Not Attended">Not Attended</option>
+                <option value="Below 50%">Below 50%</option>
+                <option value="50-75%">50-75%</option>
+                <option value="Above 75%">Above 75%</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="subjectCategory">Category</label>
+              <select id="subjectCategory" required>
+                <option value="Survival">Survival Subjects</option>
+                <option value="Repeated">Repeated-Concept Subjects</option>
+                <option value="Killer">Killer Subjects</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="subjectStatus">Status</label>
+              <select id="subjectStatus" required>
+                <option value="Not Started">Not Started</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </div>
+          </div>
+          <div class="checkbox-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="subjectPyq"> PYQ Available
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="subjectNumericals"> Numericals Dominant
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" id="subjectTheory"> Theory-based Scoring
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="subjectSubmitBtn">Add Subject</button>
+            <button type="button" class="btn btn-ghost" id="subjectCancelBtn" hidden>Cancel Edit</button>
+          </div>
+        </form>
+      </article>
+
+      <article class="card glass">
+        <div class="card-header-row">
+          <h3>All Subjects</h3>
+          <input type="search" id="subjectSearch" class="search-input" placeholder="Search subjects...">
+        </div>
+        <div class="subjects-list" id="subjectsList"></div>
+      </article>
+    </section>
+
+    <!-- ========== CATEGORIES ========== -->
+    <section id="categories" class="section">
+      <div class="category-grid">
+        <article class="card glass category-card survival">
+          <h3>🛡️ Survival Subjects</h3>
+          <p class="category-desc">Must-pass subjects — prioritize these first.</p>
+          <div class="category-list" id="catSurvival"></div>
+        </article>
+        <article class="card glass category-card repeated">
+          <h3>🔄 Repeated-Concept Subjects</h3>
+          <p class="category-desc">Concepts overlap — study smart, not hard.</p>
+          <div class="category-list" id="catRepeated"></div>
+        </article>
+        <article class="card glass category-card killer">
+          <h3>💀 Killer Subjects</h3>
+          <p class="category-desc">Heavy backlogs — allocate extra time.</p>
+          <div class="category-list" id="catKiller"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== STUDY PLANNER ========== -->
+    <section id="planner" class="section">
+      <div class="planner-grid">
+        <article class="card glass">
+          <h3>📆 Daily Study Schedule</h3>
+          <form id="dailyForm" class="inline-form">
+            <input type="text" id="dailyTask" placeholder="e.g. Power Electronics — Module 3" required>
+            <input type="time" id="dailyTime" value="09:00">
+            <button type="submit" class="btn btn-primary btn-sm">Add</button>
+          </form>
+          <ul class="planner-list" id="dailyList"></ul>
+        </article>
+
+        <article class="card glass">
+          <h3>🎯 Weekly Goals</h3>
+          <form id="weeklyForm" class="inline-form">
+            <input type="text" id="weeklyGoal" placeholder="e.g. Complete 2 modules of Machines" required>
+            <button type="submit" class="btn btn-primary btn-sm">Add</button>
+          </form>
+          <ul class="planner-list" id="weeklyList"></ul>
+        </article>
+
+        <article class="card glass full-width">
+          <h3>🔁 Revision Tracker</h3>
+          <form id="revisionForm" class="inline-form">
+            <select id="revisionSubject"></select>
+            <input type="text" id="revisionTopic" placeholder="Topic / module to revise" required>
+            <input type="date" id="revisionDate">
+            <button type="submit" class="btn btn-primary btn-sm">Track</button>
+          </form>
+          <ul class="planner-list revision-list" id="revisionList"></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== PYQ TRACKER ========== -->
+    <section id="pyq" class="section">
+      <article class="card glass">
+        <h3>Previous Year Questions Tracker</h3>
+        <form id="pyqForm" class="inline-form">
+          <select id="pyqSubject" required></select>
+          <input type="number" id="pyqYear" min="2015" max="2026" placeholder="Year" required>
+          <input type="text" id="pyqTopics" placeholder="Topics covered (comma separated)" required>
+          <select id="pyqStatus">
+            <option value="Not Started">Not Started</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Done">Done</option>
+          </select>
+          <button type="submit" class="btn btn-primary btn-sm">Add PYQ</button>
+        </form>
+        <div class="pyq-grid" id="pyqList"></div>
+      </article>
+
+      <article class="card glass" style="margin-top: 1.5rem;">
+        <div class="card-header-row">
+          <h3>⚡ Local PYQ PDF Shortcuts Library</h3>
+          <input type="search" id="pyqFileSearch" class="search-input" placeholder="Search local files...">
+        </div>
+        <p class="settings-desc">Direct shortcuts to your organized previous year question papers inside <code>Btech cources</code>. Click to open them directly in your browser!</p>
+        <div class="pdf-shortcuts-grid" id="pyqFilesList">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </article>
+    </section>
+
+    <!-- ========== NOTES ========== -->
+    <section id="notes" class="section">
+      <article class="card glass">
+        <h3>Study Notes</h3>
+        <form id="noteForm">
+          <div class="form-group">
+            <label for="noteSubject">Subject</label>
+            <select id="noteSubject"></select>
+          </div>
+          <div class="form-group">
+            <label for="noteTitle">Title</label>
+            <input type="text" id="noteTitle" placeholder="Note title" required>
+          </div>
+          <div class="form-group">
+            <label for="noteContent">Content</label>
+            <textarea id="noteContent" rows="5" placeholder="Write your notes here..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Note</button>
+        </form>
+      </article>
+      <div class="notes-grid" id="notesList"></div>
+
+      <article class="card glass" style="grid-column: 1 / -1; margin-top: var(--spacing-lg);">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-md); gap: 1rem; flex-wrap: wrap;">
+          <h3>📁 Local Notes & Study Materials</h3>
+          <input type="search" id="noteFileSearch" class="search-input" placeholder="Search module notes, textbooks, manuals..." style="max-width: 300px; margin: 0;">
+        </div>
+        <div class="pdf-shortcuts-grid" id="noteFilesList"></div>
+      </article>
+    </section>
+
+    <!-- ========== POMODORO ========== -->
+    <section id="pomodoro" class="section">
+      <article class="card glass pomodoro-card">
+        <h3>🍅 Focus Pomodoro</h3>
+        <p class="pomodoro-subject-label">Studying: <span id="pomodoroSubjectName">General</span></p>
+        <select id="pomodoroSubjectSelect" class="pomodoro-select"></select>
+        <div class="pomodoro-timer" id="pomodoroDisplay">25:00</div>
+        <div class="pomodoro-progress">
+          <div class="pomodoro-progress-fill" id="pomodoroProgress"></div>
+        </div>
+        <div class="pomodoro-controls">
+          <button class="btn btn-primary" id="pomodoroStart">Start</button>
+          <button class="btn btn-ghost" id="pomodoroPause" disabled>Pause</button>
+          <button class="btn btn-ghost" id="pomodoroReset">Reset</button>
+        </div>
+        <div class="pomodoro-modes">
+          <button class="mode-btn active" data-mode="work" data-minutes="25">Work 25m</button>
+          <button class="mode-btn" data-mode="short" data-minutes="5">Break 5m</button>
+          <button class="mode-btn" data-mode="long" data-minutes="15">Long 15m</button>
+        </div>
+        <p class="pomodoro-sessions">Sessions completed today: <strong id="pomodoroSessions">0</strong></p>
+      </article>
+      <article class="card glass">
+        <h3>💬 Motivation Board</h3>
+        <blockquote class="motivation-quote" id="mainQuote"></blockquote>
+        <button class="btn btn-ghost btn-sm" id="newQuoteBtn">New Quote</button>
+      </article>
+    </section>
+
+    <!-- ========== SETTINGS ========== -->
+    <section id="settings" class="section">
+      <article class="card glass">
+        <h3>Exam Date</h3>
+        <div class="form-group">
+          <label for="examDateInput">Set your November exam date</label>
+          <input type="date" id="examDateInput">
+        </div>
+        <button class="btn btn-primary btn-sm" id="saveExamDate">Save Exam Date</button>
+      </article>
+
+      <article class="card glass">
+        <h3>Export / Import Data</h3>
+        <p class="settings-desc">Backup your entire study data as JSON or restore from a previous backup.</p>
+        <div class="settings-actions">
+          <button class="btn btn-primary" id="exportBtn">Export JSON</button>
+          <label class="btn btn-ghost import-label">
+            Import JSON
+            <input type="file" id="importFile" accept=".json" hidden>
+          </label>
+          <button class="btn btn-danger btn-sm" id="resetDataBtn">Reset All Data</button>
+        </div>
+      </article>
+
+      <article class="card glass">
+        <h3>About</h3>
+        <p class="settings-desc">Backlog Recovery Dashboard — built for EEE engineering students. All data is stored locally in your browser. No server required.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
