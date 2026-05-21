@@ -11,6 +11,24 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Login Screen Overlay -->
+  <div id="loginScreen" class="login-screen hidden">
+    <div class="login-card glass">
+      <div class="login-brand">
+        <span class="brand-icon" style="font-size: 2.25rem;">⚡</span>
+        <h2>Backlog Recovery</h2>
+        <p>EEE · KTU 2019 Dashboard</p>
+      </div>
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="loginRegNum">Register Number</label>
+          <input type="text" id="loginRegNum" placeholder="e.g. TVE19EE001" required pattern="[A-Za-z0-9-]+" title="Please enter a valid register number (alphanumeric and hyphens only)">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Access Dashboard</button>
+      </form>
+    </div>
+  </div>
+
   <!-- Mobile overlay -->
   <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
 
@@ -18,9 +36,13 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-brand">
       <span class="brand-icon">⚡</span>
-      <div>
+      <div style="flex: 1; min-width: 0;">
         <h1>Backlog Recovery</h1>
         <p>EEE · KTU 2019</p>
+        <div class="user-badge" id="sidebarUserBadge">
+          <span class="user-reg" id="activeUserReg">Loading...</span>
+          <button id="logoutBtn" class="logout-btn" title="Logout / Switch User">🚪</button>
+        </div>
       </div>
     </div>
 

@@ -5866,11 +5866,73 @@ let pomodoro = {
   mode: 'work',
 };
 
-// ========== Storage ==========
+// ========== Storage & Login ==========
+
+let activeUser = localStorage.getItem('backlogRecoveryActiveUser') || '';
+
+function showLoginScreen() {
+  document.getElementById('loginScreen').classList.remove('hidden');
+  document.getElementById('loginRegNum').value = '';
+}
+
+function hideLoginScreen() {
+  document.getElementById('loginScreen').classList.add('hidden');
+}
+
+function login(regNum) {
+  if (!regNum) return;
+  activeUser = regNum;
+  localStorage.setItem('backlogRecoveryActiveUser', regNum);
+  
+  // Clear state in memory to prevent data bleeding
+  state = {
+    subjects: [],
+    dailySchedule: [],
+    weeklyGoals: [],
+    revisionTracker: [],
+    pyqEntries: [],
+    notes: [],
+    examDate: '2026-11-15',
+    pomodoroSessions: 0,
+    pomodoroSessionsDate: '',
+  };
+  
+  loadState();
+  renderAll();
+  showToast(`Logged in as ${regNum}`);
+}
+
+function logout() {
+  if (!confirm('Log out / Switch register number?')) return;
+  activeUser = '';
+  localStorage.removeItem('backlogRecoveryActiveUser');
+  showLoginScreen();
+  document.getElementById('activeUserReg').textContent = '';
+}
 
 /** Load data from localStorage or initialize with samples */
 function loadState() {
-  const saved = localStorage.getItem(STORAGE_KEY);
+  if (!activeUser) {
+    showLoginScreen();
+    state = {
+      subjects: [],
+      dailySchedule: [],
+      weeklyGoals: [],
+      revisionTracker: [],
+      pyqEntries: [],
+      notes: [],
+      examDate: '2026-11-15',
+      pomodoroSessions: 0,
+      pomodoroSessionsDate: '',
+    };
+    return;
+  }
+
+  hideLoginScreen();
+  document.getElementById('activeUserReg').textContent = activeUser;
+
+  const userStorageKey = `backlogRecoveryData_${activeUser}`;
+  const saved = localStorage.getItem(userStorageKey);
   if (saved) {
     try {
       state = { ...state, ...JSON.parse(saved) };
@@ -5921,7 +5983,9 @@ function initFreshState() {
 
 /** Persist state to localStorage */
 function saveState() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  if (!activeUser) return;
+  const userStorageKey = `backlogRecoveryData_${activeUser}`;
+  localStorage.setItem(userStorageKey, JSON.stringify(state));
 }
 
 /** Generate unique ID */
@@ -6730,7 +6794,10 @@ function importData(file) {
 /** Reset all data */
 function resetAllData() {
   if (!confirm('Reset ALL data? This cannot be undone.')) return;
-  localStorage.removeItem(STORAGE_KEY);
+  if (activeUser) {
+    const userStorageKey = `backlogRecoveryData_${activeUser}`;
+    localStorage.removeItem(userStorageKey);
+  }
   state = {
     subjects: [],
     dailySchedule: [],
@@ -6751,6 +6818,22 @@ function resetAllData() {
 
 /** Initialize all form event listeners */
 function initForms() {
+  // Login form
+  const loginForm = document.getElementById('loginForm');
+  if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const regNum = document.getElementById('loginRegNum').value.trim();
+      login(regNum);
+    });
+  }
+
+  // Logout button
+  const logoutBtn = document.getElementById('logoutBtn');
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', logout);
+  }
+
   // Subject form
   document.getElementById('subjectForm').addEventListener('submit', handleSubjectSubmit);
   document.getElementById('subjectCancelBtn').addEventListener('click', resetSubjectForm);
