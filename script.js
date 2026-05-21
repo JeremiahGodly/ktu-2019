@@ -5347,6 +5347,58 @@ const LOCAL_NOTE_FILES = [
   }
 ];
 
+// Curated YouTube search queries/playlists for KTU EEE 2019 Scheme subjects
+const CURATED_YOUTUBE_LINKS = {
+  "MAT101": "https://www.youtube.com/results?search_query=KTU+MAT101+Linear+Algebra+and+Calculus+playlist",
+  "EST100": "https://www.youtube.com/results?search_query=KTU+EST100+Engineering+Mechanics+playlist",
+  "EST130": "https://www.youtube.com/results?search_query=KTU+EST130+Basics+of+Electrical+and+Electronics+playlist",
+  "MAT102": "https://www.youtube.com/results?search_query=KTU+MAT102+Vector+Calculus+Differential+Equations+playlist",
+  "PHT100": "https://www.youtube.com/results?search_query=KTU+PHT100+Engineering+Physics+A+playlist",
+  "EST102": "https://www.youtube.com/results?search_query=KTU+EST102+Programming+in+C+playlist",
+  "MAT201": "https://www.youtube.com/results?search_query=KTU+MAT201+Partial+Differential+Equations+Complex+Analysis+playlist",
+  "EET201": "https://www.youtube.com/results?search_query=KTU+EET201+Circuits+and+Networks+playlist",
+  "EET203": "https://www.youtube.com/results?search_query=KTU+EET203+Measurements+and+Instrumentation+playlist",
+  "EET205": "https://www.youtube.com/results?search_query=KTU+EET205+Analog+Electronics+playlist",
+  "HUT200": "https://www.youtube.com/results?search_query=KTU+HUT200+Professional+Ethics+playlist",
+  "MAT204": "https://www.youtube.com/results?search_query=KTU+MAT204+Probability+Random+Processes+playlist",
+  "EET202": "https://www.youtube.com/results?search_query=KTU+EET202+DC+Machines+and+Transformers+playlist",
+  "EET204": "https://www.youtube.com/results?search_query=KTU+EET204+Electromagnetic+Theory+playlist",
+  "EET206": "https://www.youtube.com/results?search_query=KTU+EET206+Digital+Electronics+playlist",
+  "EST200": "https://www.youtube.com/results?search_query=KTU+EST200+Design+and+Engineering+playlist",
+  "MCN202": "https://www.youtube.com/results?search_query=KTU+MCN202+Constitution+of+India+playlist",
+  "EET301": "https://www.youtube.com/results?search_query=KTU+EET301+Power+Systems+I+playlist",
+  "EET303": "https://www.youtube.com/results?search_query=KTU+EET303+Microprocessors+and+Microcontrollers+playlist",
+  "EET305": "https://www.youtube.com/results?search_query=KTU+EET305+Signals+and+Systems+playlist",
+  "EET307": "https://www.youtube.com/results?search_query=KTU+EET307+Synchronous+and+Induction+Machines+playlist",
+  "HUT300": "https://www.youtube.com/results?search_query=KTU+HUT300+Industrial+Economics+Foreign+Trade+playlist",
+  "MCN301": "https://www.youtube.com/results?search_query=KTU+MCN301+Disaster+Management+playlist",
+  "EET302": "https://www.youtube.com/results?search_query=KTU+EET302+Linear+Control+Systems+playlist",
+  "EET304": "https://www.youtube.com/results?search_query=KTU+EET304+Power+Systems+II+playlist",
+  "EET306": "https://www.youtube.com/results?search_query=KTU+EET306+Power+Electronics+playlist",
+  "EET322": "https://www.youtube.com/results?search_query=KTU+EET322+Renewable+Energy+Systems+playlist",
+  "HUT310": "https://www.youtube.com/results?search_query=KTU+HUT310+Management+for+Engineers+playlist",
+  "EET401": "https://www.youtube.com/results?search_query=KTU+EET401+Advanced+Control+Systems+playlist",
+  "EET413": "https://www.youtube.com/results?search_query=KTU+EET413+Electric+Drives+playlist",
+  "CST415": "https://www.youtube.com/results?search_query=KTU+CST415+Mobile+Computing+playlist",
+  "EET402": "https://www.youtube.com/results?search_query=KTU+EET402+Electrical+System+Design+Estimation+playlist",
+  "EET424": "https://www.youtube.com/results?search_query=KTU+EET424+Energy+Management+playlist",
+  "EET426": "https://www.youtube.com/results?search_query=KTU+EET426+Special+Electrical+Machines+playlist",
+  "EET468": "https://www.youtube.com/results?search_query=KTU+EET468+Industrial+Instrumentation+Automation+playlist"
+};
+
+/** Get valid YouTube class link for KTU subject name */
+function getYoutubeUrlForSubject(subjectName) {
+  // Extract subject code, e.g. "Linear Algebra and Calculus (MAT101)" -> MAT101
+  const match = subjectName.match(/\(([^)]+)\)/);
+  const code = match ? match[1] : null;
+  if (code && CURATED_YOUTUBE_LINKS[code]) {
+    return CURATED_YOUTUBE_LINKS[code];
+  }
+  // Fallback search link
+  const query = encodeURIComponent("KTU " + subjectName + " playlist classes");
+  return "https://www.youtube.com/results?search_query=" + query;
+}
+
 // Sample EEE subjects pre-loaded on first visit
 const SAMPLE_SUBJECTS = [
   {
@@ -5822,6 +5874,21 @@ function loadState() {
   if (saved) {
     try {
       state = { ...state, ...JSON.parse(saved) };
+      
+      // Migrate existing subjects without youtube links
+      let migrated = false;
+      if (state.subjects) {
+        state.subjects.forEach((s) => {
+          if (!s.youtube) {
+            s.youtube = getYoutubeUrlForSubject(s.name);
+            migrated = true;
+          }
+        });
+        if (migrated) {
+          saveState();
+        }
+      }
+
       if (!state.hasImportedBacklogs || !state.subjects || state.subjects.length < 30) {
         initFreshState();
       }
@@ -5846,6 +5913,7 @@ function initFreshState() {
     theory: s.theory,
     status: s.status,
     category: s.category,
+    youtube: s.youtube || getYoutubeUrlForSubject(s.name),
   }));
   state.hasImportedBacklogs = true;
   saveState();
@@ -6020,11 +6088,20 @@ function renderDashboard() {
       : state.subjects
           .slice(0, 8)
           .map(
-            (s) => `
+            (s) => {
+              const ytUrl = s.youtube || getYoutubeUrlForSubject(s.name);
+              return `
         <div class="snapshot-item">
-          <strong>${escapeHtml(s.name)}</strong>
-          <div class="snapshot-meta">${s.status} · ${s.difficulty} · ${s.modules} modules</div>
-        </div>`
+          <div class="snapshot-content">
+            <strong>${escapeHtml(s.name)}</strong>
+            <div class="snapshot-meta">${s.status} · ${s.difficulty} · ${s.modules} modules</div>
+          </div>
+          <a href="${ytUrl}" target="_blank" class="youtube-class-btn" title="Watch YouTube Classes" aria-label="Watch YouTube Classes for ${escapeHtml(s.name)}">
+            <span class="youtube-icon">▶</span>
+            <span class="youtube-text">Class</span>
+          </a>
+        </div>`;
+            }
           )
           .join('');
 
@@ -6088,6 +6165,7 @@ function renderSubjects(filter = '') {
       ]
         .filter(Boolean)
         .join(' · ');
+      const ytUrl = s.youtube || getYoutubeUrlForSubject(s.name);
 
       return `
       <div class="subject-item" data-id="${s.id}">
@@ -6110,6 +6188,9 @@ function renderSubjects(filter = '') {
           </div>
         </div>
         <div class="subject-actions">
+          <a href="${ytUrl}" target="_blank" class="youtube-class-btn" title="Watch YouTube Classes" style="margin-bottom: 0.2rem;">
+            <span class="youtube-icon">▶</span> Class
+          </a>
           <button class="icon-btn edit-btn" data-id="${s.id}">Edit</button>
           <button class="icon-btn delete delete-btn" data-id="${s.id}">Delete</button>
         </div>
@@ -6130,6 +6211,7 @@ function renderSubjects(filter = '') {
 function resetSubjectForm() {
   document.getElementById('subjectForm').reset();
   document.getElementById('subjectId').value = '';
+  document.getElementById('subjectYoutube').value = '';
   document.getElementById('subjectModules').value = 5;
   document.getElementById('subjectDifficulty').value = 'Medium';
   document.getElementById('subjectSubmitBtn').textContent = 'Add Subject';
@@ -6151,6 +6233,7 @@ function editSubject(id) {
   document.getElementById('subjectPyq').checked = s.pyq;
   document.getElementById('subjectNumericals').checked = s.numericals;
   document.getElementById('subjectTheory').checked = s.theory;
+  document.getElementById('subjectYoutube').value = s.youtube || '';
   document.getElementById('subjectSubmitBtn').textContent = 'Update Subject';
   document.getElementById('subjectCancelBtn').hidden = false;
 
@@ -6171,9 +6254,12 @@ function deleteSubject(id) {
 function handleSubjectSubmit(e) {
   e.preventDefault();
 
+  const nameValue = document.getElementById('subjectName').value.trim();
+  const youtubeValue = document.getElementById('subjectYoutube').value.trim();
+
   const subject = {
     id: document.getElementById('subjectId').value || generateId(),
-    name: document.getElementById('subjectName').value.trim(),
+    name: nameValue,
     difficulty: document.getElementById('subjectDifficulty').value,
     modules: parseInt(document.getElementById('subjectModules').value, 10),
     internal: document.getElementById('subjectInternal').value,
@@ -6182,6 +6268,7 @@ function handleSubjectSubmit(e) {
     pyq: document.getElementById('subjectPyq').checked,
     numericals: document.getElementById('subjectNumericals').checked,
     theory: document.getElementById('subjectTheory').checked,
+    youtube: youtubeValue || getYoutubeUrlForSubject(nameValue),
   };
 
   const existingIdx = state.subjects.findIndex((s) => s.id === subject.id);
