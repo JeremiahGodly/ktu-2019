@@ -128,43 +128,158 @@
       </div>
 
       <div class="dashboard-row">
-        <article class="card glass countdown-card">
-          <h3>🎯 November Exam Countdown</h3>
-          <div class="countdown-display" id="examCountdown">
-            <div class="countdown-block"><span id="cdDays">00</span><small>Days</small></div>
-            <div class="countdown-block"><span id="cdHours">00</span><small>Hours</small></div>
-            <div class="countdown-block"><span id="cdMins">00</span><small>Mins</small></div>
-            <div class="countdown-block"><span id="cdSecs">00</span><small>Secs</small></div>
+        <article class="card glass bio-chamber-card full-width">
+          <div class="bio-chamber-header">
+            <div class="bio-header-info">
+              <h3>☣️ Bio-Mechanical Anxiety Core</h3>
+              <p class="bio-sub">System Stability & Academic Threat Chamber</p>
+            </div>
+            <div class="bio-audio-toggle">
+              <button id="toggleAudioHeartbeat" class="btn btn-ghost btn-sm" title="Toggle audio heartbeat feedback">
+                🔊 Synth Heartbeat: OFF
+              </button>
+            </div>
           </div>
-          <p class="exam-date-text">Target: <strong id="examDateDisplay">Nov 15, 2026</strong></p>
-        </article>
 
-        <article class="card glass progress-overview-card">
-          <h3>Overall Recovery Progress</h3>
-          <div class="progress-ring-container">
-            <svg class="progress-ring" viewBox="0 0 120 120">
-              <circle class="progress-ring-bg" cx="60" cy="60" r="52"/>
-              <circle class="progress-ring-fill" id="progressRing" cx="60" cy="60" r="52"/>
-            </svg>
-            <span class="progress-ring-text" id="progressRingText">0%</span>
-          </div>
-          <div class="progress-bar-wrap">
-            <div class="progress-bar">
-              <div class="progress-fill" id="overallProgressBar" style="width: 0%"></div>
+          <div class="bio-chamber-body">
+            <!-- Core Visualizer -->
+            <div class="bio-core-section">
+              <div class="bio-core-container" id="bioCoreContainer">
+                <svg class="bio-core-rings" viewBox="0 0 200 200">
+                  <!-- Outer track: Exam Countdown remaining -->
+                  <circle class="ring-track ring-outer-track" cx="100" cy="100" r="85"/>
+                  <circle class="ring-fill ring-outer-fill" id="bioRingCountdown" cx="100" cy="100" r="85"/>
+
+                  <!-- Inner track: Recovery Progress -->
+                  <circle class="ring-track ring-inner-track" cx="100" cy="100" r="70"/>
+                  <circle class="ring-fill ring-inner-fill" id="bioRingProgress" cx="100" cy="100" r="70"/>
+                </svg>
+
+                <!-- Pulsating Orb (Heart) -->
+                <div class="bio-heart-orb" id="bioHeartOrb">
+                  <span class="bio-heart-percentage" id="bioProgressPercent">0%</span>
+                  <span class="bio-heart-label">RECOVERED</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chrono Integrity (Analog Clock) -->
+            <div class="bio-clock-section">
+              <div class="clock-container">
+                <div class="clock-face" id="dashboardClockFace">
+                  <div class="marker marker-1"><div class="marker-dot"></div></div>
+                  <div class="marker marker-2"><div class="marker-dot"></div></div>
+                  <div class="marker marker-3"><div class="marker-dot"></div></div>
+                  <div class="marker marker-4"><div class="marker-dot"></div></div>
+                  <div class="marker marker-5"><div class="marker-dot"></div></div>
+                  <div class="marker marker-6"><div class="marker-dot"></div></div>
+                  <div class="marker marker-7"><div class="marker-dot"></div></div>
+                  <div class="marker marker-8"><div class="marker-dot"></div></div>
+                  <div class="marker marker-9"><div class="marker-dot"></div></div>
+                  <div class="marker marker-10"><div class="marker-dot"></div></div>
+                  <div class="marker marker-11"><div class="marker-dot"></div></div>
+                  <div class="marker marker-12"><div class="marker-dot"></div></div>
+
+                  <div class="number number-1"><span class="number-1-text">1</span></div>
+                  <div class="number number-2"><span class="number-2-text">2</span></div>
+                  <div class="number number-3"><span class="number-3-text">3</span></div>
+                  <div class="number number-4"><span class="number-4-text">4</span></div>
+                  <div class="number number-5"><span class="number-5-text">5</span></div>
+                  <div class="number number-6"><span class="number-6-text">6</span></div>
+                  <div class="number number-7"><span class="number-7-text">7</span></div>
+                  <div class="number number-8"><span class="number-8-text">8</span></div>
+                  <div class="number number-9"><span class="number-9-text">9</span></div>
+                  <div class="number number-10"><span class="number-10-text">10</span></div>
+                  <div class="number number-11"><span class="number-11-text">11</span></div>
+                  <div class="number number-12"><span class="number-12-text">12</span></div>
+
+                  <div class="hand hour-hand" id="dashboardClockHour"></div>
+                  <div class="hand minute-hand" id="dashboardClockMin"></div>
+                  <div class="hand second-hand" id="dashboardClockSec"></div>
+                  <div class="center-pin"></div>
+                </div>
+              </div>
+              <div class="dashboard-digital-time" id="dashboardDigitalTime" style="text-align: center; margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); letter-spacing: 0.05em;">12:00:00 PM</div>
+            </div>
+
+            <!-- Anxious stats and countdown details -->
+            <div class="bio-stats-section">
+              <div class="bio-threat-meter">
+                <div class="threat-label-row">
+                  <span class="threat-label">SYSTEM COLLAPSE THREAT LEVEL</span>
+                  <span class="threat-value" id="bioThreatLevel">STABLE</span>
+                </div>
+                <div class="threat-bar">
+                  <div class="threat-fill" id="bioThreatBar" style="width: 0%"></div>
+                </div>
+              </div>
+
+              <div class="bio-stats-grid">
+                <div class="bio-stat-item">
+                  <span class="bio-stat-lbl">CORE PULSE RATE</span>
+                  <span class="bio-stat-val" id="bioHeartRate">60 BPM</span>
+                </div>
+                <div class="bio-stat-item">
+                  <span class="bio-stat-lbl">STRESS COEFFICIENT</span>
+                  <span class="bio-stat-val" id="bioAnxietyCoef">0.0%</span>
+                </div>
+                <div class="bio-stat-item">
+                  <span class="bio-stat-lbl">PENDING SUBJECTS</span>
+                  <span class="bio-stat-val" id="bioPendingModules">0 Sub</span>
+                </div>
+                <div class="bio-stat-item">
+                  <span class="bio-stat-lbl">TEMPORAL MARGIN</span>
+                  <span class="bio-stat-val" id="bioTimeMargin">STABLE</span>
+                </div>
+              </div>
+
+              <!-- Anxious countdown blocks -->
+              <div class="bio-countdown-wrap">
+                <span class="bio-countdown-title">DECAY COUNTDOWN (TIME REMAINING TILL EXAM INTRUSION)</span>
+                <div class="bio-countdown-display" id="bioCountdown">
+                  <div class="bio-cd-block"><span id="bioCdDays">00</span><small>Days</small></div>
+                  <div class="bio-cd-block"><span id="bioCdHours">00</span><small>Hours</small></div>
+                  <div class="bio-cd-block"><span id="bioCdMins">00</span><small>Mins</small></div>
+                  <div class="bio-cd-block"><span id="bioCdSecs">00</span><small>Secs</small></div>
+                </div>
+                <p class="bio-date-target">TARGET EVENT HORIZON: <span id="bioTargetDate">Nov 15, 2026</span></p>
+              </div>
+
+              <!-- Terminal console log for anxious messages -->
+              <div class="bio-console-log">
+                <div class="console-header">
+                  <span>BIO-COGNITIVE PROCESS LOG</span>
+                  <span class="console-blink">● LIVE SCAN</span>
+                </div>
+                <div class="console-content" id="bioConsoleContent">
+                  <div class="console-line">> Neural core initialized. Awaiting study activity...</div>
+                </div>
+              </div>
             </div>
           </div>
         </article>
       </div>
 
-      <article class="card glass">
-        <h3>Subject Status Overview</h3>
-        <div class="chart-bars" id="statusChart"></div>
-      </article>
+      <div class="dashboard-row dynamic-tracker-row" style="margin-top: 1.25rem;">
+        <!-- Left Column: Active Study Target -->
+        <article class="card glass active-target-card">
+          <h3>🎯 Active Study Target</h3>
+          <div id="activeTargetContainer">
+            <!-- Dynamically populated target subject and controls -->
+          </div>
+        </article>
 
-      <article class="card glass">
-        <h3>Quick Subject Snapshot</h3>
-        <div class="subject-snapshot" id="subjectSnapshot"></div>
-      </article>
+        <!-- Right Column: Interactive subjects module tracker -->
+        <article class="card glass module-tracker-card">
+          <div class="tracker-header">
+            <h3>⚡ Real-time Module Progress Tracker</h3>
+            <input type="text" id="dashboardSubjectSearch" placeholder="Search subjects...">
+          </div>
+          <div class="subject-snapshot-container">
+            <div class="subject-snapshot" id="subjectSnapshot"></div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- ========== SUBJECTS ========== -->

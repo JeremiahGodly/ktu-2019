@@ -5936,13 +5936,22 @@ function loadState() {
   if (saved) {
     try {
       state = { ...state, ...JSON.parse(saved) };
-      
-      // Migrate existing subjects without youtube links
+      // Migrate existing subjects without youtube or completedModules
       let migrated = false;
       if (state.subjects) {
         state.subjects.forEach((s) => {
           if (!s.youtube) {
             s.youtube = getYoutubeUrlForSubject(s.name);
+            migrated = true;
+          }
+          if (!s.completedModules) {
+            if (s.status === 'Completed') {
+              s.completedModules = Array.from({ length: s.modules }, (_, i) => i + 1);
+            } else if (s.status === 'In Progress') {
+              s.completedModules = Array.from({ length: Math.ceil(s.modules / 2) }, (_, i) => i + 1);
+            } else {
+              s.completedModules = [];
+            }
             migrated = true;
           }
         });
@@ -5954,7 +5963,7 @@ function loadState() {
       if (!state.hasImportedBacklogs || !state.subjects || state.subjects.length < 30) {
         initFreshState();
       }
-    } catch {
+    } catch (e) {
       initFreshState();
     }
   } else {
@@ -5976,6 +5985,9 @@ function initFreshState() {
     status: s.status,
     category: s.category,
     youtube: s.youtube || getYoutubeUrlForSubject(s.name),
+    completedModules: s.status === 'Completed' 
+      ? Array.from({ length: s.modules }, (_, i) => i + 1)
+      : (s.status === 'In Progress' ? Array.from({ length: Math.ceil(s.modules / 2) }, (_, i) => i + 1) : []),
   }));
   state.hasImportedBacklogs = true;
   saveState();
@@ -6056,11 +6068,56 @@ function difficultyClass(d) {
   return map[d] || 'medium';
 }
 
+
+
 /** Status to progress percent */
 function statusProgress(status) {
   if (status === 'Completed') return 100;
   if (status === 'In Progress') return 50;
   return 0;
+}
+
+/** Get subject progress percent based on completedModules */
+function getSubjectProgress(s) {
+  if (!s) return 0;
+  if (!s.completedModules || !Array.isArray(s.completedModules)) {
+    return statusProgress(s.status);
+  }
+  if (s.modules <= 0) return 0;
+  return Math.round((s.completedModules.length / s.modules) * 100);
+}
+
+/** Toggle module completion status for a subject */
+function toggleModuleCompletion(subjectId, moduleNum) {
+  const s = state.subjects.find(x => x.id === subjectId);
+  if (!s) return;
+
+  if (!s.completedModules) {
+    s.completedModules = [];
+  }
+
+  const idx = s.completedModules.indexOf(moduleNum);
+  if (idx >= 0) {
+    s.completedModules.splice(idx, 1);
+  } else {
+    s.completedModules.push(moduleNum);
+  }
+
+  // Update status based on completed modules count
+  if (s.completedModules.length === s.modules) {
+    s.status = 'Completed';
+  } else if (s.completedModules.length > 0) {
+    s.status = 'In Progress';
+  } else {
+    s.status = 'Not Started';
+  }
+
+  saveState();
+  renderDashboard();
+  
+  // Re-render subjects and categories list to keep everything synced
+  renderSubjects(document.getElementById('subjectSearch')?.value || '');
+  renderCategories();
 }
 
 // ========== Navigation ==========
@@ -6105,71 +6162,318 @@ function initNavigation() {
 // ========== Dashboard ==========
 
 /** Update dashboard stats and charts */
-function renderDashboard() {
+// Audio state
+let bioAudio = {
+  ctx: null,
+  enabled: false,
+};
+
+let nextBeatTimeoutId = null;
+let lastConsoleUpdate = 0;
+
+// EKG drawing state
+let ekgHistory = Array(240).fill(25); // baseline at y=25
+let ekgProgress = -1; // -1 means inactive
+let ekgCanvas = null;
+let ekgCtx = null;
+
+const ANXIOUS_LOGS_CALM = [
+  "Neural core at nominal state. Keep studying to maintain safety margin.",
+  "System integrity checks: 100%. No immediate threat detected.",
+  "Bio-energy flowing stably. Academic deficit within normal bounds.",
+  "Warning: exams are coming. Do not rest too long."
+];
+
+const ANXIOUS_LOGS_WARNING = [
+  "WARNING: Academic deficit detected. Accelerated study required.",
+  "Palpitations in cognitive core. Stress levels rising.",
+  "Syllabus coverage index is lagging. Please increase module input.",
+  "Time margin decaying. Focus coefficient must be optimized."
+];
+
+const ANXIOUS_LOGS_CRITICAL = [
+  "CRITICAL ALERT: Imminent academic collapse threat!",
+  "COGNITIVE ARREST: Pulse rate exceeding safety boundaries.",
+  "RECOVERY RATE INSUFFICIENT. ACCELERATE IMMEDIATELY.",
+  "DOOMSDAY PROTOCOL ENGAGED. RUN COGNITIVE SCRIPTS NOW."
+];
+
+function calculateAnxietyAndBPM() {
   const total = state.subjects.length;
-  const completed = state.subjects.filter((s) => s.status === 'Completed').length;
+  const completed = state.subjects.filter((s) => getSubjectProgress(s) === 100).length;
+  const progress = total ? state.subjects.reduce((sum, s) => sum + getSubjectProgress(s), 0) / total : 0;
+
+  
+  // Calculate days left
+  const exam = new Date(state.examDate + 'T09:00:00');
+  const now = new Date();
+  const diff = exam - now;
+  const daysLeft = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+  
+  // Progress factor (1 = 0% progress, 0 = 100% progress)
+  const progressFactor = Math.max(0, 1 - progress / 100);
+  
+  // Days factor: stress increases as exam gets closer. 
+  // Let's assume a 90-day warning window. If daysLeft >= 90, daysFactor is 0. If daysLeft == 0, daysFactor is 1.
+  const daysFactor = Math.max(0, 1 - daysLeft / 90);
+  
+  // Stress coefficient formula: progressFactor scale of urgency
+  // If progress is 100%, stress is 0%.
+  // Otherwise, baseline stress is 30% plus up to 70% based on countdown.
+  let anxietyScore = progressFactor * (30 + 70 * daysFactor);
+  
+  // Round to 1 decimal place
+  anxietyScore = Math.min(100, Math.max(0, Math.round(anxietyScore * 10) / 10));
+  
+  // BPM formula (60 to 180 BPM)
+  let bpm = Math.round(60 + (anxietyScore / 100) * 120);
+  
+  // If user is hovering the bio-core, let's inject a "Panic Spike" (+35 BPM, capped at 200)
+  const isHovered = document.getElementById('bioHeartOrb')?.matches(':hover');
+  if (isHovered) {
+    bpm = Math.min(200, bpm + 35);
+    anxietyScore = Math.min(100, anxietyScore + 15);
+  }
+  
+  return { progress, daysLeft, anxietyScore, bpm, completed, total };
+}
+
+/** Update dashboard stats and charts */
+function renderDashboard() {
+  const stats = calculateAnxietyAndBPM();
+  const total = stats.total;
+  const completed = stats.completed;
   const pending = total - completed;
-  const progress = total ? Math.round((completed / total) * 100) : 0;
+  const progress = stats.progress;
 
-  document.getElementById('statTotal').textContent = total;
-  document.getElementById('statCompleted').textContent = completed;
-  document.getElementById('statPending').textContent = pending;
-  document.getElementById('statProgress').textContent = `${progress}%`;
+  // Update general stat counts in dashboard stats grid
+  const statTotalEl = document.getElementById('statTotal');
+  if (statTotalEl) statTotalEl.textContent = total;
+  const statCompletedEl = document.getElementById('statCompleted');
+  if (statCompletedEl) statCompletedEl.textContent = completed;
+  const statPendingEl = document.getElementById('statPending');
+  if (statPendingEl) statPendingEl.textContent = pending;
+  const statProgressEl = document.getElementById('statProgress');
+  if (statProgressEl) statProgressEl.textContent = `${progress}%`;
 
-  // Progress ring (circumference = 2 * PI * 52 ≈ 326.73)
-  const ring = document.getElementById('progressRing');
-  const offset = 326.73 - (326.73 * progress) / 100;
-  ring.style.strokeDashoffset = offset;
-  document.getElementById('progressRingText').textContent = `${progress}%`;
-  document.getElementById('overallProgressBar').style.width = `${progress}%`;
+  // Update new Bio Core values
+  const bioProgressPercentEl = document.getElementById('bioProgressPercent');
+  if (bioProgressPercentEl) bioProgressPercentEl.textContent = `${progress}%`;
+  
+  const bioHeartRateEl = document.getElementById('bioHeartRate');
+  if (bioHeartRateEl) bioHeartRateEl.textContent = `${stats.bpm} BPM`;
+  
+  const bioAnxietyCoefEl = document.getElementById('bioAnxietyCoef');
+  if (bioAnxietyCoefEl) bioAnxietyCoefEl.textContent = `${stats.anxietyScore.toFixed(1)}%`;
+  
+  const bioPendingModulesEl = document.getElementById('bioPendingModules');
+  if (bioPendingModulesEl) {
+    // Total pending modules = sum of modules for subjects not completed
+    const pendingSubjects = state.subjects.filter(s => s.status !== 'Completed');
+    const totalPendingModules = pendingSubjects.reduce((sum, s) => sum + s.modules, 0);
+    bioPendingModulesEl.textContent = `${totalPendingModules} Mod`;
+  }
 
-  // Status chart
-  const counts = {
-    'Not Started': state.subjects.filter((s) => s.status === 'Not Started').length,
-    'In Progress': state.subjects.filter((s) => s.status === 'In Progress').length,
-    Completed: completed,
-  };
-  const maxCount = Math.max(...Object.values(counts), 1);
+  const bioTimeMarginEl = document.getElementById('bioTimeMargin');
+  if (bioTimeMarginEl) {
+    if (stats.daysLeft > 60) {
+      bioTimeMarginEl.textContent = "SAFE";
+      bioTimeMarginEl.style.color = "#22c55e";
+    } else if (stats.daysLeft > 30) {
+      bioTimeMarginEl.textContent = "STABLE";
+      bioTimeMarginEl.style.color = "#eab308";
+    } else if (stats.daysLeft > 14) {
+      bioTimeMarginEl.textContent = "URGENT";
+      bioTimeMarginEl.style.color = "#f57c00";
+    } else {
+      bioTimeMarginEl.textContent = "CRITICAL";
+      bioTimeMarginEl.style.color = "#ef4444";
+    }
+  }
 
-  document.getElementById('statusChart').innerHTML = Object.entries(counts)
-    .map(([label, count]) => {
-      const pct = Math.round((count / maxCount) * 100);
-      const cls = label.toLowerCase().replace(' ', '-');
-      return `
-        <div class="chart-row">
-          <span class="chart-label">${label}</span>
-          <div class="chart-bar-track">
-            <div class="chart-bar-fill ${cls}" style="width: ${pct}%">${count}</div>
-          </div>
+  // Update threat level elements
+  const bioThreatLevelEl = document.getElementById('bioThreatLevel');
+  const bioThreatBarEl = document.getElementById('bioThreatBar');
+  if (bioThreatLevelEl) {
+    let levelText = "STABLE";
+    let color = "#22c55e";
+    if (stats.anxietyScore >= 70) {
+      levelText = "CRITICAL / PANIC";
+      color = "#ef4444";
+    } else if (stats.anxietyScore >= 50) {
+      levelText = "ELEVATED THREAT";
+      color = "#f59e0b";
+    } else if (stats.anxietyScore >= 30) {
+      levelText = "LOW RISK";
+      color = "#fbbf24";
+    }
+    bioThreatLevelEl.textContent = levelText;
+    bioThreatLevelEl.style.color = color;
+  }
+  if (bioThreatBarEl) {
+    bioThreatBarEl.style.width = `${stats.anxietyScore}%`;
+  }
+
+  // Update dynamic CSS heartbeat speed
+  const root = document.documentElement;
+  root.style.setProperty('--heartbeat-duration', `${60 / stats.bpm}s`);
+  
+  // Set threat glow colors in CSS variable based on anxiety score
+  if (stats.anxietyScore >= 70) {
+    root.style.setProperty('--bio-glow-color', 'rgba(239, 68, 68, 0.45)');
+    root.style.setProperty('--bio-glow-solid', '#ef4444');
+  } else if (stats.anxietyScore >= 30) {
+    root.style.setProperty('--bio-glow-color', 'rgba(245, 158, 11, 0.35)');
+    root.style.setProperty('--bio-glow-solid', '#f59e0b');
+  } else {
+    root.style.setProperty('--bio-glow-color', 'rgba(34, 197, 94, 0.3)');
+    root.style.setProperty('--bio-glow-solid', '#22c55e');
+  }
+
+  // Update inner SVG progress ring (circumference = 439.82)
+  const ringInner = document.getElementById('bioRingProgress');
+  if (ringInner) {
+    const offset = 439.82 - (439.82 * progress) / 100;
+    ringInner.style.strokeDashoffset = offset;
+  }
+
+  // Update outer SVG countdown ring (circumference = 534)
+  const ringOuter = document.getElementById('bioRingCountdown');
+  if (ringOuter) {
+    const timePercentage = Math.max(0, Math.min(100, (stats.daysLeft / 120) * 100));
+    const offset = 534 - (534 * timePercentage) / 100;
+    ringOuter.style.strokeDashoffset = offset;
+  }
+
+  // Update HUD elements
+  const hudProgressPercentEl = document.getElementById('hudProgressPercent');
+  if (hudProgressPercentEl) hudProgressPercentEl.textContent = `${progress}%`;
+
+  const hudAnxietyValEl = document.getElementById('hudAnxietyVal');
+  if (hudAnxietyValEl) hudAnxietyValEl.textContent = `${stats.anxietyScore.toFixed(1)}%`;
+
+  const hudBpmValEl = document.getElementById('hudBpmVal');
+  if (hudBpmValEl) hudBpmValEl.textContent = `${stats.bpm} BPM`;
+
+  const hudMarginValEl = document.getElementById('hudMarginVal');
+  if (hudMarginValEl) {
+    const timeMarginEl = document.getElementById('bioTimeMargin');
+    if (timeMarginEl) {
+      hudMarginValEl.textContent = timeMarginEl.textContent;
+      hudMarginValEl.style.color = timeMarginEl.style.color;
+    }
+  }
+
+  const hudRingInner = document.getElementById('hudRingProgress');
+  if (hudRingInner) {
+    const offset = 439.82 - (439.82 * progress) / 100;
+    hudRingInner.style.strokeDashoffset = offset;
+  }
+
+  const hudRingOuter = document.getElementById('hudRingCountdown');
+  if (hudRingOuter) {
+    const timePercentage = Math.max(0, Math.min(100, (stats.daysLeft / 120) * 100));
+    const offset = 534 - (534 * timePercentage) / 100;
+    hudRingOuter.style.strokeDashoffset = offset;
+  }
+
+  // Update console diagnostic logs
+  updateConsoleLog(stats.anxietyScore, completed, total);
+
+  // Render secondary dashboard items
+  renderSecondaryDashboardItems(completed);
+}
+
+/** Render secondary dashboard widgets (active study target, module progress tracker) */
+function renderSecondaryDashboardItems(completed) {
+  // 1. Render Active Study Target
+  const targetContainer = document.getElementById('activeTargetContainer');
+  if (targetContainer) {
+    const targetSub = state.subjects.find((s) => getSubjectProgress(s) < 100);
+    if (!targetSub) {
+      targetContainer.innerHTML = `
+        <div class="active-target-content" style="text-align: center; padding: 1rem 0;">
+          <p style="font-size: 2rem; margin-bottom: 0.5rem;">🎉</p>
+          <div class="active-target-title" style="color: #22c55e; margin-bottom: 0.5rem;">SYSTEM STABILIZED</div>
+          <p style="color: var(--text-muted); font-size: 0.8rem; margin: 0;">All backlogs successfully cleared.</p>
         </div>`;
-    })
-    .join('');
-
-  // Subject snapshot
-  document.getElementById('subjectSnapshot').innerHTML =
-    state.subjects.length === 0
-      ? '<p class="empty-state">No subjects yet. Add some in the Subjects section.</p>'
-      : state.subjects
-          .slice(0, 8)
-          .map(
-            (s) => {
-              const ytUrl = s.youtube || getYoutubeUrlForSubject(s.name);
-              return `
-        <div class="snapshot-item">
-          <div class="snapshot-content">
-            <strong>${escapeHtml(s.name)}</strong>
-            <div class="snapshot-meta">${s.status} · ${s.difficulty} · ${s.modules} modules</div>
+    } else {
+      let nextMod = 1;
+      for (let i = 1; i <= targetSub.modules; i++) {
+        if (!targetSub.completedModules || !targetSub.completedModules.includes(i)) {
+          nextMod = i;
+          break;
+        }
+      }
+      const ytUrl = targetSub.youtube || getYoutubeUrlForSubject(targetSub.name);
+      
+      targetContainer.innerHTML = `
+        <div class="active-target-content">
+          <div class="active-target-title">${escapeHtml(targetSub.name)}</div>
+          <div>
+            <span class="active-target-module">Next Up: Module ${nextMod}</span>
           </div>
-          <a href="${ytUrl}" target="_blank" class="youtube-class-btn" title="Watch YouTube Classes" aria-label="Watch YouTube Classes for ${escapeHtml(s.name)}">
-            <span class="youtube-icon">▶</span>
-            <span class="youtube-text">Class</span>
+          <a href="${ytUrl}" target="_blank" class="launch-class-btn">
+            🎬 Launch Video Class ↗
           </a>
+          <button class="mark-complete-btn" onclick="toggleModuleCompletion('${targetSub.id}', ${nextMod})">
+            ✓ Mark Module ${nextMod} Completed
+          </button>
         </div>`;
-            }
-          )
-          .join('');
+    }
+  }
 
-  updateExamCountdown();
+  // 2. Render Real-time Module Tracker snapshot
+  const snapshotEl = document.getElementById('subjectSnapshot');
+  if (snapshotEl) {
+    if (state.subjects.length === 0) {
+      snapshotEl.innerHTML = '<p class="empty-state">No subjects yet. Add some in the Subjects section.</p>';
+    } else {
+      const searchInput = document.getElementById('dashboardSubjectSearch');
+      const filterVal = searchInput ? searchInput.value.toLowerCase() : '';
+      const filtered = state.subjects.filter((s) => s.name.toLowerCase().includes(filterVal));
+      
+      if (filtered.length === 0) {
+        snapshotEl.innerHTML = '<p class="empty-state">No matching subjects found.</p>';
+      } else {
+        snapshotEl.innerHTML = filtered
+          .map((s) => {
+            const prog = getSubjectProgress(s);
+            
+            // Build module buttons
+            let moduleButtons = '';
+            for (let m = 1; m <= s.modules; m++) {
+              const isDone = s.completedModules && s.completedModules.includes(m);
+              moduleButtons += `
+                <button class="tracker-module-btn ${isDone ? 'done' : ''}" 
+                  onclick="toggleModuleCompletion('${s.id}', ${m})" 
+                  title="Toggle Module ${m} Completion (Subject: ${escapeHtml(s.name)})">
+                  M${m}
+                </button>`;
+            }
+            
+            const ytUrl = s.youtube || getYoutubeUrlForSubject(s.name);
+            return `
+              <div class="tracker-subject-item">
+                <div class="tracker-subject-info">
+                  <div class="tracker-subject-name">${escapeHtml(s.name)}</div>
+                  <div class="tracker-subject-meta">
+                    <span class="badge badge-${difficultyClass(s.difficulty)}">${s.difficulty}</span>
+                    <span class="badge badge-status ${s.status === 'Completed' ? 'badge-completed' : ''}">${s.status} (${prog}%)</span>
+                  </div>
+                </div>
+                <div class="tracker-module-container">
+                  ${moduleButtons}
+                </div>
+                <a href="${ytUrl}" target="_blank" class="tracker-class-btn" title="Open YouTube Classes for ${escapeHtml(s.name)}">
+                  ▶
+                </a>
+              </div>`;
+          })
+          .join('');
+      }
+    }
+  }
 }
 
 /** Update exam countdown timers */
@@ -6179,18 +6483,25 @@ function updateExamCountdown() {
   const diff = exam - now;
 
   const daysLeft = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-  document.getElementById('daysLeftMini').textContent = daysLeft;
+  const daysLeftMiniEl = document.getElementById('daysLeftMini');
+  if (daysLeftMiniEl) daysLeftMiniEl.textContent = daysLeft;
 
   const displayDate = exam.toLocaleDateString('en-IN', {
     month: 'short',
     day: 'numeric',
     year: 'numeric',
   });
-  document.getElementById('examDateDisplay').textContent = displayDate;
+  
+  const bioTargetDateEl = document.getElementById('bioTargetDate');
+  if (bioTargetDateEl) bioTargetDateEl.textContent = displayDate;
+  
+  const hudTargetDateEl = document.getElementById('hudTargetDate');
+  if (hudTargetDateEl) hudTargetDateEl.textContent = displayDate;
 
   if (diff <= 0) {
-    ['cdDays', 'cdHours', 'cdMins', 'cdSecs'].forEach((id) => {
-      document.getElementById(id).textContent = '00';
+    ['bioCdDays', 'bioCdHours', 'bioCdMins', 'bioCdSecs', 'hudCdDays', 'hudCdHours', 'hudCdMins', 'hudCdSecs'].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = '00';
     });
     return;
   }
@@ -6200,10 +6511,212 @@ function updateExamCountdown() {
   const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   const secs = Math.floor((diff % (1000 * 60)) / 1000);
 
-  document.getElementById('cdDays').textContent = String(days).padStart(2, '0');
-  document.getElementById('cdHours').textContent = String(hours).padStart(2, '0');
-  document.getElementById('cdMins').textContent = String(mins).padStart(2, '0');
-  document.getElementById('cdSecs').textContent = String(secs).padStart(2, '0');
+  const setVal = (id, val) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = String(val).padStart(2, '0');
+  };
+
+  setVal('bioCdDays', days);
+  setVal('bioCdHours', hours);
+  setVal('bioCdMins', mins);
+  setVal('bioCdSecs', secs);
+
+  setVal('hudCdDays', days);
+  setVal('hudCdHours', hours);
+  setVal('hudCdMins', mins);
+  setVal('hudCdSecs', secs);
+}
+
+/** Play Synthesized Audio Heartbeat via Web Audio API */
+function playHeartbeatSound(bpm) {
+  if (!bioAudio.enabled) return;
+  
+  try {
+    if (!bioAudio.ctx) {
+      bioAudio.ctx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    
+    if (bioAudio.ctx.state === 'suspended') {
+      bioAudio.ctx.resume();
+    }
+    
+    const ctx = bioAudio.ctx;
+    const now = ctx.currentTime;
+    
+    // First beat: "Lub" (Low pitch, quick decay)
+    const osc1 = ctx.createOscillator();
+    const gain1 = ctx.createGain();
+    osc1.type = 'sine';
+    osc1.frequency.setValueAtTime(60, now);
+    osc1.frequency.exponentialRampToValueAtTime(10, now + 0.12);
+    
+    gain1.gain.setValueAtTime(0.5, now);
+    gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+    
+    osc1.connect(gain1);
+    gain1.connect(ctx.destination);
+    osc1.start(now);
+    osc1.stop(now + 0.15);
+    
+    // Second beat: "Dub" (Higher pitch, slight delay)
+    const lubDubDelay = 0.15;
+    const osc2 = ctx.createOscillator();
+    const gain2 = ctx.createGain();
+    osc2.type = 'sine';
+    osc2.frequency.setValueAtTime(80, now + lubDubDelay);
+    osc2.frequency.exponentialRampToValueAtTime(15, now + lubDubDelay + 0.12);
+    
+    gain2.gain.setValueAtTime(0.4, now + lubDubDelay);
+    gain2.gain.exponentialRampToValueAtTime(0.001, now + lubDubDelay + 0.12);
+    
+    osc2.connect(gain2);
+    gain2.connect(ctx.destination);
+    osc2.start(now + lubDubDelay);
+    osc2.stop(now + lubDubDelay + 0.15);
+  } catch (e) {
+    console.error("Audio Synthesis error: ", e);
+  }
+}
+
+/** Sync heartbeat, audio play, and visual triggers */
+function scheduleVisualAndAudioBeat() {
+  if (nextBeatTimeoutId) {
+    clearTimeout(nextBeatTimeoutId);
+  }
+  
+  const stats = calculateAnxietyAndBPM();
+  
+  // Play sound if audio context is enabled
+  if (bioAudio.enabled) {
+    playHeartbeatSound(stats.bpm);
+  }
+  
+  // Schedule next pulse
+  const intervalMs = (60 / stats.bpm) * 1000;
+  nextBeatTimeoutId = setTimeout(scheduleVisualAndAudioBeat, intervalMs);
+}
+
+/** Update the anxious diagnostics terminal box */
+function updateConsoleLog(anxietyScore, completed, total) {
+  const now = Date.now();
+  if (now - lastConsoleUpdate < 4000) return; // rate limit updates
+  lastConsoleUpdate = now;
+
+  const consoleContent = document.getElementById('bioConsoleContent');
+  const hudConsoleContent = document.getElementById('hudConsoleContent');
+  if (!consoleContent && !hudConsoleContent) return;
+
+  let pool = ANXIOUS_LOGS_CALM;
+  if (anxietyScore >= 70) {
+    pool = ANXIOUS_LOGS_CRITICAL;
+  } else if (anxietyScore >= 30) {
+    pool = ANXIOUS_LOGS_WARNING;
+  }
+
+  const message = pool[Math.floor(Math.random() * pool.length)];
+  
+  let lineText = `> [${new Date().toLocaleTimeString()}] ${message}`;
+  if (anxietyScore >= 30 && Math.random() > 0.4) {
+    lineText += ` (Stress index: ${anxietyScore}%)`;
+  }
+
+  const addLine = (el) => {
+    if (!el) return;
+    const lineDiv = document.createElement('div');
+    lineDiv.className = 'console-line';
+    lineDiv.textContent = lineText;
+    el.appendChild(lineDiv);
+    while (el.children.length > 4) {
+      el.removeChild(el.firstChild);
+    }
+    el.scrollTop = el.scrollHeight;
+  };
+
+  addLine(consoleContent);
+  addLine(hudConsoleContent);
+}
+
+/** Set up listeners and systems for Bio Core Chamber */
+function initBioChamber() {
+  const audioToggleBtn = document.getElementById('toggleAudioHeartbeat');
+  if (audioToggleBtn) {
+    audioToggleBtn.addEventListener('click', () => {
+      bioAudio.enabled = !bioAudio.enabled;
+      if (bioAudio.enabled) {
+        audioToggleBtn.textContent = "🔊 Synth Heartbeat: ON";
+        audioToggleBtn.classList.add('audio-on');
+        
+        if (!bioAudio.ctx) {
+          bioAudio.ctx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        
+        scheduleVisualAndAudioBeat();
+        showToast("Heartbeat audio synthesizer activated.", "info");
+      } else {
+        audioToggleBtn.textContent = "🔊 Synth Heartbeat: OFF";
+        audioToggleBtn.classList.remove('audio-on');
+        
+        if (nextBeatTimeoutId) {
+          clearTimeout(nextBeatTimeoutId);
+          nextBeatTimeoutId = null;
+        }
+        showToast("Heartbeat audio synthesizer muted.", "info");
+        
+        // Restart silent visual loop
+        scheduleVisualAndAudioBeat();
+      }
+    });
+  }
+
+  const heartOrb = document.getElementById('bioHeartOrb');
+  if (heartOrb) {
+    heartOrb.addEventListener('mouseenter', () => {
+      scheduleVisualAndAudioBeat();
+      renderDashboard();
+    });
+    heartOrb.addEventListener('mouseleave', () => {
+      scheduleVisualAndAudioBeat();
+      renderDashboard();
+    });
+  }
+  // Start Dashboard Analog Clock Tick Engine (every second)
+  setInterval(updateDashboardAnalogClock, 1000);
+  updateDashboardAnalogClock();
+
+  // Start the heartbeat synchronization cycle (will run silently if audio is muted)
+  scheduleVisualAndAudioBeat();
+}
+
+/** Update local system time in the Dashboard Analog Clock */
+function updateDashboardAnalogClock() {
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+
+  // Compute rotation degrees
+  const secDeg = seconds * 6;
+  const minDeg = minutes * 6 + seconds * 0.1;
+  const hrDeg = (hours % 12) * 30 + minutes * 0.5;
+
+  const hrEl = document.getElementById('dashboardClockHour');
+  const minEl = document.getElementById('dashboardClockMin');
+  const secEl = document.getElementById('dashboardClockSec');
+
+  if (hrEl) hrEl.style.transform = `translateX(-50%) rotate(${hrDeg}deg)`;
+  if (minEl) minEl.style.transform = `translateX(-50%) rotate(${minDeg}deg)`;
+  if (secEl) secEl.style.transform = `translateX(-50%) rotate(${secDeg}deg)`;
+
+  // Digital readout sync
+  const digitalTimeEl = document.getElementById('dashboardDigitalTime');
+  if (digitalTimeEl) {
+    digitalTimeEl.textContent = now.toLocaleTimeString('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+    });
+  }
 }
 
 // ========== Subjects CRUD ==========
@@ -6221,7 +6734,7 @@ function renderSubjects(filter = '') {
 
   list.innerHTML = filtered
     .map((s) => {
-      const prog = statusProgress(s.status);
+      const prog = getSubjectProgress(s);
       const tags = [
         s.pyq ? 'PYQ ✓' : null,
         s.numericals ? 'Numericals' : null,
@@ -6317,22 +6830,42 @@ function deleteSubject(id) {
 /** Handle subject form submit */
 function handleSubjectSubmit(e) {
   e.preventDefault();
-
   const nameValue = document.getElementById('subjectName').value.trim();
   const youtubeValue = document.getElementById('subjectYoutube').value.trim();
 
+  const existingId = document.getElementById('subjectId').value;
+  const existingSub = existingId ? state.subjects.find((s) => s.id === existingId) : null;
+  
+  const modulesCount = parseInt(document.getElementById('subjectModules').value, 10);
+  const newStatus = document.getElementById('subjectStatus').value;
+
+  let completedModules = [];
+  if (existingSub) {
+    completedModules = existingSub.completedModules || [];
+    completedModules = completedModules.filter(m => m <= modulesCount);
+  } else {
+    if (newStatus === 'Completed') {
+      completedModules = Array.from({ length: modulesCount }, (_, i) => i + 1);
+    } else if (newStatus === 'In Progress') {
+      completedModules = Array.from({ length: Math.ceil(modulesCount / 2) }, (_, i) => i + 1);
+    } else {
+      completedModules = [];
+    }
+  }
+
   const subject = {
-    id: document.getElementById('subjectId').value || generateId(),
+    id: existingId || generateId(),
     name: nameValue,
     difficulty: document.getElementById('subjectDifficulty').value,
-    modules: parseInt(document.getElementById('subjectModules').value, 10),
+    modules: modulesCount,
     internal: document.getElementById('subjectInternal').value,
     category: document.getElementById('subjectCategory').value,
-    status: document.getElementById('subjectStatus').value,
+    status: newStatus,
     pyq: document.getElementById('subjectPyq').checked,
     numericals: document.getElementById('subjectNumericals').checked,
     theory: document.getElementById('subjectTheory').checked,
     youtube: youtubeValue || getYoutubeUrlForSubject(nameValue),
+    completedModules: completedModules,
   };
 
   const existingIdx = state.subjects.findIndex((s) => s.id === subject.id);
@@ -6366,7 +6899,7 @@ function renderCategories() {
         ? '<p class="empty-state">No subjects in this category.</p>'
         : items
             .map((s) => {
-              const prog = statusProgress(s.status);
+              const prog = getSubjectProgress(s);
               return `
           <div class="category-subject">
             <span>${escapeHtml(s.name)} <small>(${s.status})</small></span>
@@ -6649,9 +7182,29 @@ function formatTime(seconds) {
 
 /** Update pomodoro display */
 function updatePomodoroDisplay() {
-  document.getElementById('pomodoroDisplay').textContent = formatTime(pomodoro.remainingSeconds);
+  const timeStr = formatTime(pomodoro.remainingSeconds);
+  document.getElementById('pomodoroDisplay').textContent = timeStr;
   const pct = (pomodoro.remainingSeconds / pomodoro.totalSeconds) * 100;
   document.getElementById('pomodoroProgress').style.width = `${pct}%`;
+
+  // HUD Pomodoro timer sync
+  const hudTimerEl = document.getElementById('hudPomTimer');
+  if (hudTimerEl) hudTimerEl.textContent = timeStr;
+
+  // HUD Pomodoro subject sync
+  const subSelect = document.getElementById('pomodoroSubjectSelect');
+  const activeSubName = subSelect && subSelect.value 
+    ? (state.subjects.find(s => s.id === subSelect.value)?.name || 'General Study')
+    : 'General Study';
+  const hudSubEl = document.getElementById('hudPomSub');
+  if (hudSubEl) hudSubEl.textContent = activeSubName;
+
+  // Sync button disabled statuses
+  const hudStartBtn = document.getElementById('hudPomStart');
+  const hudPauseBtn = document.getElementById('hudPomPause');
+  
+  if (hudStartBtn) hudStartBtn.disabled = pomodoro.isRunning;
+  if (hudPauseBtn) hudPauseBtn.disabled = !pomodoro.isRunning;
 }
 
 /** Reset pomodoro sessions if new day */
@@ -6753,7 +7306,29 @@ function initPomodoro() {
   document.getElementById('pomodoroSubjectSelect').addEventListener('change', (e) => {
     const sub = state.subjects.find((s) => s.id === e.target.value);
     document.getElementById('pomodoroSubjectName').textContent = sub ? sub.name : 'General';
+    updatePomodoroDisplay();
   });
+
+  // HUD Pomodoro Button proxies
+  const hudStartBtn = document.getElementById('hudPomStart');
+  const hudPauseBtn = document.getElementById('hudPomPause');
+  const hudResetBtn = document.getElementById('hudPomReset');
+  
+  if (hudStartBtn) {
+    hudStartBtn.addEventListener('click', () => {
+      document.getElementById('pomodoroStart').click();
+    });
+  }
+  if (hudPauseBtn) {
+    hudPauseBtn.addEventListener('click', () => {
+      document.getElementById('pomodoroPause').click();
+    });
+  }
+  if (hudResetBtn) {
+    hudResetBtn.addEventListener('click', () => {
+      document.getElementById('pomodoroReset').click();
+    });
+  }
 
   updatePomodoroDisplay();
   checkPomodoroDay();
@@ -6834,12 +7409,19 @@ function initForms() {
     logoutBtn.addEventListener('click', logout);
   }
 
-  // Subject form
   document.getElementById('subjectForm').addEventListener('submit', handleSubjectSubmit);
   document.getElementById('subjectCancelBtn').addEventListener('click', resetSubjectForm);
   document.getElementById('subjectSearch').addEventListener('input', (e) => {
     renderSubjects(e.target.value);
   });
+
+  const dashSearch = document.getElementById('dashboardSubjectSearch');
+  if (dashSearch) {
+    dashSearch.addEventListener('input', (e) => {
+      const stats = calculateAnxietyAndBPM();
+      renderSecondaryDashboardItems(stats.completed);
+    });
+  }
 
   // Daily schedule
   document.getElementById('dailyForm').addEventListener('submit', (e) => {
@@ -6939,6 +7521,8 @@ function initForms() {
     state.examDate = date;
     saveState();
     updateExamCountdown();
+    renderDashboard();
+    scheduleVisualAndAudioBeat();
     showToast('Exam date saved');
   });
 
@@ -6999,6 +7583,7 @@ function init() {
   initPomodoro();
   updateQuotes();
   renderAll();
+  initBioChamber();
 
   // Live countdown update every second
   setInterval(updateExamCountdown, 1000);
