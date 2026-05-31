@@ -27,866 +27,404 @@ const QUOTES = [
 // Pre-populated local PYQ PDF files list
 const LOCAL_PYQ_FILES = [
   {
-    "filename": "Advanced Control Systems (2012).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (2012).pdf",
-    "year": "2012",
-    "subject": "Advanced Control Systems"
+    "filename": "Signals and Systems (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Signals and Systems"
   },
   {
-    "filename": "Advanced Control Systems (2014).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (2014).pdf",
-    "year": "2014",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (2024).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (2024).pdf",
+    "filename": "Signals and Systems (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (June 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Advanced Control Systems"
+    "subject": "Signals and Systems"
   },
   {
-    "filename": "Advanced Control Systems (April 2025).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (April 2025).pdf",
+    "filename": "Signals and Systems (November 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (November 2024) Answer Key_1.pdf",
+    "year": "2024",
+    "subject": "Signals and Systems"
+  },
+  {
+    "filename": "Signals and Systems (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Signals and Systems"
+  },
+  {
+    "filename": "Signals and Systems (May 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (May 2025) Answer Key.pdf",
     "year": "2025",
-    "subject": "Advanced Control Systems"
+    "subject": "Signals and Systems"
   },
   {
-    "filename": "Advanced Control Systems (April 2025).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/PYQs/Advanced Control Systems (April 2025).pdf",
+    "filename": "Signals and Systems Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems Answer Key_1.pdf",
+    "year": "Other",
+    "subject": "Signals and Systems"
+  },
+  {
+    "filename": "Signals and Systems (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (November 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Signals and Systems"
+  },
+  {
+    "filename": "Signals and Systems (December 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Signals and Systems"
+  },
+  {
+    "filename": "Signals and Systems (December 2022) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2022) Answer Key_2.pdf",
+    "year": "2022",
+    "subject": "Signals and Systems"
+  },
+  {
+    "filename": "Signals and Systems Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems Answer Key.pdf",
+    "year": "Other",
+    "subject": "Signals and Systems"
+  },
+  {
+    "filename": "Signals and Systems (December 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Signals and Systems"
+  },
+  {
+    "filename": "Signals and Systems (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Signals and Systems"
+  },
+  {
+    "filename": "Signals and Systems (November 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems (November 2025) Answer Key.pdf",
     "year": "2025",
-    "subject": "Advanced Control Systems"
+    "subject": "Signals and Systems"
   },
   {
-    "filename": "Advanced Control Systems (December 2022).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2022).pdf",
+    "filename": "Power Systems I (May 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (May 2022) Answer Key.pdf",
     "year": "2022",
-    "subject": "Advanced Control Systems"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Advanced Control Systems (December 2022).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/PYQs/Advanced Control Systems (December 2022).pdf",
+    "filename": "Power Systems I (May 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (May 2022) Answer Key_1.pdf",
     "year": "2022",
-    "subject": "Advanced Control Systems"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Advanced Control Systems (December 2022)_1.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2022)_1.pdf",
-    "year": "2022",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (December 2023).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2023).pdf",
-    "year": "2023",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (December 2023).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/PYQs/Advanced Control Systems (December 2023).pdf",
-    "year": "2023",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (December 2023)_1.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2023)_1.pdf",
-    "year": "2023",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (May 2018).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2018).pdf",
-    "year": "2018",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (May 2023).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2023).pdf",
-    "year": "2023",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (May 2023).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/PYQs/Advanced Control Systems (May 2023).pdf",
-    "year": "2023",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (May 2023)_1.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2023)_1.pdf",
-    "year": "2023",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (May 2024).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2024).pdf",
-    "year": "2024",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (May 2024).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/PYQs/Advanced Control Systems (May 2024).pdf",
-    "year": "2024",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (May 2024)_1.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2024)_1.pdf",
-    "year": "2024",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems (November 2024).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (November 2024).pdf",
-    "year": "2024",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems, Answer Key (2022).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems, Answer Key (2022).pdf",
-    "year": "2022",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems, Answer Key (2023).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems, Answer Key (2023).pdf",
-    "year": "2023",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems, Answer Key (2024).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems, Answer Key (2024).pdf",
-    "year": "2024",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems, Answer Key (2024)_1.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems, Answer Key (2024)_1.pdf",
-    "year": "2024",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems, Answer Key (April 2025).pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems, Answer Key (April 2025).pdf",
+    "filename": "Power Systems I (May 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (May 2025) Answer Key.pdf",
     "year": "2025",
-    "subject": "Advanced Control Systems"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Advanced Control Systems, Solved Answer Key.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems, Solved Answer Key.pdf",
-    "year": "Other",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Advanced Control Systems, Solved Answer Key.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/PYQs/Advanced Control Systems, Solved Answer Key.pdf",
-    "year": "Other",
-    "subject": "Advanced Control Systems"
-  },
-  {
-    "filename": "Analog Electronics (December 2020)_1.pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics (December 2020)_1.pdf",
-    "year": "2020",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics (December 2021)_1.pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics (December 2021)_1.pdf",
+    "filename": "Power Systems I (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (December 2021) Answer Key.pdf",
     "year": "2021",
-    "subject": "Analog Electronics"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Analog Electronics (December 2022).pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics (December 2022).pdf",
-    "year": "2022",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics (December 2023).pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics (December 2023).pdf",
-    "year": "2023",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics (June 2024).pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics (June 2024).pdf",
-    "year": "2024",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics (November 2024).pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics (November 2024).pdf",
-    "year": "2024",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics Answer Key.pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics Answer Key.pdf",
-    "year": "Other",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics QP_6.pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics QP_6.pdf",
-    "year": "Other",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics, Answer Key (2011).pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics, Answer Key (2011).pdf",
-    "year": "2011",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics, Answer Key (2020).pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics, Answer Key (2020).pdf",
-    "year": "2020",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics, Answer Key (2022).pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics, Answer Key (2022).pdf",
-    "year": "2022",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics, Answer Key QP.pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics, Answer Key QP.pdf",
-    "year": "Other",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg (December 2020).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg (December 2020).pdf",
-    "year": "2020",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg (December 2023).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg (December 2023).pdf",
-    "year": "2023",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg (July 2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg (July 2021).pdf",
+    "filename": "Power Systems I (May 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (May 2021) Answer Key_1.pdf",
     "year": "2021",
-    "subject": "Basics of Electrical & Electronics Engineering"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Basics of Electrical & Electronics Engg Answer Key.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg Answer Key.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
+    "filename": "Power Systems I (May 2000) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (May 2000) Answer Key.pdf",
+    "year": "2000",
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Basics of Electrical & Electronics Engg Answer Key_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg Answer Key_1.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg Answer Key_2.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg Answer Key_2.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg QP_11.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg QP_11.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg QP_12.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg QP_12.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg QP_3.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg QP_3.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg QP_4.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg QP_4.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg QP_5.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg QP_5.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg QP_6.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg QP_6.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg QP_7.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg QP_7.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg QP_9.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg QP_9.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg, Answer Key (June 2022).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg, Answer Key (June 2022).pdf",
-    "year": "2022",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg, Answer Key QP.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg, Answer Key QP.pdf",
-    "year": "Other",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg, Answer Scheme (July 2023).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg, Answer Scheme (July 2023).pdf",
-    "year": "2023",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Circuits and Networks (December 2020).pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2020).pdf",
-    "year": "2020",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks (December 2020)_1.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2020)_1.pdf",
-    "year": "2020",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks (December 2021).pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2021).pdf",
-    "year": "2021",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks (December 2021)_1.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2021)_1.pdf",
-    "year": "2021",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks (December 2022).pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2022).pdf",
-    "year": "2022",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks (December 2023).pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2023).pdf",
-    "year": "2023",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks (June 2024).pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (June 2024).pdf",
+    "filename": "Power Systems I (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (May 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Circuits and Networks"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Circuits and Networks (November 2024).pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (November 2024).pdf",
-    "year": "2024",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks Answer Key.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Answer Key.pdf",
+    "filename": "Power Systems I Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I Answer Key_1.pdf",
     "year": "Other",
-    "subject": "Circuits and Networks"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Circuits and Networks Answer Key_1.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Answer Key_1.pdf",
-    "year": "Other",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks Answer Key_2.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Answer Key_2.pdf",
-    "year": "Other",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks Answer Key_3.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Answer Key_3.pdf",
-    "year": "Other",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks QP.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks QP.pdf",
-    "year": "Other",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks QP_2.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks QP_2.pdf",
-    "year": "Other",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks QP_3.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks QP_3.pdf",
-    "year": "Other",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks QP_4.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks QP_4.pdf",
-    "year": "Other",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks QP_6.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks QP_6.pdf",
-    "year": "Other",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Circuits and Networks, Solved (2021).pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks, Solved (2021).pdf",
-    "year": "2021",
-    "subject": "Circuits and Networks"
-  },
-  {
-    "filename": "Comprehensive Course Work (May 2024).pdf",
-    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work (May 2024).pdf",
-    "year": "2024",
-    "subject": "Comprehensive Course Viva"
-  },
-  {
-    "filename": "Comprehensive Course Work QP.pdf",
-    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work QP.pdf",
-    "year": "Other",
-    "subject": "Comprehensive Course Viva"
-  },
-  {
-    "filename": "Comprehensive Course Work QP_1.pdf",
-    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work QP_1.pdf",
-    "year": "Other",
-    "subject": "Comprehensive Course Viva"
-  },
-  {
-    "filename": "Comprehensive Course Work QP_2.pdf",
-    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work QP_2.pdf",
-    "year": "Other",
-    "subject": "Comprehensive Course Viva"
-  },
-  {
-    "filename": "Comprehensive Course Work QP_3.pdf",
-    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work QP_3.pdf",
-    "year": "Other",
-    "subject": "Comprehensive Course Viva"
-  },
-  {
-    "filename": "Comprehensive Course Work QP_4.pdf",
-    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work QP_4.pdf",
-    "year": "Other",
-    "subject": "Comprehensive Course Viva"
-  },
-  {
-    "filename": "Constitution of India (2016).pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India (2016).pdf",
-    "year": "2016",
-    "subject": "Constitution of India"
-  },
-  {
-    "filename": "Constitution of India (April 2025).pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India (April 2025).pdf",
+    "filename": "Power Systems I (May 2025) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (May 2025) Answer Key_2.pdf",
     "year": "2025",
-    "subject": "Constitution of India"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Constitution of India (December 2024).pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India (December 2024).pdf",
-    "year": "2024",
-    "subject": "Constitution of India"
-  },
-  {
-    "filename": "Constitution of India (July 2021).pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India (July 2021).pdf",
-    "year": "2021",
-    "subject": "Constitution of India"
-  },
-  {
-    "filename": "Constitution of India (July 2021)_1.pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India (July 2021)_1.pdf",
-    "year": "2021",
-    "subject": "Constitution of India"
-  },
-  {
-    "filename": "Constitution of India (June 2022).pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India (June 2022).pdf",
-    "year": "2022",
-    "subject": "Constitution of India"
-  },
-  {
-    "filename": "Constitution of India (June 2023).pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India (June 2023).pdf",
-    "year": "2023",
-    "subject": "Constitution of India"
-  },
-  {
-    "filename": "Constitution of India (June 2023)_1.pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India (June 2023)_1.pdf",
-    "year": "2023",
-    "subject": "Constitution of India"
-  },
-  {
-    "filename": "Constitution of India (May 2024).pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India (May 2024).pdf",
-    "year": "2024",
-    "subject": "Constitution of India"
-  },
-  {
-    "filename": "Constitution of India, Answer Key QP.pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India, Answer Key QP.pdf",
+    "filename": "Power Systems I Answer Key_2.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I Answer Key_2.pdf",
     "year": "Other",
-    "subject": "Constitution of India"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "DC Machines and Transformers (June 2023).pdf",
-    "rel_path": "Btech cources/S4/DCMT /Pry q and a/DC Machines and Transformers (June 2023).pdf",
-    "year": "2023",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers Answer Key.pdf",
-    "rel_path": "Btech cources/S4/DCMT /DC Machines and Transformers Answer Key.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers Answer Key.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Pry q and a/DC Machines and Transformers Answer Key.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers Answer Key_1.pdf",
-    "rel_path": "Btech cources/S4/DCMT /DC Machines and Transformers Answer Key_1.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers Answer Key_1.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Pry q and a/DC Machines and Transformers Answer Key_1.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers QP.pdf",
-    "rel_path": "Btech cources/S4/DCMT /DC Machines and Transformers QP.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers QP.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Pry q and a/DC Machines and Transformers QP.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers QP_1.pdf",
-    "rel_path": "Btech cources/S4/DCMT /DC Machines and Transformers QP_1.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers QP_2.pdf",
-    "rel_path": "Btech cources/S4/DCMT /DC Machines and Transformers QP_2.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers QP_3.pdf",
-    "rel_path": "Btech cources/S4/DCMT /DC Machines and Transformers QP_3.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers QP_4.pdf",
-    "rel_path": "Btech cources/S4/DCMT /DC Machines and Transformers QP_4.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers QP_5.pdf",
-    "rel_path": "Btech cources/S4/DCMT /DC Machines and Transformers QP_5.pdf",
-    "year": "Other",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "Design and Engineering (April 2025).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (April 2025).pdf",
+    "filename": "Power Systems I (May 2025) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (May 2025) Answer Key_1.pdf",
     "year": "2025",
-    "subject": "Design and Engineering"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Design and Engineering (December 2017).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2017).pdf",
-    "year": "2017",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering (December 2020).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2020).pdf",
-    "year": "2020",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering (December 2020)_1.pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2020)_1.pdf",
-    "year": "2020",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering (December 2021).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2021).pdf",
-    "year": "2021",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering (December 2022).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2022).pdf",
-    "year": "2022",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering (December 2023).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2023).pdf",
+    "filename": "Power Systems I (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (December 2023) Answer Key.pdf",
     "year": "2023",
-    "subject": "Design and Engineering"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Design and Engineering (December 2024).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2024).pdf",
+    "filename": "Power Systems I Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I Answer Key.pdf",
+    "year": "Other",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems I (May 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (May 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems I (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (June 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Design and Engineering"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Design and Engineering (July 2021).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (July 2021).pdf",
+    "filename": "Synchronous and Induction Machines (2021).pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (2021).pdf",
     "year": "2021",
-    "subject": "Design and Engineering"
+    "subject": "Synchronous and Induction Machines"
   },
   {
-    "filename": "Design and Engineering (July 2021)_1.pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (July 2021)_1.pdf",
-    "year": "2021",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering (June 2022).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2022).pdf",
-    "year": "2022",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering (June 2023).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2023).pdf",
-    "year": "2023",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering (June 2023)_1.pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2023)_1.pdf",
-    "year": "2023",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering (June 2023)_2.pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2023)_2.pdf",
-    "year": "2023",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering (June 2024).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2024).pdf",
+    "filename": "Synchronous and Induction Machines (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (May 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Design and Engineering"
+    "subject": "Synchronous and Induction Machines"
   },
   {
-    "filename": "Design and Engineering (May 2019).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (May 2019).pdf",
+    "filename": "Synchronous and Induction Machines Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines Answer Key.pdf",
+    "year": "Other",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines (November 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (November 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines (May 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (May 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines (January 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (January 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines (December 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (December 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines Answer Key_1.pdf",
+    "year": "Other",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (December 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines (December 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (December 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines (2019) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines (2019) Answer Key.pdf",
     "year": "2019",
-    "subject": "Design and Engineering"
+    "subject": "Synchronous and Induction Machines"
   },
   {
-    "filename": "Design and Engineering (November 2024).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (November 2024).pdf",
-    "year": "2024",
-    "subject": "Design and Engineering"
+    "filename": "Microprocessors and Microcontrollers (December 2022) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (December 2022) Answer Key_2.pdf",
+    "year": "2022",
+    "subject": "Microprocessors and Microcontrollers"
   },
   {
-    "filename": "Design and Engineering Answer Key.pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering Answer Key.pdf",
-    "year": "Other",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering QP.pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering QP.pdf",
-    "year": "Other",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering QP_1.pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering QP_1.pdf",
-    "year": "Other",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering QP_2.pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering QP_2.pdf",
-    "year": "Other",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering, Answer Key (2021).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering, Answer Key (2021).pdf",
-    "year": "2021",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering, Answer Key (July 2021).pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering, Answer Key (July 2021).pdf",
-    "year": "2021",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Design and Engineering, Answer Key QP_1.pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering, Answer Key QP_1.pdf",
-    "year": "Other",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "Digital Electronics (2020).pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (2020).pdf",
-    "year": "2020",
-    "subject": "Digital Electronics"
-  },
-  {
-    "filename": "Digital Electronics (April 2025).pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (April 2025).pdf",
+    "filename": "Microprocessors and Microcontrollers (November 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (November 2025) Answer Key.pdf",
     "year": "2025",
-    "subject": "Digital Electronics"
+    "subject": "Microprocessors and Microcontrollers"
   },
   {
-    "filename": "Digital Electronics (December 2024).pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (December 2024).pdf",
-    "year": "2024",
-    "subject": "Digital Electronics"
-  },
-  {
-    "filename": "Digital Electronics (July 2021).pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (July 2021).pdf",
-    "year": "2021",
-    "subject": "Digital Electronics"
-  },
-  {
-    "filename": "Digital Electronics (July 2021)_1.pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (July 2021)_1.pdf",
-    "year": "2021",
-    "subject": "Digital Electronics"
-  },
-  {
-    "filename": "Digital Electronics (June 2022).pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (June 2022).pdf",
+    "filename": "Microprocessors and Microcontrollers (December 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (December 2022) Answer Key_1.pdf",
     "year": "2022",
-    "subject": "Digital Electronics"
+    "subject": "Microprocessors and Microcontrollers"
   },
   {
-    "filename": "Digital Electronics (June 2023).pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (June 2023).pdf",
-    "year": "2023",
-    "subject": "Digital Electronics"
+    "filename": "Microprocessors and Microcontrollers (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Microprocessors and Microcontrollers"
   },
   {
-    "filename": "Digital Electronics (June 2023)_1.pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (June 2023)_1.pdf",
-    "year": "2023",
-    "subject": "Digital Electronics"
+    "filename": "Microprocessors and Microcontrollers (May 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (May 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Microprocessors and Microcontrollers"
   },
   {
-    "filename": "Digital Electronics (May 2024).pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (May 2024).pdf",
+    "filename": "Microprocessors and Microcontrollers (May 2018) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (May 2018) Answer Key.pdf",
+    "year": "2018",
+    "subject": "Microprocessors and Microcontrollers"
+  },
+  {
+    "filename": "Microprocessors and Microcontrollers Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers Answer Key.pdf",
+    "year": "Other",
+    "subject": "Microprocessors and Microcontrollers"
+  },
+  {
+    "filename": "Microprocessors and Microcontrollers (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (November 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Digital Electronics"
+    "subject": "Microprocessors and Microcontrollers"
   },
   {
-    "filename": "Digital Electronics Answer Key.pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics Answer Key.pdf",
-    "year": "Other",
-    "subject": "Digital Electronics"
+    "filename": "Microprocessors and Microcontrollers (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (December 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Microprocessors and Microcontrollers"
   },
   {
-    "filename": "Digital Electronics Answer Key_1.pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics Answer Key_1.pdf",
-    "year": "Other",
-    "subject": "Digital Electronics"
+    "filename": "Microprocessors and Microcontrollers (May 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (May 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Microprocessors and Microcontrollers"
   },
   {
-    "filename": "Digital Electronics, Answer Key (2023).pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics, Answer Key (2023).pdf",
+    "filename": "Microprocessors and Microcontrollers (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (June 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Microprocessors and Microcontrollers"
+  },
+  {
+    "filename": "Microprocessors and Microcontrollers (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor/Microprocessors and Microcontrollers (December 2023) Answer Key.pdf",
     "year": "2023",
-    "subject": "Digital Electronics"
+    "subject": "Microprocessors and Microcontrollers"
   },
   {
-    "filename": "Digital Electronics, Answer Key (June 2023).pdf",
-    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics, Answer Key (June 2023).pdf",
-    "year": "2023",
-    "subject": "Digital Electronics"
+    "filename": "Disaster Management (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (November 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Disaster Management"
   },
   {
-    "filename": "Disaster Management (December 2021).pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2021).pdf",
+    "filename": "Disaster Management (December 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2021) Answer Key_1.pdf",
     "year": "2021",
     "subject": "Disaster Management"
   },
   {
-    "filename": "Disaster Management (December 2021)_1.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2021)_1.pdf",
+    "filename": "Disaster Management (March 2005) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (March 2005) Answer Key.pdf",
+    "year": "2005",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management (June 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (June 2021) Answer Key.pdf",
     "year": "2021",
     "subject": "Disaster Management"
   },
   {
-    "filename": "Disaster Management (December 2022).pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2022).pdf",
+    "filename": "Disaster Management (2005)_1.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (2005)_1.pdf",
+    "year": "2005",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management (December 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2022) Answer Key_1.pdf",
     "year": "2022",
     "subject": "Disaster Management"
   },
   {
-    "filename": "Disaster Management (December 2023).pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2023).pdf",
-    "year": "2023",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management - Dm - Question Bank.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management - Dm - Question Bank.pdf",
+    "filename": "Disaster Management Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management Answer Key_1.pdf",
     "year": "Other",
     "subject": "Disaster Management"
   },
   {
-    "filename": "Disaster Management - Dm Question Bank 2.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management - Dm Question Bank 2.pdf",
+    "filename": "Disaster Management (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management (December 2022) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2022) Answer Key_2.pdf",
+    "year": "2022",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management Answer Key_2.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management Answer Key_2.pdf",
+    "year": "Other",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management Answer Key_3.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management Answer Key_3.pdf",
+    "year": "Other",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management (December 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management (November 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (November 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management Answer Key_4.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management Answer Key_4.pdf",
     "year": "Other",
     "subject": "Disaster Management"
   },
@@ -897,514 +435,76 @@ const LOCAL_PYQ_FILES = [
     "subject": "Disaster Management"
   },
   {
-    "filename": "Disaster Management QP_1.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management QP_1.pdf",
-    "year": "Other",
+    "filename": "Disaster Management (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2023) Answer Key.pdf",
+    "year": "2023",
     "subject": "Disaster Management"
   },
   {
-    "filename": "Disaster Management QP_3.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management QP_3.pdf",
-    "year": "Other",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management QP_4.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management QP_4.pdf",
-    "year": "Other",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management QP_5.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management QP_5.pdf",
-    "year": "Other",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management QP_6.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management QP_6.pdf",
-    "year": "Other",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management QP_7.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management QP_7.pdf",
-    "year": "Other",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management QP_8.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management QP_8.pdf",
-    "year": "Other",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management, Answer Scheme QP.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management, Answer Scheme QP.pdf",
-    "year": "Other",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "s5_disaster-management_dec-2020.pdf",
-    "rel_path": "Btech cources/S5/DM/s5_disaster-management_dec-2020.pdf",
-    "year": "2020",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Electric Drives (2013).pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (2013).pdf",
-    "year": "2013",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives (April 2025).pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (April 2025).pdf",
+    "filename": "Disaster Management (May 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (May 2025) Answer Key.pdf",
     "year": "2025",
-    "subject": "Electric Drives"
+    "subject": "Disaster Management"
   },
   {
-    "filename": "Electric Drives (December 2022).pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (December 2022).pdf",
+    "filename": "Disaster Management (2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management (2005).pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (2005).pdf",
+    "year": "2005",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (June 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management (December 2022) Answer Key.pdf",
     "year": "2022",
-    "subject": "Electric Drives"
+    "subject": "Disaster Management"
   },
   {
-    "filename": "Electric Drives (December 2022)_1.pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (December 2022)_1.pdf",
+    "filename": "Industrial Economics & Foreign Trade (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade (2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (2022) Answer Key.pdf",
     "year": "2022",
-    "subject": "Electric Drives"
+    "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Electric Drives (December 2023).pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (December 2023).pdf",
-    "year": "2023",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives (December 2023)_1.pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (December 2023)_1.pdf",
-    "year": "2023",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives (May 2023).pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (May 2023).pdf",
-    "year": "2023",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives (May 2024).pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (May 2024).pdf",
+    "filename": "Industrial Economics & Foreign Trade (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (May 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Electric Drives"
+    "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Electric Drives (November 2024).pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (November 2024).pdf",
-    "year": "2024",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electrical System Design (April 2025).pdf",
-    "rel_path": "Btech cources/S8/Design/Electrical System Design (April 2025).pdf",
-    "year": "2025",
-    "subject": "Electrical System Design & Estimation"
-  },
-  {
-    "filename": "Electrical System Design (June 2023).pdf",
-    "rel_path": "Btech cources/S8/Design/Electrical System Design (June 2023).pdf",
-    "year": "2023",
-    "subject": "Electrical System Design & Estimation"
-  },
-  {
-    "filename": "Electrical System Design (May 2024).pdf",
-    "rel_path": "Btech cources/S8/Design/Electrical System Design (May 2024).pdf",
-    "year": "2024",
-    "subject": "Electrical System Design & Estimation"
-  },
-  {
-    "filename": "Electrical System Design QP_1.pdf",
-    "rel_path": "Btech cources/S8/Design/Electrical System Design QP_1.pdf",
-    "year": "Other",
-    "subject": "Electrical System Design & Estimation"
-  },
-  {
-    "filename": "Electrical System Design QP_2.pdf",
-    "rel_path": "Btech cources/S8/Design/Electrical System Design QP_2.pdf",
-    "year": "Other",
-    "subject": "Electrical System Design & Estimation"
-  },
-  {
-    "filename": "Electromagnetic Theory (January 2024).pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (January 2024).pdf",
-    "year": "2024",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory (July 2021).pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (July 2021).pdf",
-    "year": "2021",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory (June 2022).pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (June 2022).pdf",
+    "filename": "Industrial Economics & Foreign Trade (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (December 2022) Answer Key.pdf",
     "year": "2022",
-    "subject": "Electromagnetic Theory"
+    "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Electromagnetic Theory (June 2023).pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (June 2023).pdf",
-    "year": "2023",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory (June 2023)_1.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (June 2023)_1.pdf",
-    "year": "2023",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory (May 2024).pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (May 2024).pdf",
+    "filename": "Industrial Economics & Foreign Trade (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (June 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory - Screenshot 2024-06-16 At 7.48.06 Pm.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory - Screenshot 2024-06-16 At 7.48.06 Pm.pdf",
-    "year": "2024",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory Answer Key.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory Answer Key.pdf",
-    "year": "Other",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory QP.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory QP.pdf",
-    "year": "Other",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory QP_1.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory QP_1.pdf",
-    "year": "Other",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory QP_2.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory QP_2.pdf",
-    "year": "Other",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory QP_3.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory QP_3.pdf",
-    "year": "Other",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory QP_5.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory QP_5.pdf",
-    "year": "Other",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Electromagnetic Theory QP_6.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory QP_6.pdf",
-    "year": "Other",
-    "subject": "Electromagnetic Theory"
-  },
-  {
-    "filename": "Energy Management (April 2025).pdf",
-    "rel_path": "Btech cources/S8/Energy management /Energy Management (April 2025).pdf",
-    "year": "2025",
-    "subject": "Energy Management"
-  },
-  {
-    "filename": "Energy Management (June 2023).pdf",
-    "rel_path": "Btech cources/S8/Energy management /Energy Management (June 2023).pdf",
-    "year": "2023",
-    "subject": "Energy Management"
-  },
-  {
-    "filename": "Energy Management (May 2024).pdf",
-    "rel_path": "Btech cources/S8/Energy management /Energy Management (May 2024).pdf",
-    "year": "2024",
-    "subject": "Energy Management"
-  },
-  {
-    "filename": "Energy Management (October 2023).pdf",
-    "rel_path": "Btech cources/S8/Energy management /Energy Management (October 2023).pdf",
-    "year": "2023",
-    "subject": "Energy Management"
-  },
-  {
-    "filename": "Energy Management Answer Key.pdf",
-    "rel_path": "Btech cources/S8/Energy management /Energy Management Answer Key.pdf",
-    "year": "Other",
-    "subject": "Energy Management"
-  },
-  {
-    "filename": "Energy Management Answer Key_1.pdf",
-    "rel_path": "Btech cources/S8/Energy management /Energy Management Answer Key_1.pdf",
-    "year": "Other",
-    "subject": "Energy Management"
-  },
-  {
-    "filename": "Engineering Mechanics (2020).pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (2020).pdf",
-    "year": "2020",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics (December 2020).pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (December 2020).pdf",
-    "year": "2020",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics (July 2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (July 2021).pdf",
-    "year": "2021",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics (July 2021)_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (July 2021)_1.pdf",
-    "year": "2021",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics (May 2024).pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (May 2024).pdf",
-    "year": "2024",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics Answer Key.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics Answer Key.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics Answer Key_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics Answer Key_1.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics QP_10.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics QP_10.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics QP_12.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics QP_12.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics QP_13.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics QP_13.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics QP_2.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics QP_2.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics QP_3.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics QP_3.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics QP_6.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics QP_6.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics QP_7.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics QP_7.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics QP_8.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics QP_8.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics QP_9.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics QP_9.pdf",
-    "year": "Other",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics, Answer Key (December 2020).pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics, Answer Key (December 2020).pdf",
-    "year": "2020",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics, Answer Key (June 2022).pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics, Answer Key (June 2022).pdf",
-    "year": "2022",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Mechanics Answer Key (2020 Dec.).pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Mechanics Answer Key (2020 Dec.).pdf",
-    "year": "2020",
-    "subject": "Engineering Mechanics"
-  },
-  {
-    "filename": "Engineering Mechanics QP.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Mechanics QP.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A (2019).pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (2019).pdf",
-    "year": "2019",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A (2020).pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (2020).pdf",
-    "year": "2020",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A (2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (2021).pdf",
-    "year": "2021",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A (July 2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (July 2021).pdf",
-    "year": "2021",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A Answer Key.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A Answer Key.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A Answer Key_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A Answer Key_1.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_1.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_10.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_10.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_11.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_11.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_12.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_12.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_13.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_13.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_2.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_2.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_3.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_3.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_4.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_4.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_5.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_5.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_6.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_6.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_7.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_7.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_8.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_8.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A QP_9.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_9.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A, Answer Key QP.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A, Answer Key QP.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
-  },
-  {
-    "filename": "Engineering Physics A, Answer Key QP_3.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A, Answer Key QP_3.pdf",
-    "year": "Other",
-    "subject": "Engineering Physics A"
+    "subject": "Industrial Economics & Foreign Trade"
   },
   {
     "filename": "Industrial Economics & Foreign Trade (2023).pdf",
@@ -1413,68 +513,14 @@ const LOCAL_PYQ_FILES = [
     "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade (December 2021).pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (December 2021).pdf",
-    "year": "2021",
+    "filename": "Industrial Economics & Foreign Trade (May 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (May 2025) Answer Key.pdf",
+    "year": "2025",
     "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade (December 2022).pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (December 2022).pdf",
-    "year": "2022",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade (December 2023).pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (December 2023).pdf",
-    "year": "2023",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade (January 2024).pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (January 2024).pdf",
-    "year": "2024",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade (June 2022).pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (June 2022).pdf",
-    "year": "2022",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade (June 2023).pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (June 2023).pdf",
-    "year": "2023",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade (May 2024).pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (May 2024).pdf",
-    "year": "2024",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade - Ieft-Important Essay Questions.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade - Ieft-Important Essay Questions.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade - Ieft-Important Questions.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade - Ieft-Important Questions.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_1.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_1.pdf",
+    "filename": "Industrial Economics & Foreign Trade QP_2.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_2.pdf",
     "year": "Other",
     "subject": "Industrial Economics & Foreign Trade"
   },
@@ -1485,8 +531,26 @@ const LOCAL_PYQ_FILES = [
     "subject": "Industrial Economics & Foreign Trade"
   },
   {
+    "filename": "Industrial Economics & Foreign Trade (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade QP.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP.pdf",
+    "year": "Other",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
     "filename": "Industrial Economics & Foreign Trade QP_11.pdf",
     "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_11.pdf",
+    "year": "Other",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade QP_1.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_1.pdf",
     "year": "Other",
     "subject": "Industrial Economics & Foreign Trade"
   },
@@ -1497,104 +561,8 @@ const LOCAL_PYQ_FILES = [
     "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade QP_14.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_14.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_15.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_15.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
     "filename": "Industrial Economics & Foreign Trade QP_16.pdf",
     "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_16.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_18.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_18.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_19.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_19.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_2.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_2.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_20.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_20.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_21.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_21.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_22.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_22.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_23.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_23.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_24.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_24.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_25.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_25.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_26.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_26.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_27.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_27.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_28.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_28.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_29.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_29.pdf",
-    "year": "Other",
-    "subject": "Industrial Economics & Foreign Trade"
-  },
-  {
-    "filename": "Industrial Economics & Foreign Trade QP_30.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_30.pdf",
     "year": "Other",
     "subject": "Industrial Economics & Foreign Trade"
   },
@@ -1605,14 +573,26 @@ const LOCAL_PYQ_FILES = [
     "subject": "Industrial Economics & Foreign Trade"
   },
   {
+    "filename": "Industrial Economics & Foreign Trade (May 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (May 2024) Answer Key_1.pdf",
+    "year": "2024",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
     "filename": "Industrial Economics & Foreign Trade QP_5.pdf",
     "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_5.pdf",
     "year": "Other",
     "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade QP_6.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_6.pdf",
+    "filename": "Industrial Economics & Foreign Trade QP_15.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_15.pdf",
     "year": "Other",
     "subject": "Industrial Economics & Foreign Trade"
   },
@@ -1623,9 +603,45 @@ const LOCAL_PYQ_FILES = [
     "subject": "Industrial Economics & Foreign Trade"
   },
   {
+    "filename": "Industrial Economics & Foreign Trade (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade QP_6.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_6.pdf",
+    "year": "Other",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade QP_14.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_14.pdf",
+    "year": "Other",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade QP_18.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_18.pdf",
+    "year": "Other",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
     "filename": "Industrial Economics & Foreign Trade QP_8.pdf",
     "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade QP_8.pdf",
     "year": "Other",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (April 2025) Answer Key.pdf",
+    "year": "2025",
     "subject": "Industrial Economics & Foreign Trade"
   },
   {
@@ -1635,399 +651,303 @@ const LOCAL_PYQ_FILES = [
     "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Electrical System Design (April 2025).pdf",
-    "rel_path": "Btech cources/S8/Automation/Electrical System Design (April 2025).pdf",
+    "filename": "Industrial Economics & Foreign Trade (January 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (January 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade (November 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (November 2025) Answer Key.pdf",
     "year": "2025",
-    "subject": "Industrial Instrumentation & Automation"
+    "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Industrial Instrumentation & Automation (April 2025).pdf",
-    "rel_path": "Btech cources/S8/Automation/Industrial Instrumentation & Automation (April 2025).pdf",
-    "year": "2025",
-    "subject": "Industrial Instrumentation & Automation"
-  },
-  {
-    "filename": "Industrial Instrumentation & Automation (June 2023).pdf",
-    "rel_path": "Btech cources/S8/Automation/Industrial Instrumentation & Automation (June 2023).pdf",
-    "year": "2023",
-    "subject": "Industrial Instrumentation & Automation"
-  },
-  {
-    "filename": "Industrial Instrumentation & Automation (May 2024).pdf",
-    "rel_path": "Btech cources/S8/Automation/Industrial Instrumentation & Automation (May 2024).pdf",
+    "filename": "Industrial Economics & Foreign Trade (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (November 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Industrial Instrumentation & Automation"
+    "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Industrial Instrumentation & Automation, Answer Scheme (2025).pdf",
-    "rel_path": "Btech cources/S8/Automation/Industrial Instrumentation & Automation, Answer Scheme (2025).pdf",
-    "year": "2025",
-    "subject": "Industrial Instrumentation & Automation"
+    "filename": "Industrial Economics & Foreign Trade (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (June 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Industrial Instrumentation & Automation, Answer Scheme QP.pdf",
-    "rel_path": "Btech cources/S8/Automation/Industrial Instrumentation & Automation, Answer Scheme QP.pdf",
+    "filename": "Industrial Economics & Foreign Trade Answer Key.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Answer Key.pdf",
     "year": "Other",
-    "subject": "Industrial Instrumentation & Automation"
+    "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Disaster Management (December 2022).pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Disaster Management (December 2022).pdf",
+    "filename": "Industrial Economics & Foreign Trade (June 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade (June 2022) Answer Key_1.pdf",
     "year": "2022",
-    "subject": "Industrial Safety Engineering"
+    "subject": "Industrial Economics & Foreign Trade"
   },
   {
-    "filename": "Industrial Safety Engineering (December 2022).pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Question Papers/Industrial Safety Engineering (December 2022).pdf",
+    "filename": "Analog Electronics QP_6.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics QP_6.pdf",
+    "year": "Other",
+    "subject": "Analog Electronics"
+  },
+  {
+    "filename": "Circuits and Networks (December 2022) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2022) Answer Key_2.pdf",
     "year": "2022",
-    "subject": "Industrial Safety Engineering"
+    "subject": "Circuits and Networks"
   },
   {
-    "filename": "Industrial Safety Engineering (December 2023).pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Question Papers/Industrial Safety Engineering (December 2023).pdf",
+    "filename": "Circuits and Networks (December 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks (December 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2023) Answer Key_1.pdf",
     "year": "2023",
-    "subject": "Industrial Safety Engineering"
+    "subject": "Circuits and Networks"
   },
   {
-    "filename": "Industrial Safety Engineering (May 2023).pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Question Papers/Industrial Safety Engineering (May 2023).pdf",
-    "year": "2023",
-    "subject": "Industrial Safety Engineering"
+    "filename": "Circuits and Networks (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Circuits and Networks"
   },
   {
-    "filename": "Industrial Safety Engineering (May 2024).pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Question Papers/Industrial Safety Engineering (May 2024).pdf",
-    "year": "2024",
-    "subject": "Industrial Safety Engineering"
-  },
-  {
-    "filename": "Industrial Safety Engineering (November 2024).pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Question Papers/Industrial Safety Engineering (November 2024).pdf",
-    "year": "2024",
-    "subject": "Industrial Safety Engineering"
-  },
-  {
-    "filename": "Industrial Safety Engineering QP.pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Industrial Safety Engineering QP.pdf",
-    "year": "Other",
-    "subject": "Industrial Safety Engineering"
-  },
-  {
-    "filename": "Introduction to Mobile Computing QP.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing QP.pdf",
-    "year": "Other",
-    "subject": "Introduction to Mobile Computing"
-  },
-  {
-    "filename": "Introduction to Mobile Computing QP_1.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing QP_1.pdf",
-    "year": "Other",
-    "subject": "Introduction to Mobile Computing"
-  },
-  {
-    "filename": "Introduction to Mobile Computing QP_2.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing QP_2.pdf",
-    "year": "Other",
-    "subject": "Introduction to Mobile Computing"
-  },
-  {
-    "filename": "CYT100 Univ Qn Ans Dec 2021 pdfn_230214_192018.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/CYT100 Univ Qn Ans Dec 2021 pdfn_230214_192018.pdf",
-    "year": "2021",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus (2020).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus (2020).pdf",
+    "filename": "Circuits and Networks (December 2020) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2020) Answer Key_2.pdf",
     "year": "2020",
-    "subject": "Linear Algebra and Calculus"
+    "subject": "Circuits and Networks"
   },
   {
-    "filename": "Linear Algebra & Calculus (2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus (2021).pdf",
-    "year": "2021",
-    "subject": "Linear Algebra and Calculus"
+    "filename": "Circuits and Networks (December 2020) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2020) Answer Key_1.pdf",
+    "year": "2020",
+    "subject": "Circuits and Networks"
   },
   {
-    "filename": "Linear Algebra & Calculus (December 2019).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus (December 2019).pdf",
+    "filename": "Circuits and Networks (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks (December 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2019) Answer Key.pdf",
     "year": "2019",
-    "subject": "Linear Algebra and Calculus"
+    "subject": "Circuits and Networks"
   },
   {
-    "filename": "Linear Algebra & Calculus (December 2020).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus (December 2020).pdf",
+    "filename": "Circuits and Networks (December 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (June 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Answer Key_1.pdf",
+    "year": "Other",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks Answer Key_3.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Answer Key_3.pdf",
+    "year": "Other",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks Answer Key_4.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Answer Key_4.pdf",
+    "year": "Other",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks, Solved (2021).pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks, Solved (2021).pdf",
+    "year": "2021",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (November 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks (November 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (November 2024) Answer Key_1.pdf",
+    "year": "2024",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks (December 2020) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks (December 2020) Answer Key.pdf",
     "year": "2020",
-    "subject": "Linear Algebra and Calculus"
+    "subject": "Circuits and Networks"
   },
   {
-    "filename": "Linear Algebra & Calculus (December 2020)_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus (December 2020)_1.pdf",
+    "filename": "Analog Electronics (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Analog Electronics"
+  },
+  {
+    "filename": "Analog Electronics (December 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics (December 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Analog Electronics"
+  },
+  {
+    "filename": "Analog Electronics (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics (June 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Analog Electronics"
+  },
+  {
+    "filename": "Analog Electronics (December 2020) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics (December 2020) Answer Key_1.pdf",
     "year": "2020",
-    "subject": "Linear Algebra and Calculus"
+    "subject": "Analog Electronics"
   },
   {
-    "filename": "Linear Algebra & Calculus (December 2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus (December 2021).pdf",
-    "year": "2021",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus QP_2.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus QP_2.pdf",
+    "filename": "Analog Electronics Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics Answer Key_1.pdf",
     "year": "Other",
-    "subject": "Linear Algebra and Calculus"
+    "subject": "Analog Electronics"
   },
   {
-    "filename": "Linear Algebra & Calculus QP_3.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus QP_3.pdf",
-    "year": "Other",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus QP_4.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus QP_4.pdf",
-    "year": "Other",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus QP_5.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus QP_5.pdf",
-    "year": "Other",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus QP_6.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus QP_6.pdf",
-    "year": "Other",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus QP_7.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus QP_7.pdf",
-    "year": "Other",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus QP_8.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus QP_8.pdf",
-    "year": "Other",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus QP_9.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus QP_9.pdf",
-    "year": "Other",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus, Solved (2020).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus, Solved (2020).pdf",
+    "filename": "Analog Electronics (December 2020) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics (December 2020) Answer Key_2.pdf",
     "year": "2020",
-    "subject": "Linear Algebra and Calculus"
+    "subject": "Analog Electronics"
   },
   {
-    "filename": "Linear Algebra & Calculus, Solved (December 2019).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus, Solved (December 2019).pdf",
-    "year": "2019",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus, Solved (December 2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus, Solved (December 2021).pdf",
-    "year": "2021",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Algebra & Calculus, Solved (January 2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus, Solved (January 2021).pdf",
-    "year": "2021",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Maths Improvement-jan 2021.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Maths Improvement-jan 2021.pdf",
-    "year": "2021",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "dec 2019 (1).pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/dec 2019 (1).pdf",
-    "year": "2019",
-    "subject": "Linear Algebra and Calculus"
-  },
-  {
-    "filename": "Linear Control Systems (2022).pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems (2022).pdf",
+    "filename": "Analog Electronics (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics (December 2022) Answer Key.pdf",
     "year": "2022",
-    "subject": "Linear Control Systems"
+    "subject": "Analog Electronics"
   },
   {
-    "filename": "Linear Control Systems (April 2025).pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems (April 2025).pdf",
-    "year": "2025",
-    "subject": "Linear Control Systems"
+    "filename": "Analog Electronics (December 2020) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics (December 2020) Answer Key_3.pdf",
+    "year": "2020",
+    "subject": "Analog Electronics"
   },
   {
-    "filename": "Linear Control Systems (December 2024).pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems (December 2024).pdf",
+    "filename": "Analog Electronics (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics (November 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Linear Control Systems"
+    "subject": "Analog Electronics"
   },
   {
-    "filename": "Linear Control Systems (June 2022).pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems (June 2022).pdf",
-    "year": "2022",
-    "subject": "Linear Control Systems"
+    "filename": "Analog Electronics (December 2020) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics (December 2020) Answer Key.pdf",
+    "year": "2020",
+    "subject": "Analog Electronics"
   },
   {
-    "filename": "Linear Control Systems (June 2023).pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems (June 2023).pdf",
-    "year": "2023",
-    "subject": "Linear Control Systems"
+    "filename": "Analog Electronics Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics Answer Key.pdf",
+    "year": "Other",
+    "subject": "Analog Electronics"
   },
   {
-    "filename": "Linear Control Systems (May 2023).pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems (May 2023).pdf",
-    "year": "2023",
-    "subject": "Linear Control Systems"
-  },
-  {
-    "filename": "Linear Control Systems (May 2024).pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems (May 2024).pdf",
-    "year": "2024",
-    "subject": "Linear Control Systems"
-  },
-  {
-    "filename": "Linear Control Systems, Solved (June 2019).pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems, Solved (June 2019).pdf",
-    "year": "2019",
-    "subject": "Linear Control Systems"
-  },
-  {
-    "filename": "Management for Engineers (December 2021).pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (December 2021).pdf",
+    "filename": "Analog Electronics (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics (December 2021) Answer Key.pdf",
     "year": "2021",
-    "subject": "Management for Engineers"
+    "subject": "Analog Electronics"
   },
   {
-    "filename": "Management for Engineers Answer Key.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers Answer Key.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
+    "filename": "Measurements and Instrumentation (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (November 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Management for Engineers QP_1.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_1.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
+    "filename": "Measurements and Instrumentation (June 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (June 2024) Answer Key_1.pdf",
+    "year": "2024",
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Management for Engineers QP_10.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_10.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
+    "filename": "Measurements and Instrumentation (December 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Management for Engineers QP_11.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_11.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
+    "filename": "Measurements and Instrumentation (December 2023) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2023) Answer Key_2.pdf",
+    "year": "2023",
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Management for Engineers QP_12.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_12.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
-  },
-  {
-    "filename": "Management for Engineers QP_13.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_13.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
-  },
-  {
-    "filename": "Management for Engineers QP_2.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_2.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
-  },
-  {
-    "filename": "Management for Engineers QP_3.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_3.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
-  },
-  {
-    "filename": "Management for Engineers QP_4.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_4.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
-  },
-  {
-    "filename": "Management for Engineers QP_5.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_5.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
-  },
-  {
-    "filename": "Management for Engineers QP_6.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_6.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
-  },
-  {
-    "filename": "Management for Engineers QP_8.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_8.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
-  },
-  {
-    "filename": "Management for Engineers QP_9.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers QP_9.pdf",
-    "year": "Other",
-    "subject": "Management for Engineers"
-  },
-  {
-    "filename": "Measurements and Instrumentation (December 2020).pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2020).pdf",
+    "filename": "Measurements and Instrumentation (December 2020) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2020) Answer Key.pdf",
     "year": "2020",
     "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Measurements and Instrumentation (December 2021).pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2021).pdf",
+    "filename": "Measurements and Instrumentation (December 2020) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2020) Answer Key_1.pdf",
+    "year": "2020",
+    "subject": "Measurements and Instrumentation"
+  },
+  {
+    "filename": "Measurements and Instrumentation (December 2021) Answer Key_6.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2021) Answer Key_6.pdf",
     "year": "2021",
     "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Measurements and Instrumentation (December 2022).pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2022).pdf",
-    "year": "2022",
+    "filename": "Measurements and Instrumentation (December 2021) Answer Key_4.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2021) Answer Key_4.pdf",
+    "year": "2021",
     "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Measurements and Instrumentation (December 2023).pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2023).pdf",
-    "year": "2023",
+    "filename": "Measurements and Instrumentation (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2021) Answer Key.pdf",
+    "year": "2021",
     "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Measurements and Instrumentation (December 2023)_1.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2023)_1.pdf",
-    "year": "2023",
+    "filename": "Measurements and Instrumentation (December 2021) Answer Key_5.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2021) Answer Key_5.pdf",
+    "year": "2021",
     "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Measurements and Instrumentation (June 2024).pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (June 2024).pdf",
-    "year": "2024",
+    "filename": "Measurements and Instrumentation (December 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2021) Answer Key_1.pdf",
+    "year": "2021",
     "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Measurements and Instrumentation (November 2024).pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (November 2024).pdf",
-    "year": "2024",
+    "filename": "Measurements and Instrumentation (December 2021) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2021) Answer Key_2.pdf",
+    "year": "2021",
+    "subject": "Measurements and Instrumentation"
+  },
+  {
+    "filename": "Measurements and Instrumentation (December 2021) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2021) Answer Key_3.pdf",
+    "year": "2021",
     "subject": "Measurements and Instrumentation"
   },
   {
@@ -2037,189 +957,57 @@ const LOCAL_PYQ_FILES = [
     "subject": "Measurements and Instrumentation"
   },
   {
+    "filename": "Measurements and Instrumentation (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Measurements and Instrumentation"
+  },
+  {
+    "filename": "Measurements and Instrumentation (May 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (May 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Measurements and Instrumentation"
+  },
+  {
     "filename": "Measurements and Instrumentation Answer Key_1.pdf",
     "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Answer Key_1.pdf",
     "year": "Other",
     "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Measurements and Instrumentation Answer Key_2.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Answer Key_2.pdf",
-    "year": "Other",
+    "filename": "Measurements and Instrumentation (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (June 2024) Answer Key.pdf",
+    "year": "2024",
     "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Measurements and Instrumentation Answer Key_3.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Answer Key_3.pdf",
-    "year": "Other",
+    "filename": "Measurements and Instrumentation (November 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (November 2024) Answer Key_1.pdf",
+    "year": "2024",
     "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Measurements and Instrumentation Answer Key_4.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Answer Key_4.pdf",
-    "year": "Other",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Measurements and Instrumentation QP.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation QP.pdf",
-    "year": "Other",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Measurements and Instrumentation QP_3.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation QP_3.pdf",
-    "year": "Other",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Measurements and Instrumentation QP_4.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation QP_4.pdf",
-    "year": "Other",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Measurements and Instrumentation QP_5.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation QP_5.pdf",
-    "year": "Other",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Measurements and Instrumentation QP_6.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation QP_6.pdf",
-    "year": "Other",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Measurements and Instrumentation QP_7.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation QP_7.pdf",
-    "year": "Other",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Measurements and Instrumentation, Solved Answer Key.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation, Solved Answer Key.pdf",
-    "year": "Other",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "MPES SOLVED DEC 2017.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /MPES SOLVED DEC 2017.pdf",
-    "year": "2017",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "MPES SOLVED DEC 2018.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /MPES SOLVED DEC 2018.pdf",
-    "year": "2018",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers (2020).pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers (2020).pdf",
-    "year": "2020",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers Answer Key.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers Answer Key.pdf",
-    "year": "Other",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers Answer Key_1.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers Answer Key_1.pdf",
-    "year": "Other",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers QP_1.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers QP_1.pdf",
-    "year": "Other",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers QP_3.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers QP_3.pdf",
-    "year": "Other",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers QP_4.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers QP_4.pdf",
-    "year": "Other",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers QP_5.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers QP_5.pdf",
-    "year": "Other",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers QP_6.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers QP_6.pdf",
-    "year": "Other",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers QP_7.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers QP_7.pdf",
-    "year": "Other",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers QP_8.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers QP_8.pdf",
-    "year": "Other",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers QP_9.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers QP_9.pdf",
-    "year": "Other",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Dec 2023 Compressed.pdf",
-    "rel_path": "Btech cources/S3/Maths/Dec 2023 Compressed.pdf",
-    "year": "2023",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Dec 2023.pdf",
-    "rel_path": "Btech cources/S3/Maths/Dec 2023.pdf",
-    "year": "2023",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis (2021).pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis (2021).pdf",
-    "year": "2021",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis (December 2020).pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis (December 2020).pdf",
-    "year": "2020",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis (December 2021).pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis (December 2021).pdf",
-    "year": "2021",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis (December 2022).pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis (December 2022).pdf",
+    "filename": "Measurements and Instrumentation (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation (December 2022) Answer Key.pdf",
     "year": "2022",
+    "subject": "Measurements and Instrumentation"
+  },
+  {
+    "filename": "Partial Differential Equations and Complex Analysis (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (November 2024) Answer Key.pdf",
+    "year": "2024",
     "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "Partial Differential Equations & Complex Analysis (December 2023).pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis (December 2023).pdf",
-    "year": "2023",
+    "filename": "Partial Differential Equations and Complex Analysis (December 2020) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2020) Answer Key.pdf",
+    "year": "2020",
+    "subject": "Partial Differential Equations and Complex Analysis"
+  },
+  {
+    "filename": "Partial Differential Equations and Complex Analysis (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2021) Answer Key.pdf",
+    "year": "2021",
     "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
@@ -2229,310 +1017,196 @@ const LOCAL_PYQ_FILES = [
     "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "Partial Differential Equations & Complex Analysis QP_1.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis QP_1.pdf",
-    "year": "Other",
+    "filename": "Partial Differential Equations and Complex Analysis (June 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (June 2024) Answer Key_1.pdf",
+    "year": "2024",
     "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "Partial Differential Equations & Complex Analysis QP_2.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis QP_2.pdf",
-    "year": "Other",
+    "filename": "Partial Differential Equations and Complex Analysis (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2023) Answer Key.pdf",
+    "year": "2023",
     "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "Partial Differential Equations & Complex Analysis QP_3.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis QP_3.pdf",
-    "year": "Other",
+    "filename": "Partial Differential Equations and Complex Analysis (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (June 2024) Answer Key.pdf",
+    "year": "2024",
     "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "Partial Differential Equations & Complex Analysis QP_4.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis QP_4.pdf",
-    "year": "Other",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis QP_5.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis QP_5.pdf",
-    "year": "Other",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis QP_6.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis QP_6.pdf",
-    "year": "Other",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis QP_7.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis QP_7.pdf",
-    "year": "Other",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis, Answer Key (2020).pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis, Answer Key (2020).pdf",
+    "filename": "Partial Differential Equations and Complex Analysis (December 2020) Answer Key_4.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2020) Answer Key_4.pdf",
     "year": "2020",
     "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "Partial Differential Equations & Complex Analysis, Answer Key (2021).pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis, Answer Key (2021).pdf",
+    "filename": "Partial Differential Equations and Complex Analysis (December 2021) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2021) Answer Key_2.pdf",
     "year": "2021",
     "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "Power Electronics (April 2025).pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics (April 2025).pdf",
+    "filename": "Partial Differential Equations and Complex Analysis (December 2021) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2021) Answer Key_3.pdf",
+    "year": "2021",
+    "subject": "Partial Differential Equations and Complex Analysis"
+  },
+  {
+    "filename": "Partial Differential Equations and Complex Analysis (December 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Partial Differential Equations and Complex Analysis"
+  },
+  {
+    "filename": "Partial Differential Equations and Complex Analysis (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Partial Differential Equations and Complex Analysis"
+  },
+  {
+    "filename": "Partial Differential Equations and Complex Analysis (December 2020) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2020) Answer Key_2.pdf",
+    "year": "2020",
+    "subject": "Partial Differential Equations and Complex Analysis"
+  },
+  {
+    "filename": "Partial Differential Equations and Complex Analysis (December 2020) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2020) Answer Key_3.pdf",
+    "year": "2020",
+    "subject": "Partial Differential Equations and Complex Analysis"
+  },
+  {
+    "filename": "Partial Differential Equations and Complex Analysis (December 2020) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (December 2020) Answer Key_1.pdf",
+    "year": "2020",
+    "subject": "Partial Differential Equations and Complex Analysis"
+  },
+  {
+    "filename": "Partial Differential Equations and Complex Analysis (2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations and Complex Analysis (2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Partial Differential Equations and Complex Analysis"
+  },
+  {
+    "filename": "Professional Ethics (May 2020) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (May 2020) Answer Key.pdf",
+    "year": "2020",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (July 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (July 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (April 2025) Answer Key.pdf",
     "year": "2025",
-    "subject": "Power Electronics"
+    "subject": "Professional Ethics"
   },
   {
-    "filename": "Power Electronics (December 2024).pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics (December 2024).pdf",
+    "filename": "Professional Ethics (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (June 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Power Electronics"
+    "subject": "Professional Ethics"
   },
   {
-    "filename": "Power Electronics (June 2022).pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics (June 2022).pdf",
+    "filename": "Professional Ethics (May 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (May 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (May 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (May 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (May 2021) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (May 2021) Answer Key_2.pdf",
+    "year": "2021",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (May 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (May 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (May 2020) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (May 2020) Answer Key_1.pdf",
+    "year": "2020",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (December 2020) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (December 2020) Answer Key.pdf",
+    "year": "2020",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics QP.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics QP.pdf",
+    "year": "Other",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (May 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (May 2022) Answer Key.pdf",
     "year": "2022",
-    "subject": "Power Electronics"
+    "subject": "Professional Ethics"
   },
   {
-    "filename": "Power Electronics (June 2022)_1.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics (June 2022)_1.pdf",
-    "year": "2022",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics (June 2023).pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics (June 2023).pdf",
+    "filename": "Professional Ethics (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (June 2023) Answer Key_1.pdf",
     "year": "2023",
-    "subject": "Power Electronics"
+    "subject": "Professional Ethics"
   },
   {
-    "filename": "Power Electronics (May 2024).pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics (May 2024).pdf",
+    "filename": "Professional Ethics (May 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (May 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Professional Ethics"
+  },
+  {
+    "filename": "Professional Ethics (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (November 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics (May).pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics (May).pdf",
-    "year": "Other",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics QP_14.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics QP_14.pdf",
-    "year": "Other",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics QP_15.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics QP_15.pdf",
-    "year": "Other",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics QP_16.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics QP_16.pdf",
-    "year": "Other",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics QP_17.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics QP_17.pdf",
-    "year": "Other",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics QP_18.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics QP_18.pdf",
-    "year": "Other",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics, Answer Key (May).pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics, Answer Key (May).pdf",
-    "year": "Other",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Systems I (2021).pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I (2021).pdf",
-    "year": "2021",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I Answer Key.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I Answer Key.pdf",
-    "year": "Other",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I QP_2.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I QP_2.pdf",
-    "year": "Other",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I QP_3.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I QP_3.pdf",
-    "year": "Other",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I QP_4.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I QP_4.pdf",
-    "year": "Other",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I QP_5.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I QP_5.pdf",
-    "year": "Other",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I QP_6.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I QP_6.pdf",
-    "year": "Other",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I QP_7.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I QP_7.pdf",
-    "year": "Other",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I QP_8.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I QP_8.pdf",
-    "year": "Other",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems II (2021).pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (2021).pdf",
-    "year": "2021",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II (2022).pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (2022).pdf",
-    "year": "2022",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II (June 2023).pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (June 2023).pdf",
-    "year": "2023",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II (May 2023).pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (May 2023).pdf",
-    "year": "2023",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II QP.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II QP.pdf",
-    "year": "Other",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II QP_2.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II QP_2.pdf",
-    "year": "Other",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II QP_3.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II QP_3.pdf",
-    "year": "Other",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II QP_5.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II QP_5.pdf",
-    "year": "Other",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II QP_6.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II QP_6.pdf",
-    "year": "Other",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II, Answer Scheme QP.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II, Answer Scheme QP.pdf",
-    "year": "Other",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "btech-ee-6-sem-power-systems-analysis-ee306-jul-2021.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/btech-ee-6-sem-power-systems-analysis-ee306-jul-2021.pdf",
-    "year": "2021",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Probability, Random Processes & Numerical Methods (July 2021).pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods (July 2021).pdf",
-    "year": "2021",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes & Numerical Methods Answer Key.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods Answer Key.pdf",
-    "year": "Other",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes & Numerical Methods QP_1.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods QP_1.pdf",
-    "year": "Other",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes & Numerical Methods QP_2.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods QP_2.pdf",
-    "year": "Other",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes & Numerical Methods QP_3.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods QP_3.pdf",
-    "year": "Other",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes & Numerical Methods QP_4.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods QP_4.pdf",
-    "year": "Other",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes & Numerical Methods QP_5.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods QP_5.pdf",
-    "year": "Other",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes & Numerical Methods QP_6.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods QP_6.pdf",
-    "year": "Other",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes & Numerical Methods QP_7.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods QP_7.pdf",
-    "year": "Other",
-    "subject": "Probability, Random Processes and Numerical Methods"
+    "subject": "Professional Ethics"
   },
   {
     "filename": "Probability, Random Processes & Numerical Methods, Answer Key (July 2021).pdf",
@@ -2547,560 +1221,1010 @@ const LOCAL_PYQ_FILES = [
     "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms (2021).pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Vector Calculus, Differential Equations & Transforms (2021).pdf",
+    "filename": "Probability, Random Processes & Numerical Methods Answer Key.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods Answer Key.pdf",
+    "year": "Other",
+    "subject": "Probability, Random Processes and Numerical Methods"
+  },
+  {
+    "filename": "Probability, Random Processes and Numerical Methods (May 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods (May 2021) Answer Key_1.pdf",
     "year": "2021",
     "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms (July 2021).pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Vector Calculus, Differential Equations & Transforms (July 2021).pdf",
+    "filename": "Probability, Random Processes and Numerical Methods (May 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods (May 2021) Answer Key.pdf",
     "year": "2021",
     "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms (June 2022).pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Vector Calculus, Differential Equations & Transforms (June 2022).pdf",
-    "year": "2022",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Vector Calculus, Differential Equations & Transforms (June 2023).pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Vector Calculus, Differential Equations & Transforms (June 2023).pdf",
+    "filename": "Probability, Random Processes and Numerical Methods (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods (June 2023) Answer Key.pdf",
     "year": "2023",
     "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms (May 2024).pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Vector Calculus, Differential Equations & Transforms (May 2024).pdf",
+    "filename": "Probability, Random Processes and Numerical Methods (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods (December 2024) Answer Key.pdf",
     "year": "2024",
     "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "Professional Ethics (2021).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (2021).pdf",
-    "year": "2021",
-    "subject": "Professional Ethics"
+    "filename": "Probability, Random Processes and Numerical Methods (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "Professional Ethics (2022).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (2022).pdf",
-    "year": "2022",
-    "subject": "Professional Ethics"
+    "filename": "Probability, Random Processes and Numerical Methods (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "Professional Ethics (April 2025).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (April 2025).pdf",
+    "filename": "Probability, Random Processes and Numerical Methods (January 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods (January 2025) Answer Key.pdf",
     "year": "2025",
-    "subject": "Professional Ethics"
+    "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "Professional Ethics (December 2020).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (December 2020).pdf",
+    "filename": "Probability, Random Processes and Numerical Methods (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Probability, Random Processes and Numerical Methods"
+  },
+  {
+    "filename": "Digital Electronics (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (June 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Digital Electronics"
+  },
+  {
+    "filename": "Digital Electronics (January 2020) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (January 2020) Answer Key.pdf",
     "year": "2020",
-    "subject": "Professional Ethics"
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "Professional Ethics (December 2021).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (December 2021).pdf",
+    "filename": "Digital Electronics (2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (2021) Answer Key.pdf",
     "year": "2021",
-    "subject": "Professional Ethics"
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "Professional Ethics (December 2022).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (December 2022).pdf",
-    "year": "2022",
-    "subject": "Professional Ethics"
-  },
-  {
-    "filename": "Professional Ethics (December 2023).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (December 2023).pdf",
+    "filename": "Digital Electronics (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (June 2023) Answer Key.pdf",
     "year": "2023",
-    "subject": "Professional Ethics"
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "Professional Ethics (December 2024).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (December 2024).pdf",
+    "filename": "Digital Electronics (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (December 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Professional Ethics"
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "Professional Ethics (July 2021).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (July 2021).pdf",
+    "filename": "Digital Electronics (July 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (July 2021) Answer Key.pdf",
     "year": "2021",
-    "subject": "Professional Ethics"
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "Professional Ethics (June 2022).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (June 2022).pdf",
+    "filename": "Digital Electronics (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (June 2022) Answer Key.pdf",
     "year": "2022",
-    "subject": "Professional Ethics"
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "Professional Ethics (June 2023).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (June 2023).pdf",
+    "filename": "Digital Electronics (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (June 2023) Answer Key_1.pdf",
     "year": "2023",
-    "subject": "Professional Ethics"
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "Professional Ethics (June 2023)_1.pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (June 2023)_1.pdf",
+    "filename": "Digital Electronics (June 2023) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (June 2023) Answer Key_2.pdf",
     "year": "2023",
-    "subject": "Professional Ethics"
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "Professional Ethics (June 2024).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (June 2024).pdf",
+    "filename": "Digital Electronics (August 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (August 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Professional Ethics"
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "Professional Ethics (May 2019).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (May 2019).pdf",
+    "filename": "Digital Electronics (June 2023) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (June 2023) Answer Key_3.pdf",
+    "year": "2023",
+    "subject": "Digital Electronics"
+  },
+  {
+    "filename": "Digital Electronics (January 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (January 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Digital Electronics"
+  },
+  {
+    "filename": "Digital Electronics (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Digital Electronics"
+  },
+  {
+    "filename": "Digital Electronics (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Digital Electronics"
+  },
+  {
+    "filename": "Digital Electronics Answer Key_2.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics Answer Key_2.pdf",
+    "year": "Other",
+    "subject": "Digital Electronics"
+  },
+  {
+    "filename": "Electromagnetic Theory Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory Answer Key_1.pdf",
+    "year": "Other",
+    "subject": "Electromagnetic Theory"
+  },
+  {
+    "filename": "Electromagnetic Theory (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Electromagnetic Theory"
+  },
+  {
+    "filename": "Electromagnetic Theory (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (June 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Electromagnetic Theory"
+  },
+  {
+    "filename": "Electromagnetic Theory (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Electromagnetic Theory"
+  },
+  {
+    "filename": "Electromagnetic Theory (July 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (July 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Electromagnetic Theory"
+  },
+  {
+    "filename": "Electromagnetic Theory (2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Electromagnetic Theory"
+  },
+  {
+    "filename": "Electromagnetic Theory (2019) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (2019) Answer Key.pdf",
     "year": "2019",
-    "subject": "Professional Ethics"
+    "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Professional Ethics (November 2024).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics (November 2024).pdf",
+    "filename": "Electromagnetic Theory (June 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (June 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Electromagnetic Theory"
+  },
+  {
+    "filename": "Electromagnetic Theory (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (May 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Professional Ethics"
+    "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Professional Ethics Answer Key.pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics Answer Key.pdf",
-    "year": "Other",
-    "subject": "Professional Ethics"
+    "filename": "Electromagnetic Theory (July 2021) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (July 2021) Answer Key_2.pdf",
+    "year": "2021",
+    "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Professional Ethics QP.pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics QP.pdf",
-    "year": "Other",
-    "subject": "Professional Ethics"
-  },
-  {
-    "filename": "Professional Ethics QP_1.pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics QP_1.pdf",
-    "year": "Other",
-    "subject": "Professional Ethics"
-  },
-  {
-    "filename": "Professional Ethics, Solved (2014).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics, Solved (2014).pdf",
-    "year": "2014",
-    "subject": "Professional Ethics"
-  },
-  {
-    "filename": "Professional Ethics, Solved (2020).pdf",
-    "rel_path": "Btech cources/S3/Professional Ethics/Professional Ethics, Solved (2020).pdf",
-    "year": "2020",
-    "subject": "Professional Ethics"
-  },
-  {
-    "filename": "DocScanner Aug 2, 2023 9-16 AM.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/DocScanner Aug 2, 2023 9-16 AM.pdf",
+    "filename": "Electromagnetic Theory (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (June 2023) Answer Key.pdf",
     "year": "2023",
-    "subject": "Programming in C"
+    "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Programming in C (2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (2021).pdf",
-    "year": "2021",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C (2022).pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (2022).pdf",
-    "year": "2022",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C (July 2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (July 2021).pdf",
-    "year": "2021",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C (July 2021)_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (July 2021)_1.pdf",
-    "year": "2021",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C (June 2022).pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (June 2022).pdf",
-    "year": "2022",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C Answer Key.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C Answer Key.pdf",
-    "year": "Other",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C QP.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C QP.pdf",
-    "year": "Other",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C QP_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C QP_1.pdf",
-    "year": "Other",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C QP_2.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C QP_2.pdf",
-    "year": "Other",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C QP_3.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C QP_3.pdf",
-    "year": "Other",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C, Answer Key (July 2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C, Answer Key (July 2021).pdf",
-    "year": "2021",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C, Answer Key QP.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C, Answer Key QP.pdf",
-    "year": "Other",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C, Answer Scheme (July 2021).pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C, Answer Scheme (July 2021).pdf",
-    "year": "2021",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C, Answer Scheme (July 2021)_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C, Answer Scheme (July 2021)_1.pdf",
-    "year": "2021",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C, Answer Scheme (June 2022).pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C, Answer Scheme (June 2022).pdf",
-    "year": "2022",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Renewable Energy Systems (2020).pdf",
-    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (2020).pdf",
-    "year": "2020",
-    "subject": "Renewable Energy Systems"
-  },
-  {
-    "filename": "Renewable Energy Systems (April 2025).pdf",
-    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (April 2025).pdf",
+    "filename": "Electromagnetic Theory (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (April 2025) Answer Key.pdf",
     "year": "2025",
-    "subject": "Renewable Energy Systems"
+    "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Renewable Energy Systems (December 2024).pdf",
-    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (December 2024).pdf",
-    "year": "2024",
-    "subject": "Renewable Energy Systems"
-  },
-  {
-    "filename": "Renewable Energy Systems (June 2022).pdf",
-    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (June 2022).pdf",
-    "year": "2022",
-    "subject": "Renewable Energy Systems"
-  },
-  {
-    "filename": "Renewable Energy Systems (June 2022)_1.pdf",
-    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (June 2022)_1.pdf",
-    "year": "2022",
-    "subject": "Renewable Energy Systems"
-  },
-  {
-    "filename": "Renewable Energy Systems (June 2023).pdf",
-    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (June 2023).pdf",
-    "year": "2023",
-    "subject": "Renewable Energy Systems"
-  },
-  {
-    "filename": "Renewable Energy Systems (May 2024).pdf",
-    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (May 2024).pdf",
-    "year": "2024",
-    "subject": "Renewable Energy Systems"
-  },
-  {
-    "filename": "Renewable Energy Systems, Answer Key (July 2022).pdf",
-    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems, Answer Key (July 2022).pdf",
-    "year": "2022",
-    "subject": "Renewable Energy Systems"
-  },
-  {
-    "filename": "Renewable Energy Systems, Answer Key (June).pdf",
-    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems, Answer Key (June).pdf",
-    "year": "Other",
-    "subject": "Renewable Energy Systems"
-  },
-  {
-    "filename": "Signals and Systems (December 2021).pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2021).pdf",
+    "filename": "Electromagnetic Theory (July 2021) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (July 2021) Answer Key_3.pdf",
     "year": "2021",
-    "subject": "Signals and Systems"
+    "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Signals and Systems (December 2021)_1.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2021)_1.pdf",
+    "filename": "Electromagnetic Theory (July 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory (July 2021) Answer Key_1.pdf",
     "year": "2021",
-    "subject": "Signals and Systems"
+    "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Signals and Systems (December 2022).pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2022).pdf",
-    "year": "2022",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems (December 2022)_1.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2022)_1.pdf",
-    "year": "2022",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems (December 2023).pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2023).pdf",
+    "filename": "DC Machines and Transformers (June 2023) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (June 2023) Answer Key_2.pdf",
     "year": "2023",
-    "subject": "Signals and Systems"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Signals and Systems (December 2023)_1.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2023)_1.pdf",
+    "filename": "DC Machines and Transformers (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (June 2023) Answer Key_1.pdf",
     "year": "2023",
-    "subject": "Signals and Systems"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Signals and Systems (December 2023)_2.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems (December 2023)_2.pdf",
+    "filename": "DC Machines and Transformers (May 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (May 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "DC Machines and Transformers"
+  },
+  {
+    "filename": "DC Machines and Transformers Answer Key_2.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Answer Key_2.pdf",
+    "year": "Other",
+    "subject": "DC Machines and Transformers"
+  },
+  {
+    "filename": "DC Machines and Transformers (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (May 2023) Answer Key.pdf",
     "year": "2023",
-    "subject": "Signals and Systems"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Signals and Systems (June 2024).pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems (June 2024).pdf",
+    "filename": "DC Machines and Transformers (May 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (May 2024) Answer Key_1.pdf",
     "year": "2024",
-    "subject": "Signals and Systems"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Signals and Systems Answer Key.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems Answer Key.pdf",
+    "filename": "DC Machines and Transformers (May 2021) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (May 2021) Answer Key_2.pdf",
+    "year": "2021",
+    "subject": "DC Machines and Transformers"
+  },
+  {
+    "filename": "DC Machines and Transformers Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Answer Key_1.pdf",
     "year": "Other",
-    "subject": "Signals and Systems"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Signals and Systems QP.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems QP.pdf",
-    "year": "Other",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems QP_4.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems QP_4.pdf",
-    "year": "Other",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems QP_5.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems QP_5.pdf",
-    "year": "Other",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems QP_6.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems QP_6.pdf",
-    "year": "Other",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems QP_8.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems QP_8.pdf",
-    "year": "Other",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems, Answer Key QP.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems, Answer Key QP.pdf",
-    "year": "Other",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Special Electrical Machines (April 2025).pdf",
-    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines (April 2025).pdf",
-    "year": "2025",
-    "subject": "Special Electrical Machines"
-  },
-  {
-    "filename": "Special Electrical Machines (June 2023).pdf",
-    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines (June 2023).pdf",
-    "year": "2023",
-    "subject": "Special Electrical Machines"
-  },
-  {
-    "filename": "Special Electrical Machines (May 2024).pdf",
-    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines (May 2024).pdf",
+    "filename": "DC Machines and Transformers (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (May 2024) Answer Key.pdf",
     "year": "2024",
-    "subject": "Special Electrical Machines"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Special Electrical Machines QP.pdf",
-    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines QP.pdf",
-    "year": "Other",
-    "subject": "Special Electrical Machines"
-  },
-  {
-    "filename": "Special Electrical Machines QP_1.pdf",
-    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines QP_1.pdf",
-    "year": "Other",
-    "subject": "Special Electrical Machines"
-  },
-  {
-    "filename": "Special Electrical Machines, Answer Key (June 2023).pdf",
-    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines, Answer Key (June 2023).pdf",
-    "year": "2023",
-    "subject": "Special Electrical Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines (December 2021).pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (December 2021).pdf",
-    "year": "2021",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines (December 2021)_1.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (December 2021)_1.pdf",
-    "year": "2021",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines (December 2022).pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (December 2022).pdf",
-    "year": "2022",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines (December 2023).pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (December 2023).pdf",
-    "year": "2023",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines (May 2010).pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (May 2010).pdf",
-    "year": "2010",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines (May 2010)_1.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (May 2010)_1.pdf",
-    "year": "2010",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines (May 2014).pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (May 2014).pdf",
-    "year": "2014",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines (May 2014)_1.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (May 2014)_1.pdf",
-    "year": "2014",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines (May 2015).pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (May 2015).pdf",
-    "year": "2015",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines (May 2025).pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (May 2025).pdf",
-    "year": "2025",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines Answer Key.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines Answer Key.pdf",
-    "year": "Other",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines Answer Key_1.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines Answer Key_1.pdf",
-    "year": "Other",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines QP.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines QP.pdf",
-    "year": "Other",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines QP_3.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines QP_3.pdf",
-    "year": "Other",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines QP_4.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines QP_4.pdf",
-    "year": "Other",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines QP_5.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines QP_5.pdf",
-    "year": "Other",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines QP_6.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines QP_6.pdf",
-    "year": "Other",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines QP_7.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines QP_7.pdf",
-    "year": "Other",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Abominable.2019.720p.10bit.BluRay.6CH.x265.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Maths/Abominable.2019.720p.10bit.BluRay.6CH.x265.pdf",
+    "filename": "DC Machines and Transformers (May 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (May 2019) Answer Key.pdf",
     "year": "2019",
-    "subject": "Vector Calculus, Differential Equations and Transforms"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "DocScanner 31-Mar-2023 3-55 pm.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Maths/DocScanner 31-Mar-2023 3-55 pm.pdf",
+    "filename": "DC Machines and Transformers (January 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (January 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "DC Machines and Transformers"
+  },
+  {
+    "filename": "DC Machines and Transformers (May 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (May 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "DC Machines and Transformers"
+  },
+  {
+    "filename": "DC Machines and Transformers (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "DC Machines and Transformers"
+  },
+  {
+    "filename": "DC Machines and Transformers (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers (June 2023) Answer Key.pdf",
     "year": "2023",
-    "subject": "Vector Calculus, Differential Equations and Transforms"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms (2020).pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms (2020).pdf",
+    "filename": "DC Machines and Transformers Answer Key.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Answer Key.pdf",
+    "year": "Other",
+    "subject": "DC Machines and Transformers"
+  },
+  {
+    "filename": "Constitution of India Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India Answer Key.pdf",
+    "year": "Other",
+    "subject": "Constitution of India"
+  },
+  {
+    "filename": "Constitution of India Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India Answer Key_1.pdf",
+    "year": "Other",
+    "subject": "Constitution of India"
+  },
+  {
+    "filename": "Constitution of India (July 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India (July 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Constitution of India"
+  },
+  {
+    "filename": "Constitution of India (May 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India (May 2024) Answer Key_1.pdf",
+    "year": "2024",
+    "subject": "Constitution of India"
+  },
+  {
+    "filename": "Constitution of India (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Constitution of India"
+  },
+  {
+    "filename": "Constitution of India (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Constitution of India"
+  },
+  {
+    "filename": "Constitution of India (July 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India (July 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Constitution of India"
+  },
+  {
+    "filename": "Constitution of India (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Constitution of India"
+  },
+  {
+    "filename": "Constitution of India (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Constitution of India"
+  },
+  {
+    "filename": "Constitution of India (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Constitution of India"
+  },
+  {
+    "filename": "Design and Engineering (May 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (May 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (June 2023) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2023) Answer Key_2.pdf",
+    "year": "2023",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (June 2023) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2023) Answer Key_3.pdf",
+    "year": "2023",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (July 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (July 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering Answer Key.pdf",
+    "year": "Other",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (July 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (July 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (May 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (May 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (December 2020) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2020) Answer Key.pdf",
     "year": "2020",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (November 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (June 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering Answer Key_1.pdf",
+    "year": "Other",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering Answer Key_2.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering Answer Key_2.pdf",
+    "year": "Other",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering Answer Key_3.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering Answer Key_3.pdf",
+    "year": "Other",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (December 2020) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2020) Answer Key_1.pdf",
+    "year": "2020",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (2098) Lab Manual.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (2098) Lab Manual.pdf",
+    "year": "2098",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (2019) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (May 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (May 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (May 2021) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (May 2021) Answer Key_3.pdf",
+    "year": "2021",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (May 2021) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (May 2021) Answer Key_2.pdf",
+    "year": "2021",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (May 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (May 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Design and Engineering (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Programming in C (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (July 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (July 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (July 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (July 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (June 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (June 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (June 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (June 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (June 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (May 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (May 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (June 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (June 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (July 2021) Answer Key_5.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (July 2021) Answer Key_5.pdf",
+    "year": "2021",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (July 2021) Answer Key_4.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (July 2021) Answer Key_4.pdf",
+    "year": "2021",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (July 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (July 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (July 2021) Answer Key_3.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (July 2021) Answer Key_3.pdf",
+    "year": "2021",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (July 2021) Answer Key_2.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (July 2021) Answer Key_2.pdf",
+    "year": "2021",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C (July 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C (July 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (January 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (January 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (December 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (December 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra & Calculus (2021).pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus (2021).pdf",
+    "year": "2021",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra & Calculus, Solved (2020).pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus, Solved (2020).pdf",
+    "year": "2020",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (December 2019) Answer Key_6.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (December 2019) Answer Key_6.pdf",
+    "year": "2019",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (December 2019) Answer Key_7.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (December 2019) Answer Key_7.pdf",
+    "year": "2019",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (December 2019) Answer Key_5.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (December 2019) Answer Key_5.pdf",
+    "year": "2019",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (December 2020) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (December 2020) Answer Key.pdf",
+    "year": "2020",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (December 2019) Answer Key_4.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (December 2019) Answer Key_4.pdf",
+    "year": "2019",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (December 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (December 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (May 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (May 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (December 2019) Answer Key_3.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (December 2019) Answer Key_3.pdf",
+    "year": "2019",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra and Calculus (December 2019) Answer Key_2.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus (December 2019) Answer Key_2.pdf",
+    "year": "2019",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Engineering Physics A Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A Answer Key.pdf",
+    "year": "Other",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (June 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (June 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2020) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2020) Answer Key.pdf",
+    "year": "2020",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (May 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (May 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2019) Answer Key_4.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2019) Answer Key_4.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2019) Answer Key_5.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2019) Answer Key_5.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2019) Answer Key_6.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2019) Answer Key_6.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (May 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (May 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2019) Answer Key_2.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2019) Answer Key_2.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2019) Answer Key_3.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2019) Answer Key_3.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (May 2019) Answer Key_2.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (May 2019) Answer Key_2.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Mechanics QP.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Mechanics QP.pdf",
+    "year": "Other",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (June 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (June 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A QP_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A QP_1.pdf",
+    "year": "Other",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (May 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (May 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (December 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Engineering Physics A (January 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A (January 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Engineering Physics A"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (October 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (October 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (December 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (December 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (June 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (June 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (October 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (October 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engg, Answer Key QP.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg, Answer Key QP.pdf",
+    "year": "Other",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (December 2019) Answer Key_6.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (December 2019) Answer Key_6.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (December 2019) Answer Key_4.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (December 2019) Answer Key_4.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (December 2019) Answer Key_5.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (December 2019) Answer Key_5.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering Answer Key.pdf",
+    "year": "Other",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (December 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (December 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (May 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (May 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (December 2019) Answer Key_2.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (December 2019) Answer Key_2.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (December 2019) Answer Key_3.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (December 2019) Answer Key_3.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (June 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (June 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (January 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (January 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (July 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (July 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Basics of Electrical & Electronics Engineering (May 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering (May 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Basics of Electrical & Electronics Engineering"
+  },
+  {
+    "filename": "Vector Calculus, Differential Equations and Transforms (July 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (July 2021) Answer Key_1.pdf",
+    "year": "2021",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms (2020)_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms (2020)_1.pdf",
+    "filename": "Vector Calculus, Differential Equations & Transforms (2020)_4.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms (2020)_4.pdf",
     "year": "2020",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
@@ -3117,9 +2241,15 @@ const LOCAL_PYQ_FILES = [
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms (2020)_4.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms (2020)_4.pdf",
+    "filename": "Vector Calculus, Differential Equations & Transforms (2020)_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms (2020)_1.pdf",
     "year": "2020",
+    "subject": "Vector Calculus, Differential Equations and Transforms"
+  },
+  {
+    "filename": "Vector Calculus, Differential Equations and Transforms (July 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (July 2019) Answer Key.pdf",
+    "year": "2019",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
@@ -3129,125 +2259,1769 @@ const LOCAL_PYQ_FILES = [
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms QP_2.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms QP_2.pdf",
-    "year": "Other",
+    "filename": "Vector Calculus, Differential Equations and Transforms (July 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (July 2021) Answer Key.pdf",
+    "year": "2021",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms QP_3.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms QP_3.pdf",
-    "year": "Other",
+    "filename": "Vector Calculus, Differential Equations and Transforms (May 2019) Answer Key_2.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (May 2019) Answer Key_2.pdf",
+    "year": "2019",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms QP_4.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms QP_4.pdf",
-    "year": "Other",
+    "filename": "Vector Calculus, Differential Equations and Transforms (May 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (May 2019) Answer Key_1.pdf",
+    "year": "2019",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms QP_5.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms QP_5.pdf",
-    "year": "Other",
+    "filename": "Vector Calculus, Differential Equations & Transforms (2020).pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms (2020).pdf",
+    "year": "2020",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms QP_6.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms QP_6.pdf",
-    "year": "Other",
+    "filename": "Vector Calculus, Differential Equations and Transforms (June 2019) Answer Key_3.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (June 2019) Answer Key_3.pdf",
+    "year": "2019",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms QP_7.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms QP_7.pdf",
-    "year": "Other",
+    "filename": "Vector Calculus, Differential Equations and Transforms (June 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (June 2019) Answer Key.pdf",
+    "year": "2019",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms QP_8.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms QP_8.pdf",
-    "year": "Other",
+    "filename": "Vector Calculus, Differential Equations and Transforms (June 2019) Answer Key_2.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (June 2019) Answer Key_2.pdf",
+    "year": "2019",
     "subject": "Vector Calculus, Differential Equations and Transforms"
+  },
+  {
+    "filename": "Vector Calculus, Differential Equations and Transforms (December 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (December 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Vector Calculus, Differential Equations and Transforms"
+  },
+  {
+    "filename": "Vector Calculus, Differential Equations and Transforms (June 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (June 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Vector Calculus, Differential Equations and Transforms"
+  },
+  {
+    "filename": "Vector Calculus, Differential Equations and Transforms (July 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (July 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Vector Calculus, Differential Equations and Transforms"
+  },
+  {
+    "filename": "Vector Calculus, Differential Equations and Transforms (May 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations and Transforms (May 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Vector Calculus, Differential Equations and Transforms"
+  },
+  {
+    "filename": "Mechanics Answer Key (2020 Dec.).pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Mechanics Answer Key (2020 Dec.).pdf",
+    "year": "2020",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics, Answer Key (December 2020).pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics, Answer Key (December 2020).pdf",
+    "year": "2020",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (January 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (January 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (December 2019) Answer Key_5.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (December 2019) Answer Key_5.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (May 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (May 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (December 2019) Answer Key_4.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (December 2019) Answer Key_4.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (July 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (July 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (December 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (December 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (December 2019) Answer Key_6.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (December 2019) Answer Key_6.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (December 2019) Answer Key_3.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (December 2019) Answer Key_3.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (December 2019) Answer Key_2.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (December 2019) Answer Key_2.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (December 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (December 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics, Answer Key (June 2022).pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics, Answer Key (June 2022).pdf",
+    "year": "2022",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (May 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (May 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (June 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (June 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics Answer Key.pdf",
+    "year": "Other",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (June 2019) Answer Key.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (June 2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Engineering Mechanics (July 2019) Answer Key_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics (July 2019) Answer Key_1.pdf",
+    "year": "2019",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Electrical System Design & Estimation (April 2011) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S8/Design/Electrical System Design & Estimation (April 2011) Answer Key_2.pdf",
+    "year": "2011",
+    "subject": "Electrical System Design & Estimation"
+  },
+  {
+    "filename": "Electrical System Design & Estimation (June 2011) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S8/Design/Electrical System Design & Estimation (June 2011) Answer Key_1.pdf",
+    "year": "2011",
+    "subject": "Electrical System Design & Estimation"
+  },
+  {
+    "filename": "Electrical System Design & Estimation (April 2011) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S8/Design/Electrical System Design & Estimation (April 2011) Answer Key_1.pdf",
+    "year": "2011",
+    "subject": "Electrical System Design & Estimation"
+  },
+  {
+    "filename": "Electrical System Design & Estimation (April 2011) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Design/Electrical System Design & Estimation (April 2011) Answer Key.pdf",
+    "year": "2011",
+    "subject": "Electrical System Design & Estimation"
+  },
+  {
+    "filename": "Electrical System Design & Estimation (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Design/Electrical System Design & Estimation (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Electrical System Design & Estimation"
+  },
+  {
+    "filename": "Electrical System Design & Estimation (May 2003) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Design/Electrical System Design & Estimation (May 2003) Answer Key.pdf",
+    "year": "2003",
+    "subject": "Electrical System Design & Estimation"
+  },
+  {
+    "filename": "Electrical System Design & Estimation (June 2011) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Design/Electrical System Design & Estimation (June 2011) Answer Key.pdf",
+    "year": "2011",
+    "subject": "Electrical System Design & Estimation"
+  },
+  {
+    "filename": "Special Electrical Machines (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Special Electrical Machines"
+  },
+  {
+    "filename": "Special Electrical Machines Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines Answer Key.pdf",
+    "year": "Other",
+    "subject": "Special Electrical Machines"
+  },
+  {
+    "filename": "Special Electrical Machines (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Special Electrical Machines"
+  },
+  {
+    "filename": "Special Electrical Machines (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines (June 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Special Electrical Machines"
+  },
+  {
+    "filename": "Special Electrical Machines (June 2023) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines (June 2023) Answer Key_2.pdf",
+    "year": "2023",
+    "subject": "Special Electrical Machines"
+  },
+  {
+    "filename": "Special Electrical Machines (April 2025) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines (April 2025) Answer Key_1.pdf",
+    "year": "2025",
+    "subject": "Special Electrical Machines"
+  },
+  {
+    "filename": "Special Electrical Machines (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Machines/Special Electrical Machines (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Special Electrical Machines"
+  },
+  {
+    "filename": "Industrial Instrumentation & Automation (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Automation/Industrial Instrumentation & Automation (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Industrial Instrumentation & Automation"
+  },
+  {
+    "filename": "Industrial Instrumentation & Automation (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S8/Automation/Industrial Instrumentation & Automation (June 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Industrial Instrumentation & Automation"
+  },
+  {
+    "filename": "Industrial Instrumentation & Automation (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Automation/Industrial Instrumentation & Automation (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Industrial Instrumentation & Automation"
+  },
+  {
+    "filename": "Industrial Instrumentation & Automation (2019) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Automation/Industrial Instrumentation & Automation (2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Industrial Instrumentation & Automation"
+  },
+  {
+    "filename": "Industrial Instrumentation & Automation (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Automation/Industrial Instrumentation & Automation (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Industrial Instrumentation & Automation"
+  },
+  {
+    "filename": "Energy Management (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Energy management/Energy Management (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Energy Management"
+  },
+  {
+    "filename": "Energy Management (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Energy management/Energy Management (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Energy Management"
+  },
+  {
+    "filename": "Energy Management (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Energy management/Energy Management (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Energy Management"
+  },
+  {
+    "filename": "Energy Management (2015) Lab Manual.pdf",
+    "rel_path": "Btech cources/S8/Energy management/Energy Management (2015) Lab Manual.pdf",
+    "year": "2015",
+    "subject": "Energy Management"
+  },
+  {
+    "filename": "Energy Management (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S8/Energy management/Energy Management (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Energy Management"
+  },
+  {
+    "filename": "Renewable Energy Systems (June 2022) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (June 2022) Answer Key_2.pdf",
+    "year": "2022",
+    "subject": "Renewable Energy Systems"
+  },
+  {
+    "filename": "Renewable Energy Systems (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Renewable Energy Systems"
+  },
+  {
+    "filename": "Renewable Energy Systems (June 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (June 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Renewable Energy Systems"
+  },
+  {
+    "filename": "Renewable Energy Systems (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Renewable Energy Systems"
+  },
+  {
+    "filename": "Renewable Energy Systems (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (June 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Renewable Energy Systems"
+  },
+  {
+    "filename": "Renewable Energy Systems (March 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (March 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Renewable Energy Systems"
+  },
+  {
+    "filename": "Renewable Energy Systems (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Renewable Energy Systems"
+  },
+  {
+    "filename": "Renewable Energy Systems (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Renewable Energy Systems/Renewable Energy Systems (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Renewable Energy Systems"
+  },
+  {
+    "filename": "Power Systems II (June 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (June 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems II (May 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (May 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems II Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II Answer Key.pdf",
+    "year": "Other",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems II (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems II (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems II Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II Answer Key_1.pdf",
+    "year": "Other",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems II (May 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (May 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems II (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems II (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems II (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems II (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/Power Systems II (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Electronics (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (2022).pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (2022).pdf",
+    "year": "2022",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (2022)_1.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (2022)_1.pdf",
+    "year": "2022",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (2022)_3.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (2022)_3.pdf",
+    "year": "2022",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (2022)_2.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (2022)_2.pdf",
+    "year": "2022",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics Answer Key.pdf",
+    "year": "Other",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics Answer Key_2.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics Answer Key_2.pdf",
+    "year": "Other",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics Answer Key_1.pdf",
+    "year": "Other",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (June 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (June 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Comprehensive Course Work (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Comprehensive Course Work"
+  },
+  {
+    "filename": "Comprehensive Course Work (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Comprehensive Course Work"
+  },
+  {
+    "filename": "Comprehensive Course Work (May 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work (May 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Comprehensive Course Work"
+  },
+  {
+    "filename": "Comprehensive Course Work (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Comprehensive Course Work"
+  },
+  {
+    "filename": "Comprehensive Course Work (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Comprehensive Course Work"
+  },
+  {
+    "filename": "Comprehensive Course Work (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Comprehensive/Comprehensive Course Work (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Comprehensive Course Work"
+  },
+  {
+    "filename": "Management for Engineers (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (December 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (December 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers Answer Key_1.pdf",
+    "year": "Other",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (June 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (June 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (May 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (May 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (May 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (May 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (May 2025) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (May 2025) Answer Key_1.pdf",
+    "year": "2025",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers Answer Key.pdf",
+    "year": "Other",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (July 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (July 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Management for Engineers (May 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers (May 2024) Answer Key_1.pdf",
+    "year": "2024",
+    "subject": "Management for Engineers"
+  },
+  {
+    "filename": "Linear Control Systems Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems Answer Key_1.pdf",
+    "year": "Other",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems (June 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems (June 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems (April 2025) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems (April 2025) Answer Key_1.pdf",
+    "year": "2025",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems (June 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems (June 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems Answer Key.pdf",
+    "year": "Other",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems (June 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems (June 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems (2019) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems (2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems (December 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems (December 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Electric Drives (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (December 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives (2013).pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (2013).pdf",
+    "year": "2013",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives (December 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (December 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives (December 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (December 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives (December 2022) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (December 2022) Answer Key_2.pdf",
+    "year": "2022",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives (May 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (May 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (November 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Introduction to Mobile Computing (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Introduction to Mobile Computing"
+  },
+  {
+    "filename": "Introduction to Mobile Computing (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing (November 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Introduction to Mobile Computing"
+  },
+  {
+    "filename": "Introduction to Mobile Computing (2019) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing (2019) Answer Key.pdf",
+    "year": "2019",
+    "subject": "Introduction to Mobile Computing"
+  },
+  {
+    "filename": "Introduction to Mobile Computing (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Introduction to Mobile Computing"
+  },
+  {
+    "filename": "Industrial Safety Engineering QP.pdf",
+    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Industrial Safety Engineering QP.pdf",
+    "year": "Other",
+    "subject": "General"
+  },
+  {
+    "filename": "Advanced Control Systems (December 2021) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2021) Answer Key_1.pdf",
+    "year": "2021",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (December 2021) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2021) Answer Key.pdf",
+    "year": "2021",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (May 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (May 2023) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2023) Answer Key_3.pdf",
+    "year": "2023",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (May 2023) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2023) Answer Key_2.pdf",
+    "year": "2023",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (November 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (November 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (December 2022) Answer Key_4.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2022) Answer Key_4.pdf",
+    "year": "2022",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (December 2023) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2023) Answer Key_2.pdf",
+    "year": "2023",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (2014).pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (2014).pdf",
+    "year": "2014",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (December 2023) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2023) Answer Key_1.pdf",
+    "year": "2023",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (May 2024) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2024) Answer Key_3.pdf",
+    "year": "2024",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (December 2022) Answer Key_3.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2022) Answer Key_3.pdf",
+    "year": "2022",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (December 2022) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2022) Answer Key_2.pdf",
+    "year": "2022",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (May 2024) Answer Key_2.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2024) Answer Key_2.pdf",
+    "year": "2024",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (December 2022) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2022) Answer Key_1.pdf",
+    "year": "2022",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (May 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2024) Answer Key_1.pdf",
+    "year": "2024",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (April 2025) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (April 2025) Answer Key.pdf",
+    "year": "2025",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (November 2024) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (November 2024) Answer Key_1.pdf",
+    "year": "2024",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (December 2022) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2022) Answer Key.pdf",
+    "year": "2022",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (May 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (December 2023) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (December 2023) Answer Key.pdf",
+    "year": "2023",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (April 2025) Answer Key_1.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (April 2025) Answer Key_1.pdf",
+    "year": "2025",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Answer Key.pdf",
+    "year": "Other",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems (May 2024) Answer Key.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems (May 2024) Answer Key.pdf",
+    "year": "2024",
+    "subject": "Advanced Control Systems"
   }
 ];
 
 const LOCAL_NOTE_FILES = [
   {
-    "filename": "Advanced Control Systems - Ilovemerge.txt",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems - Ilovemerge.txt",
+    "filename": "Synchronous and Induction Machines (May 2015).pdf",
+    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (May 2015).pdf",
     "format": "PDF Notes",
-    "subject": "Advanced Control Systems"
+    "subject": "Synchronous and Induction Machines"
   },
   {
-    "filename": "Advanced Control Systems Notes.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes.pdf",
+    "filename": "Synchronous and Induction Machines (May 2014).pdf",
+    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines (May 2014).pdf",
     "format": "PDF Notes",
-    "subject": "Advanced Control Systems"
+    "subject": "Synchronous and Induction Machines"
   },
   {
-    "filename": "Advanced Control Systems Notes_1.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_1.pdf",
+    "filename": "Synchronous and Induction Machines - Sim-Short-Notes.pdf",
+    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines - Sim-Short-Notes.pdf",
     "format": "PDF Notes",
-    "subject": "Advanced Control Systems"
+    "subject": "Synchronous and Induction Machines"
   },
   {
-    "filename": "Advanced Control Systems Notes_2.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_2.pdf",
+    "filename": "Power Systems I - Module 1.pdf",
+    "rel_path": "Btech cources/S5/Power system /Power Systems I - Module 1.pdf",
     "format": "PDF Notes",
-    "subject": "Advanced Control Systems"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Advanced Control Systems Notes_3.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_3.pdf",
+    "filename": "Power Systems I Notes_10.pdf",
+    "rel_path": "Btech cources/S5/Power system /Power Systems I Notes_10.pdf",
     "format": "PDF Notes",
-    "subject": "Advanced Control Systems"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Advanced Control Systems Notes_4.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_4.pdf",
+    "filename": "Power Systems I module4.pdf",
+    "rel_path": "Btech cources/S5/Power system /Power Systems I module4.pdf",
     "format": "PDF Notes",
-    "subject": "Advanced Control Systems"
+    "subject": "Power Systems I"
   },
   {
-    "filename": "Advanced Control Systems Notes_5.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_5.pdf",
+    "filename": "Signals and Systems Notes_14.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems Notes_14.pdf",
     "format": "PDF Notes",
-    "subject": "Advanced Control Systems"
+    "subject": "Signals and Systems"
   },
   {
-    "filename": "Advanced Control Systems Notes_6.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_6.pdf",
+    "filename": "Signals and Systems Notes_12.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems Notes_12.pdf",
     "format": "PDF Notes",
-    "subject": "Advanced Control Systems"
+    "subject": "Signals and Systems"
   },
   {
-    "filename": "Advanced Control Systems Notes_7.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_7.pdf",
+    "filename": "Signals and Systems Notes_13.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems Notes_13.pdf",
     "format": "PDF Notes",
-    "subject": "Advanced Control Systems"
+    "subject": "Signals and Systems"
   },
   {
-    "filename": "Advanced Control Systems Notes_8.pdf",
-    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_8.pdf",
+    "filename": "Signals and Systems Notes_11.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems Notes_11.pdf",
     "format": "PDF Notes",
-    "subject": "Advanced Control Systems"
+    "subject": "Signals and Systems"
   },
   {
-    "filename": "Analog Electronics Notes.pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics Notes.pdf",
+    "filename": "Signals and Systems Notes_10.pdf",
+    "rel_path": "Btech cources/S5/Signals/Signals and Systems Notes_10.pdf",
     "format": "PDF Notes",
-    "subject": "Analog Electronics"
+    "subject": "Signals and Systems"
+  },
+  {
+    "filename": "IMG_6088.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6088.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6103.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6103.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6117.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6117.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6116.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6116.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6102.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6102.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6089.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6089.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6128.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6128.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6114.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6114.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6100.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6100.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6101.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6101.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6115.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6115.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6129.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6129.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6111.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6111.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6105.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6105.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6139.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6139.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6138.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6138.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6104.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6104.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6110.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6110.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6099.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6099.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6106.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6106.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6112.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6112.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6113.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6113.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6107.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6107.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6098.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6098.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6148.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6148.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6160.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6160.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6174.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6174.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6175.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6175.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6161.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6161.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6149.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6149.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6163.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6163.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6162.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6162.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6176.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6176.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6172.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6172.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6166.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6166.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6167.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6167.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6173.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6173.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6165.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6165.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6171.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6171.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6159.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6159.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6158.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6158.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6170.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6170.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6164.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6164.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6169.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6169.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6141.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6141.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6155.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6155.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6154.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6154.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6140.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6140.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6168.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6168.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6156.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6156.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6142.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6142.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6143.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6143.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6157.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6157.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6153.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6153.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6147.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6147.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6146.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6146.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6152.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6152.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6144.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6144.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6150.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6150.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6151.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6151.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6145.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6145.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6095.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6095.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6122.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6122.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6136.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6136.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6137.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6137.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6123.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6123.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6094.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6094.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6096.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6096.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6109.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6109.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6135.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6135.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6121.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6121.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6120.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6120.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6134.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6134.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6108.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6108.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6097.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6097.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6087.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6087.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6093.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6093.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6130.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6130.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6124.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6124.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6118.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6118.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6119.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6119.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6125.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6125.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6131.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6131.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6092.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6092.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6086.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6086.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6090.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6090.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6127.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6127.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6133.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6133.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6132.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6132.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6126.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6126.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6085.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6085.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "IMG_6091.pdf",
+    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6091.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "Microprocessors and Microcontrollers - Module 2.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers - Module 2.pdf",
+    "format": "PDF Notes",
+    "subject": "Microprocessors and Microcontrollers"
+  },
+  {
+    "filename": "Microprocessors and Microcontrollers - Module 1.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers - Module 1.pdf",
+    "format": "PDF Notes",
+    "subject": "Microprocessors and Microcontrollers"
+  },
+  {
+    "filename": "Microprocessors and Microcontrollers - Module 4.pdf",
+    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers - Module 4.pdf",
+    "format": "PDF Notes",
+    "subject": "Microprocessors and Microcontrollers"
+  },
+  {
+    "filename": "Power Systems I.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I.pdf",
+    "format": "PDF Notes",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems I Lab Manual.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems I Lab Manual_1.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I Lab Manual_1.pdf",
+    "format": "Lab Manual",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems I Syllabus.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I Syllabus.pdf",
+    "format": "Syllabus",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems I (May 2005).pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (May 2005).pdf",
+    "format": "PDF Notes",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Systems I (December 2020) Lab Manual.pdf",
+    "rel_path": "Btech cources/S5/Power system/Power Systems I (December 2020) Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Synchronous and Induction Machines_1.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines_1.pdf",
+    "format": "PDF Notes",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Synchronous and Induction Machines.pdf",
+    "rel_path": "Btech cources/S5/Synchronous/Synchronous and Induction Machines.pdf",
+    "format": "PDF Notes",
+    "subject": "Synchronous and Induction Machines"
+  },
+  {
+    "filename": "Disaster Management - Dm Question Bank 2.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management - Dm Question Bank 2.pdf",
+    "format": "PDF Notes",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "DM M1 Ktunotes.in.pdf",
+    "rel_path": "Btech cources/S5/DM/DM M1 Ktunotes.in.pdf",
+    "format": "PDF Notes",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management.pdf",
+    "format": "PDF Notes",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management_1.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management_1.pdf",
+    "format": "PDF Notes",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Disaster Management Notes_9.pdf",
+    "rel_path": "Btech cources/S5/DM/Disaster Management Notes_9.pdf",
+    "format": "PDF Notes",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "DM M2 Ktunotes.in.pdf",
+    "rel_path": "Btech cources/S5/DM/DM M2 Ktunotes.in.pdf",
+    "format": "PDF Notes",
+    "subject": "Disaster Management"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_31.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_31.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Lab Manual.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_32.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_32.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_33.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_33.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_37.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_37.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_36.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_36.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_34.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_34.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_35.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_35.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade - Industrial Economics Full Notes.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade - Industrial Economics Full Notes.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_3.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_3.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade - Ieft-Important Essay Questions.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade - Ieft-Important Essay Questions.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_38.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_38.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_39.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_39.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
+  },
+  {
+    "filename": "Industrial Economics & Foreign Trade Notes_17.pdf",
+    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_17.pdf",
+    "format": "PDF Notes",
+    "subject": "Industrial Economics & Foreign Trade"
   },
   {
     "filename": "Analog Electronics Notes_1.pdf",
     "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics Notes_1.pdf",
-    "format": "PDF Notes",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Analog Electronics Notes_2.pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics Notes_2.pdf",
     "format": "PDF Notes",
     "subject": "Analog Electronics"
   },
@@ -3258,104 +4032,32 @@ const LOCAL_NOTE_FILES = [
     "subject": "Analog Electronics"
   },
   {
+    "filename": "Analog Electronics Notes_2.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics Notes_2.pdf",
+    "format": "PDF Notes",
+    "subject": "Analog Electronics"
+  },
+  {
+    "filename": "Analog Electronics Notes.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics Notes.pdf",
+    "format": "PDF Notes",
+    "subject": "Analog Electronics"
+  },
+  {
     "filename": "Analog Electronics Notes_4.pdf",
     "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics Notes_4.pdf",
     "format": "PDF Notes",
     "subject": "Analog Electronics"
   },
   {
-    "filename": "Analog Electronics Notes_7.pdf",
-    "rel_path": "Btech cources/S3/Analog electronics /Analog Electronics Notes_7.pdf",
-    "format": "PDF Notes",
-    "subject": "Analog Electronics"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg Notes.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engg Notes_2.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg Notes_2.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Dec_Pdf 2.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Dec_Pdf 2.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Dec_Pdf 3.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Dec_Pdf 3.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Dec_Pdf.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Dec_Pdf.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Dec__Pdf.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Dec__Pdf.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Jan_Pdf 2.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Jan_Pdf 2.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Jan_Pdf.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Ktu__Ss_Bee_Jan_Pdf.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Module 2.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Module 2.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Module 3.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Module 3.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Module 4.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Module 4.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Module 5.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Module 5.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Basics of Electrical & Electronics Engineering - Module 6.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Module 6.pdf",
-    "format": "PDF Notes",
-    "subject": "Basics of Electrical & Electronics Engineering"
-  },
-  {
-    "filename": "Circuits and Networks Notes_10.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Notes_10.pdf",
+    "filename": "Circuits and Networks Notes_11.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Notes_11.pdf",
     "format": "PDF Notes",
     "subject": "Circuits and Networks"
   },
   {
-    "filename": "Circuits and Networks Notes_11.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Notes_11.pdf",
+    "filename": "Circuits and Networks Notes_10.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Notes_10.pdf",
     "format": "PDF Notes",
     "subject": "Circuits and Networks"
   },
@@ -3372,6 +4074,24 @@ const LOCAL_NOTE_FILES = [
     "subject": "Circuits and Networks"
   },
   {
+    "filename": "Circuits and Networks Notes_9.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Notes_9.pdf",
+    "format": "PDF Notes",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks Notes_8.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Notes_8.pdf",
+    "format": "PDF Notes",
+    "subject": "Circuits and Networks"
+  },
+  {
+    "filename": "Circuits and Networks, Solved Notes.pdf",
+    "rel_path": "Btech cources/S3/CAN/Circuits and Networks, Solved Notes.pdf",
+    "format": "PDF Notes",
+    "subject": "Circuits and Networks"
+  },
+  {
     "filename": "Circuits and Networks Notes_5.pdf",
     "rel_path": "Btech cources/S3/CAN/Circuits and Networks Notes_5.pdf",
     "format": "PDF Notes",
@@ -3384,206 +4104,218 @@ const LOCAL_NOTE_FILES = [
     "subject": "Circuits and Networks"
   },
   {
-    "filename": "Circuits and Networks Notes_8.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Notes_8.pdf",
+    "filename": "Analog Electronics.pdf",
+    "rel_path": "Btech cources/S3/Analog electronics/Analog Electronics.pdf",
     "format": "PDF Notes",
-    "subject": "Circuits and Networks"
+    "subject": "Analog Electronics"
   },
   {
-    "filename": "Circuits and Networks Notes_9.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks Notes_9.pdf",
+    "filename": "Measurements and Instrumentation_1.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation_1.pdf",
     "format": "PDF Notes",
-    "subject": "Circuits and Networks"
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Circuits and Networks, Solved Notes.pdf",
-    "rel_path": "Btech cources/S3/CAN/Circuits and Networks, Solved Notes.pdf",
+    "filename": "Measurements and Instrumentation Notes_18.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_18.pdf",
     "format": "PDF Notes",
-    "subject": "Circuits and Networks"
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Constitution of India Notes_10.pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India Notes_10.pdf",
+    "filename": "Measurements and Instrumentation Notes_12.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_12.pdf",
     "format": "PDF Notes",
-    "subject": "Constitution of India"
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Constitution of India Notes_11.pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India Notes_11.pdf",
+    "filename": "Measurements and Instrumentation Notes_11.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_11.pdf",
     "format": "PDF Notes",
-    "subject": "Constitution of India"
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Constitution of India Notes_12.pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India Notes_12.pdf",
+    "filename": "Measurements and Instrumentation Notes_10.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_10.pdf",
     "format": "PDF Notes",
-    "subject": "Constitution of India"
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Constitution of India Notes_8.pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India Notes_8.pdf",
+    "filename": "Measurements and Instrumentation Notes_15.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_15.pdf",
     "format": "PDF Notes",
-    "subject": "Constitution of India"
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "Constitution of India Notes_9.pdf",
-    "rel_path": "Btech cources/S4/Constitution of India /Constitution of India Notes_9.pdf",
+    "filename": "Measurements and Instrumentation Notes_9.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_9.pdf",
     "format": "PDF Notes",
-    "subject": "Constitution of India"
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "DC Machines and Transformers - 1.1_Constructional Details.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod1/DC Machines and Transformers - 1.1_Constructional Details.pdf",
+    "filename": "Measurements and Instrumentation Notes_17.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_17.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "DC Machines and Transformers - 1.2_Armature Winding.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod1/DC Machines and Transformers - 1.2_Armature Winding.pdf",
+    "filename": "Measurements and Instrumentation Notes_16.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_16.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "DC Machines and Transformers - 1.3_Mmf_Emf_Torque.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod1/DC Machines and Transformers - 1.3_Mmf_Emf_Torque.pdf",
+    "filename": "Measurements and Instrumentation.pdf",
+    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Measurements and Instrumentation"
   },
   {
-    "filename": "DC Machines and Transformers - 1.4_Equalizer Rings And Dummy Coils.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod1/DC Machines and Transformers - 1.4_Equalizer Rings And Dummy Coils.pdf",
+    "filename": "Partial Differential Equations & Complex Analysis Notes_9.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_9.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 2.1_Emf Equation And Excitation (1).pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod2/DC Machines and Transformers - 2.1_Emf Equation And Excitation (1).pdf",
+    "filename": "Partial Differential Equations & Complex Analysis, Solved Notes.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis, Solved Notes.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 2.2_Losses And Power Flow.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod2/DC Machines and Transformers - 2.2_Losses And Power Flow.pdf",
+    "filename": "Partial Differential Equations & Complex Analysis Notes.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 2.3_Armature Reaction.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod2/DC Machines and Transformers - 2.3_Armature Reaction.pdf",
+    "filename": "Partial Differential Equations & Complex Analysis Notes_8.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_8.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 2.4_Armature Reaction2 (1).pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod2/DC Machines and Transformers - 2.4_Armature Reaction2 (1).pdf",
+    "filename": "Partial Differential Equations & Complex Analysis, Solved Notes_1.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis, Solved Notes_1.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 2.5_Generator Characteristics.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod2/DC Machines and Transformers - 2.5_Generator Characteristics.pdf",
+    "filename": "Partial Differential Equations & Complex Analysis Notes_16.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_16.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 2.6_Voltage Build-Up.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod2/DC Machines and Transformers - 2.6_Voltage Build-Up.pdf",
+    "filename": "Dec 2023.pdf",
+    "rel_path": "Btech cources/S3/Maths/Dec 2023.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 2.7_Parallel Operation.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod2/DC Machines and Transformers - 2.7_Parallel Operation.pdf",
+    "filename": "Partial Differential Equations & Complex Analysis Notes_15.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_15.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 2.8_Commutation.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod2/DC Machines and Transformers - 2.8_Commutation.pdf",
+    "filename": "Partial Differential Equations & Complex Analysis Notes_14.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_14.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 3.1_Torque Equation And Back Emf.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod3/DC Machines and Transformers - 3.1_Torque Equation And Back Emf.pdf",
+    "filename": "Partial Differential Equations & Complex Analysis Notes_10.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_10.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 3.2_Types Losses And Power Flow.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod3/DC Machines and Transformers - 3.2_Types Losses And Power Flow.pdf",
+    "filename": "Partial Differential Equations & Complex Analysis Notes_11.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_11.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 3.3_Performance Characteristics & Starting.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod3/DC Machines and Transformers - 3.3_Performance Characteristics & Starting.pdf",
+    "filename": "Partial Differential Equations & Complex Analysis Notes_13.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_13.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 3.4_Speed Control Of Motor.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod3/DC Machines and Transformers - 3.4_Speed Control Of Motor.pdf",
+    "filename": "Partial Differential Equations & Complex Analysis Notes_12.pdf",
+    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_12.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 3.5_Braking Of Dc Motor.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod3/DC Machines and Transformers - 3.5_Braking Of Dc Motor.pdf",
+    "filename": "Dec 2023 Compressed.pdf",
+    "rel_path": "Btech cources/S3/Maths/Dec 2023 Compressed.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Partial Differential Equations and Complex Analysis"
   },
   {
-    "filename": "DC Machines and Transformers - 3.6_Tests On Dc Motors.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod3/DC Machines and Transformers - 3.6_Tests On Dc Motors.pdf",
+    "filename": "Probability, Random Processes & Numerical Methods Notes.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods Notes.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "DC Machines and Transformers - 4.2_Idealtransformerdotconventionkvarating.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod4/DC Machines and Transformers - 4.2_Idealtransformerdotconventionkvarating.pdf",
+    "filename": "Probability, Random Processes and Numerical Methods - Module 2.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods - Module 2.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "DC Machines and Transformers - 4.3_Phasor Diagram.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod4/DC Machines and Transformers - 4.3_Phasor Diagram.pdf",
+    "filename": "Probability, Random Processes and Numerical Methods - Module 3.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods - Module 3.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "DC Machines and Transformers - 4.4_Equivalent Circuit Losses And Efficiency.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod4/DC Machines and Transformers - 4.4_Equivalent Circuit Losses And Efficiency.pdf",
+    "filename": "Probability, Random Processes and Numerical Methods - Module 1.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods - Module 1.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "DC Machines and Transformers - 4.5_Open Ckt And Short Ckt Tests.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod4/DC Machines and Transformers - 4.5_Open Ckt And Short Ckt Tests.pdf",
+    "filename": "Probability, Random Processes and Numerical Methods - Module 4.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods - Module 4.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "DC Machines and Transformers - 4.6_All Day Efficiency.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod4/DC Machines and Transformers - 4.6_All Day Efficiency.pdf",
+    "filename": "Probability, Random Processes and Numerical Methods - Module 5.pdf",
+    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods - Module 5.pdf",
     "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "subject": "Probability, Random Processes and Numerical Methods"
   },
   {
-    "filename": "DC Machines and Transformers - 5.1_Threephasetransformer.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod5/DC Machines and Transformers - 5.1_Threephasetransformer.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "filename": "Digital Electronics (January 2022) Lab Manual.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (January 2022) Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "DC Machines and Transformers - 5.2_Vector Groups.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod5/DC Machines and Transformers - 5.2_Vector Groups.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
+    "filename": "Digital Electronics Lab Manual.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Digital Electronics"
   },
   {
-    "filename": "DC Machines and Transformers - 5.3_Three Winding Transformer.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod5/DC Machines and Transformers - 5.3_Three Winding Transformer.pdf",
+    "filename": "Digital Electronics (February 2025) Lab Manual.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics (February 2025) Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Digital Electronics"
+  },
+  {
+    "filename": "Digital Electronics Lab Manual_1.pdf",
+    "rel_path": "Btech cources/S4/Digital Electronics/Digital Electronics Lab Manual_1.pdf",
+    "format": "Lab Manual",
+    "subject": "Digital Electronics"
+  },
+  {
+    "filename": "DC Machines and Transformers - Transformer On No Load.pdf",
+    "rel_path": "Btech cources/S4/DCMT /Mod5/DC Machines and Transformers - Transformer On No Load.pdf",
     "format": "PDF Notes",
     "subject": "DC Machines and Transformers"
   },
@@ -3606,14 +4338,8 @@ const LOCAL_NOTE_FILES = [
     "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "DC Machines and Transformers - Compensating Winding.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod2/DC Machines and Transformers - Compensating Winding.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers - Dynamic Breaking.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod3/DC Machines and Transformers - Dynamic Breaking.pdf",
+    "filename": "DC Machines and Transformers - Wave Winding Diagram.pdf",
+    "rel_path": "Btech cources/S4/DCMT /Mod1/DC Machines and Transformers - Wave Winding Diagram.pdf",
     "format": "PDF Notes",
     "subject": "DC Machines and Transformers"
   },
@@ -3624,260 +4350,32 @@ const LOCAL_NOTE_FILES = [
     "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "DC Machines and Transformers - Module 4.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod4/DC Machines and Transformers - Module 4.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers - Tap Changing Transformers.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod5/DC Machines and Transformers - Tap Changing Transformers.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers - Textbook.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod4/DC Machines and Transformers - Textbook.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers - Transformer Connections.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod5/DC Machines and Transformers - Transformer Connections.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers - Transformer On No Load.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod5/DC Machines and Transformers - Transformer On No Load.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers - Tutorial 1_Sol.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod2/DC Machines and Transformers - Tutorial 1_Sol.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers - Tutorial 2.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod1/DC Machines and Transformers - Tutorial 2.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers - Wave Winding Diagram.pdf",
-    "rel_path": "Btech cources/S4/DCMT /Mod1/DC Machines and Transformers - Wave Winding Diagram.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "DC Machines and Transformers Notes_6.pdf",
-    "rel_path": "Btech cources/S4/DCMT /DC Machines and Transformers Notes_6.pdf",
-    "format": "PDF Notes",
-    "subject": "DC Machines and Transformers"
-  },
-  {
-    "filename": "Design and Engineering Notes_18.pdf",
-    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering Notes_18.pdf",
-    "format": "PDF Notes",
-    "subject": "Design and Engineering"
-  },
-  {
-    "filename": "DM M1 Ktunotes.in.pdf",
-    "rel_path": "Btech cources/S5/DM/DM M1 Ktunotes.in.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "DM M2 Ktunotes.in.pdf",
-    "rel_path": "Btech cources/S5/DM/DM M2 Ktunotes.in.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "DM M3 Ktunotes.in.pdf",
-    "rel_path": "Btech cources/S5/DM/DM M3 Ktunotes.in.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "DM M4 Ktunotes.in.pdf",
-    "rel_path": "Btech cources/S5/DM/DM M4 Ktunotes.in.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "DM M5 Ktunotes.in.pdf",
-    "rel_path": "Btech cources/S5/DM/DM M5 Ktunotes.in.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management - Disaster Management - State And Explain The Types Of Disaster Mitigation Measures And Also\u2026.docx",
-    "rel_path": "Btech cources/S5/DM/Disaster Management - Disaster Management - State And Explain The Types Of Disaster Mitigation Measures And Also\u2026.docx",
-    "format": "Word Document",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management - Disaster Management - State And Explain The Types Of Disaster Mitigation Measures And Also\u2026.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management - Disaster Management - State And Explain The Types Of Disaster Mitigation Measures And Also\u2026.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management - Merged_Presentation_Choladeck.pptx",
-    "rel_path": "Btech cources/S5/DM/Disaster Management - Merged_Presentation_Choladeck.pptx",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management - Module 1.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management - Module 1.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management - Module 2.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management - Module 2.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management - Module 3.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management - Module 3.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management - Module 4.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management - Module 4.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management - Module 5.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management - Module 5.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management Notes.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management Notes_10.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management Notes_10.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management Notes_11.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management Notes_11.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management Notes_12.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management Notes_12.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Disaster Management Notes_9.pdf",
-    "rel_path": "Btech cources/S5/DM/Disaster Management Notes_9.pdf",
-    "format": "PDF Notes",
-    "subject": "Disaster Management"
-  },
-  {
-    "filename": "Electric Drives (July).pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives (July).pdf",
-    "format": "PDF Notes",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives Notes.pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives Notes_1.pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_1.pdf",
-    "format": "PDF Notes",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives Notes_10.pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_10.pdf",
-    "format": "PDF Notes",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives Notes_11.pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_11.pdf",
-    "format": "PDF Notes",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives Notes_6.pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_6.pdf",
-    "format": "PDF Notes",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives Notes_7.pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_7.pdf",
-    "format": "PDF Notes",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives Notes_8.pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_8.pdf",
-    "format": "PDF Notes",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electric Drives Notes_9.pdf",
-    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_9.pdf",
-    "format": "PDF Notes",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "IMG_7941.heic",
-    "rel_path": "Btech cources/S7/Electric Drives/IMG_7941.heic",
-    "format": "PDF Notes",
-    "subject": "Electric Drives"
-  },
-  {
-    "filename": "Electrical System Design Notes.pdf",
-    "rel_path": "Btech cources/S8/Design/Electrical System Design Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Electrical System Design & Estimation"
-  },
-  {
-    "filename": "Electromagnetic Theory - Doc-20230313-Wa0000_.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory - Doc-20230313-Wa0000_.pdf",
+    "filename": "Electromagnetic Theory - Screenshot 2024-06-16 At 7.48.06 Pm.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory - Screenshot 2024-06-16 At 7.48.06 Pm.pdf",
     "format": "PDF Notes",
     "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Electromagnetic Theory - Emt Ans.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory - Emt Ans.pdf",
+    "filename": "Electromagnetic Theory.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory.pdf",
     "format": "PDF Notes",
     "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Electromagnetic Theory - Emtmod-4.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory - Emtmod-4.pdf",
+    "filename": "Electromagnetic Theory - Module 5.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory - Module 5.pdf",
     "format": "PDF Notes",
     "subject": "Electromagnetic Theory"
   },
   {
     "filename": "Electromagnetic Theory - Imp-Matching.pdf",
     "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory - Imp-Matching.pdf",
+    "format": "PDF Notes",
+    "subject": "Electromagnetic Theory"
+  },
+  {
+    "filename": "Electromagnetic Theory - Doc-20230313-Wa0000_.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory - Doc-20230313-Wa0000_.pdf",
     "format": "PDF Notes",
     "subject": "Electromagnetic Theory"
   },
@@ -3894,254 +4392,296 @@ const LOCAL_NOTE_FILES = [
     "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Electromagnetic Theory - Module 5.pdf",
-    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory - Module 5.pdf",
-    "format": "PDF Notes",
-    "subject": "Electromagnetic Theory"
-  },
-  {
     "filename": "mod-5.pdf",
     "rel_path": "Btech cources/S4/EMT note/mod-5.pdf",
     "format": "PDF Notes",
     "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Engineering Mechanics Notes.pdf",
-    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics Notes.pdf",
+    "filename": "Electromagnetic Theory - Emtmod-4.pdf",
+    "rel_path": "Btech cources/S4/EMT note/Electromagnetic Theory - Emtmod-4.pdf",
     "format": "PDF Notes",
-    "subject": "Engineering Mechanics"
+    "subject": "Electromagnetic Theory"
   },
   {
-    "filename": "Engineering Physics A - Module 2.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A - Module 2.pdf",
-    "format": "PDF Notes",
-    "subject": "Engineering Physics A"
+    "filename": "Electrical Machines Lab I.pdf",
+    "rel_path": "Btech cources/S4/DCMT/Electrical Machines Lab I.pdf",
+    "format": "Lab Manual",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Engineering Physics A - Module 3.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A - Module 3.pdf",
+    "filename": "DC Machines and Transformers_1.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_1.pdf",
     "format": "PDF Notes",
-    "subject": "Engineering Physics A"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Engineering Physics A - Module 4.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A - Module 4.pdf",
-    "format": "PDF Notes",
-    "subject": "Engineering Physics A"
+    "filename": "DC Machines and Transformers Syllabus_7.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_7.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Engineering Physics A - Module 5.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A - Module 5.pdf",
-    "format": "PDF Notes",
-    "subject": "Engineering Physics A"
+    "filename": "DC Machines and Transformers Syllabus_6.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_6.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Engineering Physics A - Oscillations.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A - Oscillations.pdf",
+    "filename": "DC Machines and Transformers_2.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_2.pdf",
     "format": "PDF Notes",
-    "subject": "Engineering Physics A"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Engineering Physics A - Physics Improvement.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A - Physics Improvement.pdf",
-    "format": "PDF Notes",
-    "subject": "Engineering Physics A"
+    "filename": "DC Machines and Transformers Syllabus_4.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_4.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Engineering Physics A - Time Dependant And Time Independent Equation.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A - Time Dependant And Time Independent Equation.pdf",
-    "format": "PDF Notes",
-    "subject": "Engineering Physics A"
+    "filename": "DC Machines and Transformers Syllabus_5.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_5.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "M3 Quantum Mechanics Note.pdf",
-    "rel_path": "Btech cources/College S1 S2/Phy/M3 Quantum Mechanics Note.pdf",
+    "filename": "DC Machines and Transformers_3.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_3.pdf",
     "format": "PDF Notes",
-    "subject": "Engineering Physics A"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade - Industrial Economics Full Notes.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade - Industrial Economics Full Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "filename": "DC Machines and Transformers Syllabus_13.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_13.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_17.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_17.pdf",
+    "filename": "DC Machines and Transformers_7.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_7.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_3.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_3.pdf",
-    "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "filename": "DC Machines and Transformers Syllabus_1.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_1.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_31.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_31.pdf",
+    "filename": "DC Machines and Transformers_6.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_6.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_32.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_32.pdf",
-    "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "filename": "DC Machines and Transformers Syllabus_12.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_12.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_33.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_33.pdf",
-    "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "filename": "DC Machines and Transformers Syllabus_10.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_10.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_34.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_34.pdf",
-    "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "filename": "DC Machines and Transformers Lab Manual.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_35.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_35.pdf",
+    "filename": "DC Machines and Transformers_4.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_4.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_36.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_36.pdf",
-    "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "filename": "DC Machines and Transformers Syllabus_2.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_2.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_37.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_37.pdf",
-    "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "filename": "DC Machines and Transformers Syllabus_3.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_3.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_38.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_38.pdf",
+    "filename": "DC Machines and Transformers_5.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_5.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_39.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_39.pdf",
-    "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "filename": "DC Machines and Transformers Syllabus_11.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_11.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Economics & Foreign Trade Notes_40.pdf",
-    "rel_path": "Btech cources/S5/Economics/Industrial Economics & Foreign Trade Notes_40.pdf",
+    "filename": "DC Machines and Transformers_8.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_8.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Economics & Foreign Trade"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Safety Engineering - Mcn401-A-8.pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Industrial Safety Engineering - Mcn401-A-8.pdf",
+    "filename": "DC Machines and Transformers_10.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_10.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Safety Engineering"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Safety Engineering - Module 1.pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Industrial Safety Engineering - Module 1.pdf",
+    "filename": "DC Machines and Transformers_11.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_11.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Safety Engineering"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Safety Engineering - Module 2.pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Industrial Safety Engineering - Module 2.pdf",
+    "filename": "DC Machines and Transformers_9.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_9.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Safety Engineering"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Safety Engineering - Module 3.pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Industrial Safety Engineering - Module 3.pdf",
+    "filename": "DC Machines and Transformers.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Safety Engineering"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Safety Engineering - Module 4.pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Industrial Safety Engineering - Module 4.pdf",
+    "filename": "DC Machines and Transformers_13.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_13.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Safety Engineering"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Safety Engineering - Module 5.pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Industrial Safety Engineering - Module 5.pdf",
-    "format": "PDF Notes",
-    "subject": "Industrial Safety Engineering"
+    "filename": "Electrical Machines Lab I Lab Manual.pdf",
+    "rel_path": "Btech cources/S4/DCMT/Electrical Machines Lab I Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Industrial Safety Engineering - Textbook.pdf",
-    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Industrial Safety Engineering - Textbook.pdf",
+    "filename": "DC Machines and Transformers_12.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers_12.pdf",
     "format": "PDF Notes",
-    "subject": "Industrial Safety Engineering"
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Introduction to Mobile Computing - Mobile Computing.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Mobile Computing.pdf",
-    "format": "PDF Notes",
-    "subject": "Introduction to Mobile Computing"
+    "filename": "DC Machines and Transformers Syllabus_8.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_8.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Introduction to Mobile Computing - Module 1.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Module 1.pdf",
-    "format": "PDF Notes",
-    "subject": "Introduction to Mobile Computing"
+    "filename": "DC Machines and Transformers Syllabus_9.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus_9.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Introduction to Mobile Computing - Module 2.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Module 2.pdf",
-    "format": "PDF Notes",
-    "subject": "Introduction to Mobile Computing"
+    "filename": "DC Machines and Transformers Syllabus.pdf",
+    "rel_path": "Btech cources/S4/DCMT/DC Machines and Transformers Syllabus.pdf",
+    "format": "Syllabus",
+    "subject": "DC Machines and Transformers"
   },
   {
-    "filename": "Introduction to Mobile Computing - Module 3.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Module 3.pdf",
-    "format": "PDF Notes",
-    "subject": "Introduction to Mobile Computing"
+    "filename": "Constitution of India Syllabus.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India Syllabus.pdf",
+    "format": "Syllabus",
+    "subject": "Constitution of India"
   },
   {
-    "filename": "Introduction to Mobile Computing - Module 4.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Module 4.pdf",
+    "filename": "Constitution of India.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India.pdf",
     "format": "PDF Notes",
-    "subject": "Introduction to Mobile Computing"
+    "subject": "Constitution of India"
   },
   {
-    "filename": "Introduction to Mobile Computing - Module 5.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Module 5.pdf",
-    "format": "PDF Notes",
-    "subject": "Introduction to Mobile Computing"
+    "filename": "Constitution of India Syllabus_2.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India Syllabus_2.pdf",
+    "format": "Syllabus",
+    "subject": "Constitution of India"
   },
   {
-    "filename": "Introduction to Mobile Computing - Textbook.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Textbook.pdf",
-    "format": "PDF Notes",
-    "subject": "Introduction to Mobile Computing"
+    "filename": "Constitution of India Syllabus_1.pdf",
+    "rel_path": "Btech cources/S4/Constitution of India/Constitution of India Syllabus_1.pdf",
+    "format": "Syllabus",
+    "subject": "Constitution of India"
   },
   {
-    "filename": "Mobile Comp-M2 -Ktunotes.in.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Mobile Comp-M2 -Ktunotes.in.pdf",
-    "format": "PDF Notes",
-    "subject": "Introduction to Mobile Computing"
+    "filename": "Design and Engineering Lab Manual_2.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering Lab Manual_2.pdf",
+    "format": "Lab Manual",
+    "subject": "Design and Engineering"
   },
   {
-    "filename": "Mobile Comp-M4-Ktunotes.in.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Mobile Comp-M4-Ktunotes.in.pdf",
-    "format": "PDF Notes",
-    "subject": "Introduction to Mobile Computing"
+    "filename": "Design and Engineering Lab Manual_1.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering Lab Manual_1.pdf",
+    "format": "Lab Manual",
+    "subject": "Design and Engineering"
   },
   {
-    "filename": "Mobile Comp-M5-Ktunotes.in.pdf",
-    "rel_path": "Btech cources/S7/Mobile Computing/Mobile Comp-M5-Ktunotes.in.pdf",
-    "format": "PDF Notes",
-    "subject": "Introduction to Mobile Computing"
+    "filename": "Design and Engineering Lab Manual.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Design and Engineering"
   },
   {
-    "filename": "Linear Algebra & Calculus Notes.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus Notes.pdf",
+    "filename": "Design and Engineering.pdf",
+    "rel_path": "Btech cources/S4/Design and Engineering/Design and Engineering.pdf",
+    "format": "PDF Notes",
+    "subject": "Design and Engineering"
+  },
+  {
+    "filename": "Programming in C Syllabus.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C Syllabus.pdf",
+    "format": "Syllabus",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C Syllabus_3.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C Syllabus_3.pdf",
+    "format": "Syllabus",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C Syllabus_2.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C Syllabus_2.pdf",
+    "format": "Syllabus",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C Lab Manual.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Programming in C Syllabus_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C Syllabus_1.pdf",
+    "format": "Syllabus",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "DocScanner Aug 2, 2023 9-16 AM.pdf",
+    "rel_path": "Btech cources/College S1 S2/C prog/DocScanner Aug 2, 2023 9-16 AM.pdf",
+    "format": "PDF Notes",
+    "subject": "Programming in C"
+  },
+  {
+    "filename": "Maths Improvement-jan 2021.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Maths Improvement-jan 2021.pdf",
+    "format": "PDF Notes",
+    "subject": "Linear Algebra and Calculus"
+  },
+  {
+    "filename": "Linear Algebra & Calculus, Solved (December 2019).pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus, Solved (December 2019).pdf",
     "format": "PDF Notes",
     "subject": "Linear Algebra and Calculus"
   },
@@ -4152,1144 +4692,130 @@ const LOCAL_NOTE_FILES = [
     "subject": "Linear Algebra and Calculus"
   },
   {
-    "filename": "Linear Algebra & Calculus Notes_10.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus Notes_10.pdf",
+    "filename": "Linear Algebra & Calculus, Solved (January 2021).pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus, Solved (January 2021).pdf",
     "format": "PDF Notes",
     "subject": "Linear Algebra and Calculus"
   },
   {
-    "filename": "Linear Algebra and Calculus - Maths Summary.pdf",
-    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus - Maths Summary.pdf",
+    "filename": "CYT100 Univ Qn Ans Dec 2021 pdfn_230214_192018.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/CYT100 Univ Qn Ans Dec 2021 pdfn_230214_192018.pdf",
     "format": "PDF Notes",
     "subject": "Linear Algebra and Calculus"
   },
   {
-    "filename": "Linear Control Systems Notes_10.pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_10.pdf",
+    "filename": "Linear Algebra & Calculus (December 2019).pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus (December 2019).pdf",
     "format": "PDF Notes",
-    "subject": "Linear Control Systems"
+    "subject": "Linear Algebra and Calculus"
   },
   {
-    "filename": "Linear Control Systems Notes_11.pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_11.pdf",
+    "filename": "Linear Algebra & Calculus Notes.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus Notes.pdf",
     "format": "PDF Notes",
-    "subject": "Linear Control Systems"
+    "subject": "Linear Algebra and Calculus"
   },
   {
-    "filename": "Linear Control Systems Notes_12.pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_12.pdf",
+    "filename": "Linear Algebra and Calculus.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus.pdf",
     "format": "PDF Notes",
-    "subject": "Linear Control Systems"
+    "subject": "Linear Algebra and Calculus"
   },
   {
-    "filename": "Linear Control Systems Notes_13.pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_13.pdf",
+    "filename": "Linear Algebra and Calculus_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra and Calculus_1.pdf",
     "format": "PDF Notes",
-    "subject": "Linear Control Systems"
+    "subject": "Linear Algebra and Calculus"
   },
   {
-    "filename": "Linear Control Systems Notes_14.pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_14.pdf",
+    "filename": "Linear Algebra & Calculus, Solved (December 2021).pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 maths/Linear Algebra & Calculus, Solved (December 2021).pdf",
     "format": "PDF Notes",
-    "subject": "Linear Control Systems"
+    "subject": "Linear Algebra and Calculus"
   },
   {
-    "filename": "Linear Control Systems Notes_15.pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_15.pdf",
+    "filename": "Engineering Physics A - Module 3.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A - Module 3.pdf",
     "format": "PDF Notes",
-    "subject": "Linear Control Systems"
+    "subject": "Engineering Physics A"
   },
   {
-    "filename": "Linear Control Systems Notes_16.pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_16.pdf",
+    "filename": "Engineering Physics A - Module 5.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A - Module 5.pdf",
     "format": "PDF Notes",
-    "subject": "Linear Control Systems"
+    "subject": "Engineering Physics A"
   },
   {
-    "filename": "Linear Control Systems Notes_17.pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_17.pdf",
+    "filename": "Engineering Physics A.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/Engineering Physics A.pdf",
     "format": "PDF Notes",
-    "subject": "Linear Control Systems"
+    "subject": "Engineering Physics A"
   },
   {
-    "filename": "Linear Control Systems Notes_9.pdf",
-    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_9.pdf",
+    "filename": "M3 Quantum Mechanics Note.pdf",
+    "rel_path": "Btech cources/College S1 S2/Phy/M3 Quantum Mechanics Note.pdf",
     "format": "PDF Notes",
-    "subject": "Linear Control Systems"
+    "subject": "Engineering Physics A"
   },
   {
-    "filename": "Management for Engineers Notes.pdf",
-    "rel_path": "Btech cources/S6/Management of Engineering/Management for Engineers Notes.pdf",
+    "filename": "Basics of Electrical & Electronics Engineering.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering.pdf",
     "format": "PDF Notes",
-    "subject": "Management for Engineers"
+    "subject": "Basics of Electrical & Electronics Engineering"
   },
   {
-    "filename": "Measurements and Instrumentation - Textbook.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation - Textbook.pdf",
+    "filename": "Basics of Electrical & Electronics Engg Notes_2.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engg Notes_2.pdf",
     "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
+    "subject": "Basics of Electrical & Electronics Engineering"
   },
   {
-    "filename": "Measurements and Instrumentation Notes_10.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_10.pdf",
+    "filename": "Basics of Electrical & Electronics Engineering - Module 5.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Module 5.pdf",
     "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
+    "subject": "Basics of Electrical & Electronics Engineering"
   },
   {
-    "filename": "Measurements and Instrumentation Notes_11.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_11.pdf",
+    "filename": "Basics of Electrical & Electronics Engineering - Module 4.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Module 4.pdf",
     "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
+    "subject": "Basics of Electrical & Electronics Engineering"
   },
   {
-    "filename": "Measurements and Instrumentation Notes_12.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_12.pdf",
+    "filename": "Basics of Electrical & Electronics Engineering - Module 6.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Module 6.pdf",
     "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
+    "subject": "Basics of Electrical & Electronics Engineering"
   },
   {
-    "filename": "Measurements and Instrumentation Notes_13.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_13.pdf",
+    "filename": "Basics of Electrical & Electronics Engineering_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering_1.pdf",
     "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
+    "subject": "Basics of Electrical & Electronics Engineering"
   },
   {
-    "filename": "Measurements and Instrumentation Notes_14.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_14.pdf",
+    "filename": "Basics of Electrical & Electronics Engineering - Module 3.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Module 3.pdf",
     "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
+    "subject": "Basics of Electrical & Electronics Engineering"
   },
   {
-    "filename": "Measurements and Instrumentation Notes_15.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_15.pdf",
+    "filename": "Basics of Electrical & Electronics Engineering - Module 2.pdf",
+    "rel_path": "Btech cources/College S1 S2/S1 BEEE/Basics of Electrical & Electronics Engineering - Module 2.pdf",
     "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
+    "subject": "Basics of Electrical & Electronics Engineering"
   },
   {
-    "filename": "Measurements and Instrumentation Notes_16.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_16.pdf",
+    "filename": "Vector Calculus, Differential Equations & Transforms Notes_9.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms Notes_9.pdf",
     "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
+    "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Measurements and Instrumentation Notes_17.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_17.pdf",
+    "filename": "Vector Calculus, Differential Equations & Transforms Notes_11.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms Notes_11.pdf",
     "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Measurements and Instrumentation Notes_18.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_18.pdf",
-    "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Measurements and Instrumentation Notes_8.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_8.pdf",
-    "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Measurements and Instrumentation Notes_9.pdf",
-    "rel_path": "Btech cources/S3/Mi/Measurements and Instrumentation Notes_9.pdf",
-    "format": "PDF Notes",
-    "subject": "Measurements and Instrumentation"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers - Module 1.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers - Module 1.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers - Module 2.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers - Module 2.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers - Module 4.docx",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers - Module 4.docx",
-    "format": "Word Document",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers - Module 4.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers - Module 4.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers - Mp-Short-Answer.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers - Mp-Short-Answer.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers - Mpes Imp Topics.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers - Mpes Imp Topics.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers - Mpmc.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers - Mpmc.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers Notes.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers Notes_10.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers Notes_10.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers Notes_11.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers Notes_11.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers Notes_12.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers Notes_12.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers Notes_13.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers Notes_13.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Microprocessors and Microcontrollers Notes_14.pdf",
-    "rel_path": "Btech cources/S5/Microprocessor /Microprocessors and Microcontrollers Notes_14.pdf",
-    "format": "PDF Notes",
-    "subject": "Microprocessors and Microcontrollers"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes_10.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_10.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes_11.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_11.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes_12.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_12.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes_13.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_13.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes_14.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_14.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes_15.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_15.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes_16.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_16.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes_17.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_17.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes_8.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_8.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis Notes_9.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis Notes_9.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis, Solved Notes.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis, Solved Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Partial Differential Equations & Complex Analysis, Solved Notes_1.pdf",
-    "rel_path": "Btech cources/S3/Maths/Partial Differential Equations & Complex Analysis, Solved Notes_1.pdf",
-    "format": "PDF Notes",
-    "subject": "Partial Differential Equations and Complex Analysis"
-  },
-  {
-    "filename": "Power Electronics Notes.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics Notes_10.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics Notes_10.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics Notes_11.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics Notes_11.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics Notes_12.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics Notes_12.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics Notes_13.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics Notes_13.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics Notes_19.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics Notes_19.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Electronics Notes_9.pdf",
-    "rel_path": "Btech cources/S6/Power Electronics /Power Electronics Notes_9.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Electronics"
-  },
-  {
-    "filename": "Power Systems I - Module 1.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I - Module 1.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I - Principles Of Power System By V K Mehta, Rohit Mehta.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I - Principles Of Power System By V K Mehta, Rohit Mehta.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I Notes_10.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I Notes_10.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I Notes_11.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I Notes_11.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I Notes_9.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I Notes_9.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I module 5.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I module 5.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems I module4.pdf",
-    "rel_path": "Btech cources/S5/Power system /Power Systems I module4.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems I"
-  },
-  {
-    "filename": "Power Systems II - Eld Wadhwa-Ecnomic Dispatch.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/For ML notebook/Power Systems II - Eld Wadhwa-Ecnomic Dispatch.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II - Textbook.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II - Textbook.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II Notes_10.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II Notes_10.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II Notes_11.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II Notes_11.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II Notes_7.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II Notes_7.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II Notes_8.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II Notes_8.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Power Systems II Notes_9.pdf",
-    "rel_path": "Btech cources/S6/Power system 2/Power Systems II Notes_9.pdf",
-    "format": "PDF Notes",
-    "subject": "Power Systems II"
-  },
-  {
-    "filename": "Probability, Random Processes & Numerical Methods Notes.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes & Numerical Methods Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes and Numerical Methods - Module 1.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods - Module 1.pdf",
-    "format": "PDF Notes",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes and Numerical Methods - Module 2.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods - Module 2.pdf",
-    "format": "PDF Notes",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes and Numerical Methods - Module 3.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods - Module 3.pdf",
-    "format": "PDF Notes",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes and Numerical Methods - Module 4.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods - Module 4.pdf",
-    "format": "PDF Notes",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Probability, Random Processes and Numerical Methods - Module 5.pdf",
-    "rel_path": "Btech cources/S4/S4 maths/Probability, Random Processes and Numerical Methods - Module 5.pdf",
-    "format": "PDF Notes",
-    "subject": "Probability, Random Processes and Numerical Methods"
-  },
-  {
-    "filename": "Programming in C - C_Programming.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C - C_Programming.pdf",
-    "format": "PDF Notes",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "Programming in C Notes_4.pdf",
-    "rel_path": "Btech cources/College S1 S2/C prog/Programming in C Notes_4.pdf",
-    "format": "PDF Notes",
-    "subject": "Programming in C"
-  },
-  {
-    "filename": "4.pdf",
-    "rel_path": "Btech cources/S8/P2/4.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "5.pdf",
-    "rel_path": "Btech cources/S8/P2/5.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "Project Phase II - A_Three-Level_Single_Stage_A-Source_Inverter_With_The_Ability_To_Generate_Active_Voltage_Vector_During_Shoot-Through_State.pdf",
-    "rel_path": "Btech cources/S8/P2/Project Phase II - A_Three-Level_Single_Stage_A-Source_Inverter_With_The_Ability_To_Generate_Active_Voltage_Vector_During_Shoot-Through_State.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "Project Phase II - Low_Frequency_Versus_High_Frequency_Pwm_In_Medium_Voltage_High_Power_Higher_Level_Inverters_Thd_Harmonic_Filtering_And_Efficiency_Comparison.pdf",
-    "rel_path": "Btech cources/S8/P2/Project Phase II - Low_Frequency_Versus_High_Frequency_Pwm_In_Medium_Voltage_High_Power_Higher_Level_Inverters_Thd_Harmonic_Filtering_And_Efficiency_Comparison.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "Project Phase II - Multi%20Level.Pdf.pdf",
-    "rel_path": "Btech cources/S8/P2/Project Phase II - Multi%20Level.Pdf.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "Project Phase II - Multilevel1.pdf",
-    "rel_path": "Btech cources/S8/P2/Project Phase II - Multilevel1.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "Project Phase II - Multilevel3.pdf",
-    "rel_path": "Btech cources/S8/P2/Project Phase II - Multilevel3.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "Project Phase II - Single Phase T-Type Multilevel Inverters For Renewable Energy Systems, Topology, Modulation, And Control Techniques.pdf",
-    "rel_path": "Btech cources/S8/P2/Project Phase II - Single Phase T-Type Multilevel Inverters For Renewable Energy Systems, Topology, Modulation, And Control Techniques.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "Project Phase II - Single-Stage_Five-Level_Common_Ground_Transformerless_Inverter_With_Extendable_Structure_For_Centralized_Photovoltaics.pdf",
-    "rel_path": "Btech cources/S8/P2/Project Phase II - Single-Stage_Five-Level_Common_Ground_Transformerless_Inverter_With_Extendable_Structure_For_Centralized_Photovoltaics.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "Project Phase II - Textbook.pdf",
-    "rel_path": "Btech cources/S8/P2/Project Phase II - Textbook.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "Project Phase II - Twelve-Step_Voltage_Source_Inverter_A_Three-Phase_Six-Levels_Inverter_Using_Planar_Transformers.pdf",
-    "rel_path": "Btech cources/S8/P2/Project Phase II - Twelve-Step_Voltage_Source_Inverter_A_Three-Phase_Six-Levels_Inverter_Using_Planar_Transformers.pdf",
-    "format": "PDF Notes",
-    "subject": "Project Phase II"
-  },
-  {
-    "filename": "Signals and Systems - Ss Imp Topics.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems - Ss Imp Topics.pdf",
-    "format": "PDF Notes",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems Notes_10.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems Notes_10.pdf",
-    "format": "PDF Notes",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems Notes_11.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems Notes_11.pdf",
-    "format": "PDF Notes",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems Notes_12.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems Notes_12.pdf",
-    "format": "PDF Notes",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems Notes_13.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems Notes_13.pdf",
-    "format": "PDF Notes",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "Signals and Systems Notes_14.pdf",
-    "rel_path": "Btech cources/S5/Signals/Signals and Systems Notes_14.pdf",
-    "format": "PDF Notes",
-    "subject": "Signals and Systems"
-  },
-  {
-    "filename": "IMG_6085.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6085.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6086.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6086.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6087.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6087.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6088.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6088.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6089.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6089.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6090.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6090.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6091.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6091.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6092.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6092.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6093.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6093.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6094.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6094.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6095.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6095.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6096.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6096.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6097.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6097.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6098.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6098.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6099.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6099.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6100.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6100.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6101.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6101.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6102.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6102.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6103.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6103.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6104.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6104.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6105.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6105.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6106.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6106.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6107.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6107.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6108.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6108.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6109.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6109.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6110.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6110.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6111.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6111.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6112.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6112.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6113.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6113.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6114.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6114.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6115.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6115.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6116.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6116.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6117.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6117.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6118.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6118.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6119.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6119.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6120.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6120.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6121.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6121.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6122.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6122.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6123.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6123.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6124.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6124.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6125.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6125.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6126.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6126.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6127.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6127.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6128.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6128.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6129.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6129.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6130.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6130.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6131.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6131.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6132.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6132.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6133.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6133.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6134.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6134.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6135.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6135.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6136.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6136.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6137.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6137.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6138.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6138.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6139.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6139.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6140.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6140.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6141.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6141.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6142.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6142.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6143.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6143.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6144.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6144.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6145.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6145.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6146.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6146.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6147.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6147.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6148.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6148.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6149.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6149.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6150.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6150.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6151.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6151.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6152.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6152.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6153.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6153.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6154.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6154.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6155.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6155.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6156.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6156.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6157.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6157.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6158.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6158.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6159.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6159.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6160.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6160.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6161.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6161.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6162.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6162.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6163.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6163.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6164.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6164.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6165.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6165.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6166.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6166.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6167.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6167.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6168.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6168.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6169.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6169.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6170.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6170.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6171.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6171.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6172.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6172.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6173.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6173.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6174.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6174.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6175.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6175.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "IMG_6176.heic",
-    "rel_path": "Btech cources/S5/Sim lab manual /IMG_6176.heic",
-    "format": "PDF Notes",
-    "subject": "Simulation Lab Manual"
-  },
-  {
-    "filename": "Synchronous and Induction Machines - Sim-Short-Notes.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines - Sim-Short-Notes.pdf",
-    "format": "PDF Notes",
-    "subject": "Synchronous and Induction Machines"
-  },
-  {
-    "filename": "Synchronous and Induction Machines - Synchronous And Induction Machines Complete Study Materials.pdf",
-    "rel_path": "Btech cources/S5/Synchronous /Synchronous and Induction Machines - Synchronous And Induction Machines Complete Study Materials.pdf",
-    "format": "PDF Notes",
-    "subject": "Synchronous and Induction Machines"
+    "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
     "filename": "Vector Calculus, Differential Equations & Transforms Notes.pdf",
@@ -5298,20 +4824,8 @@ const LOCAL_NOTE_FILES = [
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms Notes_1.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms Notes_1.pdf",
-    "format": "PDF Notes",
-    "subject": "Vector Calculus, Differential Equations and Transforms"
-  },
-  {
     "filename": "Vector Calculus, Differential Equations & Transforms Notes_10.pdf",
     "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms Notes_10.pdf",
-    "format": "PDF Notes",
-    "subject": "Vector Calculus, Differential Equations and Transforms"
-  },
-  {
-    "filename": "Vector Calculus, Differential Equations & Transforms Notes_11.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms Notes_11.pdf",
     "format": "PDF Notes",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
@@ -5328,8 +4842,14 @@ const LOCAL_NOTE_FILES = [
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations & Transforms Notes_9.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms Notes_9.pdf",
+    "filename": "Vector Calculus, Differential Equations & Transforms Notes_1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Vector Calculus, Differential Equations & Transforms Notes_1.pdf",
+    "format": "PDF Notes",
+    "subject": "Vector Calculus, Differential Equations and Transforms"
+  },
+  {
+    "filename": "Vector Calculus, Differential Equations and Transforms - Module 1.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Maths/Vector Calculus, Differential Equations and Transforms - Module 1.pdf",
     "format": "PDF Notes",
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
@@ -5340,10 +4860,262 @@ const LOCAL_NOTE_FILES = [
     "subject": "Vector Calculus, Differential Equations and Transforms"
   },
   {
-    "filename": "Vector Calculus, Differential Equations and Transforms - Module 1.pdf",
-    "rel_path": "Btech cources/College S1 S2/S2 maths note/Maths/Vector Calculus, Differential Equations and Transforms - Module 1.pdf",
+    "filename": "Abominable.2019.720p.10bit.BluRay.6CH.x265.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Maths/Abominable.2019.720p.10bit.BluRay.6CH.x265.pdf",
     "format": "PDF Notes",
     "subject": "Vector Calculus, Differential Equations and Transforms"
+  },
+  {
+    "filename": "DocScanner 31-Mar-2023 3-55 pm.pdf",
+    "rel_path": "Btech cources/College S1 S2/S2 maths note/Maths/DocScanner 31-Mar-2023 3-55 pm.pdf",
+    "format": "PDF Notes",
+    "subject": "Vector Calculus, Differential Equations and Transforms"
+  },
+  {
+    "filename": "Engineering Mechanics Notes.pdf",
+    "rel_path": "Btech cources/College S1 S2/Mech/Engineering Mechanics Notes.pdf",
+    "format": "PDF Notes",
+    "subject": "Engineering Mechanics"
+  },
+  {
+    "filename": "Electrical System Design & Estimation Lab Manual.pdf",
+    "rel_path": "Btech cources/S8/Design/Electrical System Design & Estimation Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Electrical System Design & Estimation"
+  },
+  {
+    "filename": "btech-ee-6-sem-power-systems-analysis-ee306-jul-2021.pdf",
+    "rel_path": "Btech cources/S6/Power system 2/btech-ee-6-sem-power-systems-analysis-ee306-jul-2021.pdf",
+    "format": "PDF Notes",
+    "subject": "Power Systems I"
+  },
+  {
+    "filename": "Power Electronics Syllabus.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics Syllabus.pdf",
+    "format": "Syllabus",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics.pdf",
+    "format": "PDF Notes",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics_4.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics_4.pdf",
+    "format": "PDF Notes",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics_1.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics_1.pdf",
+    "format": "PDF Notes",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics_2.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics_2.pdf",
+    "format": "PDF Notes",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics_3.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics_3.pdf",
+    "format": "PDF Notes",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Power Electronics (May 2022) Lab Manual.pdf",
+    "rel_path": "Btech cources/S6/Power Electronics/Power Electronics (May 2022) Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Power Electronics"
+  },
+  {
+    "filename": "Linear Control Systems Notes_16.pdf",
+    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_16.pdf",
+    "format": "PDF Notes",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems Notes_14.pdf",
+    "rel_path": "Btech cources/S6/Linear control system /Linear Control Systems Notes_14.pdf",
+    "format": "PDF Notes",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems Lab Manual_1.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems Lab Manual_1.pdf",
+    "format": "Lab Manual",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems.pdf",
+    "format": "PDF Notes",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems_2.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems_2.pdf",
+    "format": "PDF Notes",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems_1.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems_1.pdf",
+    "format": "PDF Notes",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Linear Control Systems Lab Manual.pdf",
+    "rel_path": "Btech cources/S6/Linear control system/Linear Control Systems Lab Manual.pdf",
+    "format": "Lab Manual",
+    "subject": "Linear Control Systems"
+  },
+  {
+    "filename": "Electric Drives Notes_10.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_10.pdf",
+    "format": "PDF Notes",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives Notes_9.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_9.pdf",
+    "format": "PDF Notes",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives Notes_1.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_1.pdf",
+    "format": "PDF Notes",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives Notes_7.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_7.pdf",
+    "format": "PDF Notes",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Electric Drives Notes_6.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/Electric Drives Notes_6.pdf",
+    "format": "PDF Notes",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "IMG_7941.pdf",
+    "rel_path": "Btech cources/S7/Electric Drives/IMG_7941.pdf",
+    "format": "PDF Notes",
+    "subject": "Electric Drives"
+  },
+  {
+    "filename": "Mobile Comp-M5-Ktunotes.in.pdf",
+    "rel_path": "Btech cources/S7/Mobile Computing/Mobile Comp-M5-Ktunotes.in.pdf",
+    "format": "PDF Notes",
+    "subject": "Introduction to Mobile Computing"
+  },
+  {
+    "filename": "Introduction to Mobile Computing - Module 5.pdf",
+    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Module 5.pdf",
+    "format": "PDF Notes",
+    "subject": "Introduction to Mobile Computing"
+  },
+  {
+    "filename": "Introduction to Mobile Computing - Module 4.pdf",
+    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Module 4.pdf",
+    "format": "PDF Notes",
+    "subject": "Introduction to Mobile Computing"
+  },
+  {
+    "filename": "Mobile Comp-M4-Ktunotes.in.pdf",
+    "rel_path": "Btech cources/S7/Mobile Computing/Mobile Comp-M4-Ktunotes.in.pdf",
+    "format": "PDF Notes",
+    "subject": "Introduction to Mobile Computing"
+  },
+  {
+    "filename": "Introduction to Mobile Computing - Module 3.pdf",
+    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Module 3.pdf",
+    "format": "PDF Notes",
+    "subject": "Introduction to Mobile Computing"
+  },
+  {
+    "filename": "Introduction to Mobile Computing - Module 2.pdf",
+    "rel_path": "Btech cources/S7/Mobile Computing/Introduction to Mobile Computing - Module 2.pdf",
+    "format": "PDF Notes",
+    "subject": "Introduction to Mobile Computing"
+  },
+  {
+    "filename": "Industrial Safety Engineering - Mcn401-A-8.pdf",
+    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Industrial Safety Engineering - Mcn401-A-8.pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "Industrial Safety Engineering (May 2023).pdf",
+    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Question Papers/Industrial Safety Engineering (May 2023).pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "Industrial Safety Engineering (May 2024).pdf",
+    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Question Papers/Industrial Safety Engineering (May 2024).pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "Industrial Safety Engineering (December 2023).pdf",
+    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Question Papers/Industrial Safety Engineering (December 2023).pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "Industrial Safety Engineering (November 2024).pdf",
+    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Question Papers/Industrial Safety Engineering (November 2024).pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "Industrial Safety Engineering (December 2022).pdf",
+    "rel_path": "Btech cources/S7/Industrial Safety Engineering/Question Papers/Industrial Safety Engineering (December 2022).pdf",
+    "format": "PDF Notes",
+    "subject": "General"
+  },
+  {
+    "filename": "Advanced Control Systems Notes.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes.pdf",
+    "format": "PDF Notes",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems.pdf",
+    "format": "PDF Notes",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems Syllabus.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Syllabus.pdf",
+    "format": "Syllabus",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems Notes_2.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_2.pdf",
+    "format": "PDF Notes",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems Notes_5.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_5.pdf",
+    "format": "PDF Notes",
+    "subject": "Advanced Control Systems"
+  },
+  {
+    "filename": "Advanced Control Systems Notes_7.pdf",
+    "rel_path": "Btech cources/S7/Advanced Control Systems/Advanced Control Systems Notes_7.pdf",
+    "format": "PDF Notes",
+    "subject": "Advanced Control Systems"
   }
 ];
 
@@ -5910,6 +5682,202 @@ function logout() {
   document.getElementById('activeUserReg').textContent = '';
 }
 
+/** Auto-detect semester from course code in subject name */
+function detectSemesterFromCode(name) {
+  const match = name.match(/\(([A-Z]{3})(\d{3})\)/);
+  if (match) {
+    const code = match[2];
+    if (code.startsWith('1')) {
+      if (code === '102') return 'S2';
+      return 'S1';
+    } else if (code.startsWith('2')) {
+      const num = parseInt(code, 10);
+      if (num % 2 !== 0) return 'S3';
+      return 'S4';
+    } else if (code.startsWith('3')) {
+      const num = parseInt(code, 10);
+      if (num % 2 !== 0) return 'S5';
+      return 'S6';
+    } else if (code.startsWith('4')) {
+      const num = parseInt(code, 10);
+      if (num % 2 !== 0 || code === '415') return 'S7';
+      return 'S8';
+    }
+  }
+  return 'S1';
+}
+function getCourseCode(name) {
+  const match = name.match(/\(([^)]+)\)/);
+  return match ? match[1] : name;
+}
+
+window.showSubjectNotes = function(name) {
+  navigateTo('notes');
+  const code = getCourseCode(name);
+  const noteSearch = document.getElementById('noteFileSearch');
+  if (noteSearch) {
+    noteSearch.value = code;
+  }
+  renderLocalNoteFiles(code);
+};
+
+window.showSubjectQPs = function(name) {
+  navigateTo('pyq');
+  const code = getCourseCode(name);
+  const pyqSearch = document.getElementById('pyqFileSearch');
+  if (pyqSearch) {
+    pyqSearch.value = code;
+  }
+  renderLocalPyqFiles(code);
+};
+
+window.toggleSubjectShortcuts = function(e, subjectName, type) {
+  e.preventDefault();
+  e.stopPropagation();
+  
+  // Remove any existing shortcuts modals or legacy dropdowns
+  document.querySelectorAll('.shortcuts-modal-overlay, .shortcuts-dropdown').forEach(d => d.remove());
+  
+  const cleanSubName = getCourseCode(subjectName);
+  
+  // Find matching files
+  const files = (type === 'notes' ? LOCAL_NOTE_FILES : LOCAL_PYQ_FILES)
+    .filter(f => f.subject.toLowerCase().includes(cleanSubName.toLowerCase()) || 
+                 subjectName.toLowerCase().includes(f.subject.toLowerCase()));
+                 
+  if (files.length === 0) {
+    showToast(`No local ${type === 'notes' ? 'notes' : 'question papers'} found for this subject.`, 'info');
+    return;
+  }
+  
+  // Create overlay element
+  const overlay = document.createElement('div');
+  overlay.className = 'shortcuts-modal-overlay';
+  
+  // Create content container
+  const content = document.createElement('div');
+  content.className = 'shortcuts-modal-content glass';
+  
+  const titleText = `${type === 'notes' ? '📂 Study Notes' : '📂 Question Papers'}: ${escapeHtml(subjectName)}`;
+  
+  // Build content markup with horizontal grid-based folder view and a local search bar
+  content.innerHTML = `
+    <div class="shortcuts-modal-header">
+      <h4>${titleText}</h4>
+      <button class="shortcuts-modal-close" aria-label="Close modal">×</button>
+    </div>
+    <div class="shortcuts-search-bar">
+      <input type="text" id="modalFileSearch" placeholder="Search files in this folder..." class="modal-search-input" autocomplete="off">
+    </div>
+    <div class="shortcuts-modal-body">
+      ${files.map(f => {
+        const displayName = f.filename.replace('.pdf', '');
+        const meta = type === 'notes' ? (f.format || 'Notes') : (f.year || 'QP');
+        
+        // Premium outline SVGs for notes vs question papers
+        const iconSvg = type === 'notes' ? `
+          <svg class="file-icon-svg notes-accent" viewBox="0 0 24 24" width="44" height="44" style="fill: none; stroke: #0ea5e9; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 0.15rem;">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        ` : `
+          <svg class="file-icon-svg qp-accent" viewBox="0 0 24 24" width="44" height="44" style="fill: none; stroke: #f97316; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; margin-bottom: 0.15rem;">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+        `;
+        
+        return `
+          <a href="${encodeURI(f.rel_path)}" target="_blank" class="folder-file-card type-${type}" data-filename="${escapeHtml(displayName)}" title="${escapeHtml(displayName)}">
+            ${iconSvg}
+            <span class="folder-file-card-title">${escapeHtml(displayName)}</span>
+            <span class="folder-file-card-meta">${escapeHtml(meta)}</span>
+          </a>
+        `;
+      }).join('')}
+    </div>
+  `;
+  
+  overlay.appendChild(content);
+  document.body.appendChild(overlay);
+  
+  // Prevent click events inside the modal content from propagating to the overlay
+  content.addEventListener('click', (ev) => {
+    ev.stopPropagation();
+  });
+  
+  // Filter file cards dynamically based on search query
+  const searchInput = content.querySelector('#modalFileSearch');
+  const modalBody = content.querySelector('.shortcuts-modal-body');
+  if (searchInput && modalBody) {
+    searchInput.focus();
+    searchInput.addEventListener('input', (ev) => {
+      const q = ev.target.value.toLowerCase();
+      let visibleCount = 0;
+      content.querySelectorAll('.folder-file-card').forEach(card => {
+        const title = card.getAttribute('data-filename').toLowerCase();
+        if (title.includes(q)) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      
+      let emptyMsg = content.querySelector('.modal-empty-state');
+      if (visibleCount === 0) {
+        if (!emptyMsg) {
+          emptyMsg = document.createElement('div');
+          emptyMsg.className = 'modal-empty-state';
+          emptyMsg.style.cssText = 'grid-column: 1 / -1; text-align: center; padding: 3rem 1.5rem; color: var(--text-muted); font-size: 0.85rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;';
+          emptyMsg.innerHTML = `
+            <span style="font-size: 1.5rem;">🔍</span>
+            <span>No files matching "${escapeHtml(ev.target.value)}" found.</span>
+          `;
+          modalBody.appendChild(emptyMsg);
+        } else {
+          emptyMsg.innerHTML = `
+            <span style="font-size: 1.5rem;">🔍</span>
+            <span>No files matching "${escapeHtml(ev.target.value)}" found.</span>
+          `;
+          emptyMsg.style.display = 'flex';
+        }
+      } else {
+        if (emptyMsg) {
+          emptyMsg.style.display = 'none';
+        }
+      }
+    });
+  }
+  
+  // Close modal function
+  const closeModal = () => {
+    overlay.remove();
+    document.removeEventListener('keydown', handleEsc);
+  };
+  
+  // Close on Escape key press
+  const handleEsc = (ev) => {
+    if (ev.key === 'Escape') {
+      closeModal();
+    }
+  };
+  document.addEventListener('keydown', handleEsc);
+  
+  // Close on clicking backdrop
+  overlay.addEventListener('click', closeModal);
+  
+  // Close on clicking close button
+  content.querySelector('.shortcuts-modal-close').addEventListener('click', closeModal);
+};
+
+
 /** Load data from localStorage or initialize with samples */
 function loadState() {
   if (!activeUser) {
@@ -5936,7 +5904,7 @@ function loadState() {
   if (saved) {
     try {
       state = { ...state, ...JSON.parse(saved) };
-      // Migrate existing subjects without youtube or completedModules
+      // Migrate existing subjects without youtube, completedModules, or semester
       let migrated = false;
       if (state.subjects) {
         state.subjects.forEach((s) => {
@@ -5952,6 +5920,10 @@ function loadState() {
             } else {
               s.completedModules = [];
             }
+            migrated = true;
+          }
+          if (!s.semester) {
+            s.semester = detectSemesterFromCode(s.name);
             migrated = true;
           }
         });
@@ -5984,6 +5956,7 @@ function initFreshState() {
     theory: s.theory,
     status: s.status,
     category: s.category,
+    semester: s.semester || detectSemesterFromCode(s.name),
     youtube: s.youtube || getYoutubeUrlForSubject(s.name),
     completedModules: s.status === 'Completed' 
       ? Array.from({ length: s.modules }, (_, i) => i + 1)
@@ -6035,24 +6008,47 @@ function populateSubjectSelects() {
     'noteSubject',
     'pomodoroSubjectSelect',
   ];
-  const options =
-    '<option value="">— Select subject —</option>' +
-    state.subjects
-      .map((s) => `<option value="${s.id}">${escapeHtml(s.name)}</option>`)
-      .join('');
+
+  const semesters = ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'];
+  const semNames = {
+    S1: 'Semester 1',
+    S2: 'Semester 2',
+    S3: 'Semester 3',
+    S4: 'Semester 4',
+    S5: 'Semester 5',
+    S6: 'Semester 6',
+    S7: 'Semester 7',
+    S8: 'Semester 8',
+  };
+
+  const buildGroupedOptions = (generalText) => {
+    let html = `<option value="">${generalText}</option>`;
+    semesters.forEach((sem) => {
+      const semSubs = state.subjects.filter((s) => (s.semester || 'S1') === sem);
+      if (semSubs.length > 0) {
+        html += `<optgroup label="${semNames[sem]}">`;
+        html += semSubs
+          .map((s) => `<option value="${s.id}">${escapeHtml(s.name)}</option>`)
+          .join('');
+        html += `</optgroup>`;
+      }
+    });
+    return html;
+  };
+
+  const standardOptions = buildGroupedOptions('— Select subject —');
+  const pomodoroOptions = buildGroupedOptions('General Study');
 
   selects.forEach((id) => {
     const el = document.getElementById(id);
-    if (el) el.innerHTML = options;
+    if (el) {
+      if (id === 'pomodoroSubjectSelect') {
+        el.innerHTML = pomodoroOptions;
+      } else {
+        el.innerHTML = standardOptions;
+      }
+    }
   });
-
-  // Pomodoro general option
-  const pomSelect = document.getElementById('pomodoroSubjectSelect');
-  if (pomSelect) {
-    pomSelect.innerHTML =
-      '<option value="">General Study</option>' +
-      state.subjects.map((s) => `<option value="${s.id}">${escapeHtml(s.name)}</option>`).join('');
-  }
 }
 
 /** Escape HTML to prevent XSS */
@@ -6465,9 +6461,17 @@ function renderSecondaryDashboardItems(completed) {
                 <div class="tracker-module-container">
                   ${moduleButtons}
                 </div>
-                <a href="${ytUrl}" target="_blank" class="tracker-class-btn" title="Open YouTube Classes for ${escapeHtml(s.name)}">
-                  ▶
-                </a>
+                <div class="tracker-action-buttons" style="display: flex; gap: 0.25rem; align-items: center;">
+                  <a href="${ytUrl}" target="_blank" class="tracker-class-btn" title="Open YouTube Classes for ${escapeHtml(s.name)}">
+                    ▶
+                  </a>
+                  <button class="tracker-class-btn tracker-notes-btn" onclick="toggleSubjectShortcuts(event, '${escapeHtml(s.name).replace(/'/g, "\\'")}', 'notes')" title="Open Study Notes for ${escapeHtml(s.name)}">
+                    📒
+                  </button>
+                  <button class="tracker-class-btn tracker-qp-btn" onclick="toggleSubjectShortcuts(event, '${escapeHtml(s.name).replace(/'/g, "\\'")}', 'qp')" title="Open Question Papers for ${escapeHtml(s.name)}">
+                    📄
+                  </button>
+                </div>
               </div>`;
           })
           .join('');
@@ -6732,48 +6736,78 @@ function renderSubjects(filter = '') {
     return;
   }
 
-  list.innerHTML = filtered
-    .map((s) => {
-      const prog = getSubjectProgress(s);
-      const tags = [
-        s.pyq ? 'PYQ ✓' : null,
-        s.numericals ? 'Numericals' : null,
-        s.theory ? 'Theory' : null,
-      ]
-        .filter(Boolean)
-        .join(' · ');
-      const ytUrl = s.youtube || getYoutubeUrlForSubject(s.name);
+  const semesters = ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'];
+  const semNames = {
+    S1: 'Semester 1',
+    S2: 'Semester 2',
+    S3: 'Semester 3',
+    S4: 'Semester 4',
+    S5: 'Semester 5',
+    S6: 'Semester 6',
+    S7: 'Semester 7',
+    S8: 'Semester 8',
+  };
 
-      return `
-      <div class="subject-item" data-id="${s.id}">
-        <div>
-          <div class="subject-item-header">
-            <h4>${escapeHtml(s.name)}</h4>
-            <span class="badge badge-${difficultyClass(s.difficulty)}">${s.difficulty}</span>
-            <span class="badge badge-status ${s.status === 'Completed' ? 'badge-completed' : ''}">${s.status}</span>
-            <span class="badge badge-category">${s.category}</span>
+  let html = '';
+  semesters.forEach((sem) => {
+    const semSubs = filtered.filter((s) => (s.semester || 'S1') === sem);
+    if (semSubs.length > 0) {
+      html += `
+        <div class="semester-group">
+          <h4 class="semester-title">${semNames[sem]}</h4>
+          <div class="semester-subjects-list">
+            ${semSubs.map((s) => {
+              const prog = getSubjectProgress(s);
+              const tags = [
+                s.pyq ? 'PYQ ✓' : null,
+                s.numericals ? 'Numericals' : null,
+                s.theory ? 'Theory' : null,
+              ]
+                .filter(Boolean)
+                .join(' · ');
+              const ytUrl = s.youtube || getYoutubeUrlForSubject(s.name);
+
+              return `
+              <div class="subject-item" data-id="${s.id}">
+                <div>
+                  <div class="subject-item-header">
+                    <h4>${escapeHtml(s.name)}</h4>
+                    <span class="badge badge-${difficultyClass(s.difficulty)}">${s.difficulty}</span>
+                    <span class="badge badge-status ${s.status === 'Completed' ? 'badge-completed' : ''}">${s.status}</span>
+                    <span class="badge badge-category">${s.category}</span>
+                  </div>
+                  <div class="subject-meta">
+                    <span>${s.modules} modules</span>
+                    <span>Internal: ${s.internal}</span>
+                    ${tags ? `<span>${tags}</span>` : ''}
+                  </div>
+                  <div class="subject-progress-mini">
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: ${prog}%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="subject-actions">
+                  <a href="${ytUrl}" target="_blank" class="youtube-class-btn" title="Watch YouTube Classes" style="margin-bottom: 0.2rem;">
+                    <span class="youtube-icon">▶</span> Class
+                  </a>
+                  <button class="notes-shortcut-btn" onclick="toggleSubjectShortcuts(event, '${escapeHtml(s.name).replace(/'/g, "\\'")}', 'notes')" title="View Study Notes for ${escapeHtml(s.name)}" style="margin-bottom: 0.2rem;">
+                    📒 Notes
+                  </button>
+                  <button class="qp-shortcut-btn" onclick="toggleSubjectShortcuts(event, '${escapeHtml(s.name).replace(/'/g, "\\'")}', 'qp')" title="View Question Papers for ${escapeHtml(s.name)}" style="margin-bottom: 0.2rem;">
+                    📄 QP
+                  </button>
+                  <button class="icon-btn edit-btn" data-id="${s.id}">Edit</button>
+                  <button class="icon-btn delete delete-btn" data-id="${s.id}">Delete</button>
+                </div>
+              </div>`;
+            }).join('')}
           </div>
-          <div class="subject-meta">
-            <span>${s.modules} modules</span>
-            <span>Internal: ${s.internal}</span>
-            ${tags ? `<span>${tags}</span>` : ''}
-          </div>
-          <div class="subject-progress-mini">
-            <div class="progress-bar">
-              <div class="progress-fill" style="width: ${prog}%"></div>
-            </div>
-          </div>
-        </div>
-        <div class="subject-actions">
-          <a href="${ytUrl}" target="_blank" class="youtube-class-btn" title="Watch YouTube Classes" style="margin-bottom: 0.2rem;">
-            <span class="youtube-icon">▶</span> Class
-          </a>
-          <button class="icon-btn edit-btn" data-id="${s.id}">Edit</button>
-          <button class="icon-btn delete delete-btn" data-id="${s.id}">Delete</button>
-        </div>
-      </div>`;
-    })
-    .join('');
+        </div>`;
+    }
+  });
+
+  list.innerHTML = html;
 
   // Attach event listeners
   list.querySelectorAll('.edit-btn').forEach((btn) => {
@@ -6791,6 +6825,7 @@ function resetSubjectForm() {
   document.getElementById('subjectYoutube').value = '';
   document.getElementById('subjectModules').value = 5;
   document.getElementById('subjectDifficulty').value = 'Medium';
+  document.getElementById('subjectSemester').value = 'S1';
   document.getElementById('subjectSubmitBtn').textContent = 'Add Subject';
   document.getElementById('subjectCancelBtn').hidden = true;
 }
@@ -6806,6 +6841,7 @@ function editSubject(id) {
   document.getElementById('subjectModules').value = s.modules;
   document.getElementById('subjectInternal').value = s.internal;
   document.getElementById('subjectCategory').value = s.category;
+  document.getElementById('subjectSemester').value = s.semester || 'S1';
   document.getElementById('subjectStatus').value = s.status;
   document.getElementById('subjectPyq').checked = s.pyq;
   document.getElementById('subjectNumericals').checked = s.numericals;
@@ -6860,6 +6896,7 @@ function handleSubjectSubmit(e) {
     modules: modulesCount,
     internal: document.getElementById('subjectInternal').value,
     category: document.getElementById('subjectCategory').value,
+    semester: document.getElementById('subjectSemester').value,
     status: newStatus,
     pyq: document.getElementById('subjectPyq').checked,
     numericals: document.getElementById('subjectNumericals').checked,
