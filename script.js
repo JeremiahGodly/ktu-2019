@@ -4380,6 +4380,7 @@ let state = {
   examDate: '2026-11-23',
   pomodoroSessions: 0,
   pomodoroSessionsDate: '',
+  plannerCompletedSlots: {},
 };
 
 // Pomodoro state
@@ -4420,6 +4421,7 @@ function login(regNum) {
     examDate: '2026-11-15',
     pomodoroSessions: 0,
     pomodoroSessionsDate: '',
+    plannerCompletedSlots: {},
   };
   
   loadState();
@@ -4689,6 +4691,8 @@ function loadState() {
         state.examDate = '2026-11-23';
         saveState();
       }
+
+      state.plannerCompletedSlots = state.plannerCompletedSlots || {};
 
       if (!state.hasImportedBacklogs || !state.subjects || state.subjects.length < 30) {
         initFreshState();
@@ -5705,7 +5709,888 @@ function renderCategories() {
   });
 }
 
-// ========== Study Planner ==========
+// ========== Master Weekly Study Plan (Automation-Aligned) ==========
+
+const WEEKLY_STUDY_PLAN = {
+  Monday: [
+    {
+      id: 'mon-1',
+      day: 'Monday',
+      startTime: '08:00',
+      endTime: '11:30',
+      timeFormatted: '08:00 AM – 11:30 AM',
+      duration: '3.5 hrs',
+      category: 'Morning Deep Work',
+      badgeType: 'morning',
+      subjectCode: 'EET401',
+      subjectName: 'Advanced Control Systems (ACS)',
+      sem: 'S7 Regular',
+      module: 'Module 1: State Space Modeling & State Transition Matrix',
+      topics: [
+        'State space formulation of continuous-time electrical & electromechanical LTI systems',
+        'State Transition Matrix Φ(t) = exp(At) properties and matrix exponential computation',
+        'Resolvent matrix method (sI - A)⁻¹ and Cayley-Hamilton polynomial technique',
+        'Complete solution of state equations: Zero-input and zero-state response derivations'
+      ],
+      tip: 'High mathematical load: solve step-by-step state equations for 2x2 and 3x3 matrices with complex eigenvalues.',
+      isClass: false
+    },
+    {
+      id: 'mon-2',
+      day: 'Monday',
+      startTime: '12:00',
+      endTime: '17:00',
+      timeFormatted: '12:00 PM – 05:00 PM',
+      duration: '5.0 hrs',
+      category: '⚡ Industrial Automation Class',
+      badgeType: 'class',
+      subjectCode: 'AUTO',
+      subjectName: 'Industrial Automation & Control Lecture & Lab',
+      sem: 'Mandatory Class',
+      module: 'Industrial Automation Curriculum',
+      topics: [
+        'PLC Programming: Ladder logic, TON/TOF timers, up/down counters, latch/unlatch relays',
+        'SCADA / HMI interface architecture & 4-20mA current loop industrial transmitter wiring',
+        'Hands-on PLC hardware troubleshooting, safety interlocks & industrial process loop simulation'
+      ],
+      tip: 'Mandatory training block: stay 100% engaged in practicals. University study resumes at 6:00 PM after a 1-hour reset!',
+      isClass: true
+    },
+    {
+      id: 'mon-3',
+      day: 'Monday',
+      startTime: '18:00',
+      endTime: '20:30',
+      timeFormatted: '06:00 PM – 08:30 PM',
+      duration: '2.5 hrs',
+      category: 'Evening Core Session',
+      badgeType: 'evening',
+      subjectCode: 'EET413',
+      subjectName: 'Electric Drives (Program Elective II)',
+      sem: 'S7 Elective',
+      module: 'Module 1: Dynamics of Electric Drives',
+      topics: [
+        'Fundamental torque equation: T - T_l = J(dω/dt) with rotational inertia and load components',
+        'Multi-quadrant operation: Forward motoring, forward braking, reverse motoring & reverse braking',
+        'Steady-state stability criteria for motor-load combinations: d(T_l)/dω - d(T)/dω > 0',
+        'Drive motor rating selection for continuous, short-time, and periodic intermittent duty'
+      ],
+      tip: 'Draw the 4-quadrant speed-torque diagram with proper sign conventions for torque and speed.',
+      isClass: false
+    },
+    {
+      id: 'mon-4',
+      day: 'Monday',
+      startTime: '21:30',
+      endTime: '23:00',
+      timeFormatted: '09:30 PM – 11:00 PM',
+      duration: '1.5 hrs',
+      category: 'Night Active Recall & PYQ',
+      badgeType: 'night',
+      subjectCode: 'EET401',
+      subjectName: 'Advanced Control Systems (ACS)',
+      sem: 'S7 Regular',
+      module: 'PYQ Drill & Formula Flashcards',
+      topics: [
+        'Solve 5 Part-A previous university questions from KTU 2022 & 2023 question papers',
+        'Quick flashcard formula review: Eigenvalues, modal transformation matrix M, diagonal canonical form'
+      ],
+      tip: 'Solve on paper under a 20-minute countdown timer without looking at answer keys.',
+      isClass: false
+    }
+  ],
+  Tuesday: [
+    {
+      id: 'tue-1',
+      day: 'Tuesday',
+      startTime: '08:00',
+      endTime: '11:30',
+      timeFormatted: '08:00 AM – 11:30 AM',
+      duration: '3.5 hrs',
+      category: 'Morning Deep Work',
+      badgeType: 'morning',
+      subjectCode: 'EET401',
+      subjectName: 'Advanced Control Systems (ACS)',
+      sem: 'S7 Regular',
+      module: 'Module 2: Controllability & Observability Design',
+      topics: [
+        'Kalman test for controllability Q_c = [B AB A²B ... A^(n-1)B] and rank condition',
+        'Gilbert test for diagonalized and Jordan canonical form systems',
+        'State feedback controller design using Pole Placement & Ackermann formula',
+        'Full order state observer design concept and dual observer gain matrix L'
+      ],
+      tip: 'Ackermann formula: K = [0 0 ... 1] * inv(Q_c) * α_c(A). Always check det(Q_c) ≠ 0 first!',
+      isClass: false
+    },
+    {
+      id: 'tue-2',
+      day: 'Tuesday',
+      startTime: '12:00',
+      endTime: '17:00',
+      timeFormatted: '12:00 PM – 05:00 PM',
+      duration: '5.0 hrs',
+      category: '⚡ Industrial Automation Class',
+      badgeType: 'class',
+      subjectCode: 'AUTO',
+      subjectName: 'Industrial Automation & Control Lecture & Lab',
+      sem: 'Mandatory Class',
+      module: 'Industrial Automation Curriculum',
+      topics: [
+        'Closed-loop PID controller tuning in automation PLCs (Ziegler-Nichols method)',
+        'Industrial communication protocols: Modbus RTU/TCP, Ethernet/IP, Profibus DP',
+        'Calibration of RTDs, thermocouples, pressure transmitters & analog scaling blocks'
+      ],
+      tip: 'Mandatory training block.',
+      isClass: true
+    },
+    {
+      id: 'tue-3',
+      day: 'Tuesday',
+      startTime: '18:00',
+      endTime: '20:30',
+      timeFormatted: '06:00 PM – 08:30 PM',
+      duration: '2.5 hrs',
+      category: 'Evening Core Session',
+      badgeType: 'evening',
+      subjectCode: 'CST415',
+      subjectName: 'Mobile Computing (Open Elective)',
+      sem: 'S7 Open Elec',
+      module: 'Module 1: Cellular Network Architecture',
+      topics: [
+        'Cellular architecture, hexagonal geometry, frequency reuse factor N = i² + ij + j²',
+        'Co-channel interference ratio (S/I) and cluster capacity calculations',
+        'Channel assignment strategies: Fixed (FCA) vs Dynamic (DCA)',
+        'Handoff mechanisms: Hard handoff vs Soft handoff vs Mobile-Assisted Handoff (MAHO)'
+      ],
+      tip: 'Draw neat cluster diagrams showing 7-cell reuse pattern and co-channel cells.',
+      isClass: false
+    },
+    {
+      id: 'tue-4',
+      day: 'Tuesday',
+      startTime: '21:30',
+      endTime: '23:00',
+      timeFormatted: '09:30 PM – 11:00 PM',
+      duration: '1.5 hrs',
+      category: 'Night Active Recall & PYQ',
+      badgeType: 'night',
+      subjectCode: 'CST415',
+      subjectName: 'Mobile Computing',
+      sem: 'S7 Open Elec',
+      module: 'GSM Architecture & PYQ Drill',
+      topics: [
+        'Draw complete GSM architecture block diagram: MS, BSS (BTS, BSC), NSS (MSC, HLR, VLR, AuC, EIR)',
+        'Memorize 3-mark definitions: Cell splitting, cell sectoring, microcell zones'
+      ],
+      tip: 'Labeled GSM architecture diagram is a guaranteed 10-mark question in KTU.',
+      isClass: false
+    }
+  ],
+  Wednesday: [
+    {
+      id: 'wed-1',
+      day: 'Wednesday',
+      startTime: '08:00',
+      endTime: '11:30',
+      timeFormatted: '08:00 AM – 11:30 AM',
+      duration: '3.5 hrs',
+      category: 'Morning Deep Work',
+      badgeType: 'morning',
+      subjectCode: 'EET413',
+      subjectName: 'Electric Drives',
+      sem: 'S7 Elective',
+      module: 'Module 2: Chopper & Converter DC Motor Drives',
+      topics: [
+        'Chopper-fed DC separately excited motor drives (motoring and regenerative braking)',
+        'Four-quadrant operation using Class E chopper circuit and duty ratio modulation',
+        'Single-phase & 3-phase fully controlled converter-fed DC drives: firing angle α control',
+        'Discontinuous conduction mode (DCM) characteristics & closed-loop current control'
+      ],
+      tip: 'Sketch voltage & armature current waveforms for continuous vs discontinuous mode.',
+      isClass: false
+    },
+    {
+      id: 'wed-2',
+      day: 'Wednesday',
+      startTime: '12:00',
+      endTime: '17:00',
+      timeFormatted: '12:00 PM – 05:00 PM',
+      duration: '5.0 hrs',
+      category: '⚡ Industrial Automation Class',
+      badgeType: 'class',
+      subjectCode: 'AUTO',
+      subjectName: 'Industrial Automation & Control Lecture & Lab',
+      sem: 'Mandatory Class',
+      module: 'Industrial Automation Curriculum',
+      topics: [
+        'Variable Frequency Drive (VFD) industrial interfacing & parameter setup',
+        'Pneumatic cylinder sequencing using 5/2-way solenoid valves and optical proximity switches'
+      ],
+      tip: 'Mandatory training block.',
+      isClass: true
+    },
+    {
+      id: 'wed-3',
+      day: 'Wednesday',
+      startTime: '18:00',
+      endTime: '20:30',
+      timeFormatted: '06:00 PM – 08:30 PM',
+      duration: '2.5 hrs',
+      category: 'Evening Backlog Session',
+      badgeType: 'evening',
+      subjectCode: 'EET302',
+      subjectName: 'Linear Control Systems (S6 Backlog Focus)',
+      sem: 'S6 Supple',
+      module: 'Module 2 & 3: Stability & Root Locus',
+      topics: [
+        'Routh-Hurwitz stability criterion with special cases (row of zeros & auxiliary equation)',
+        'Root Locus construction rules: Asymptotes, centroid, breakaway/break-in points',
+        'Angle of departure & arrival for complex conjugate open-loop poles and zeros'
+      ],
+      tip: 'Root Locus is a guaranteed 14-mark question in KTU LCS papers. Draw carefully to scale with protractor.',
+      isClass: false
+    },
+    {
+      id: 'wed-4',
+      day: 'Wednesday',
+      startTime: '21:30',
+      endTime: '23:00',
+      timeFormatted: '09:30 PM – 11:00 PM',
+      duration: '1.5 hrs',
+      category: 'Night Active Recall & PYQ',
+      badgeType: 'night',
+      subjectCode: 'EET413',
+      subjectName: 'Electric Drives',
+      sem: 'S7 Elective',
+      module: 'DC Drives Numerical Drill',
+      topics: [
+        'Solve 3 numerical problems on chopper duty ratio α, terminal voltage, and back-EMF',
+        'Speed-torque curve calculations under varying armature resistance and field weakening'
+      ],
+      tip: 'Remember: Back EMF E_b = V_a - I_a*R_a = k_e * Φ * ω.',
+      isClass: false
+    }
+  ],
+  Thursday: [
+    {
+      id: 'thu-1',
+      day: 'Thursday',
+      startTime: '08:00',
+      endTime: '11:30',
+      timeFormatted: '08:00 AM – 11:30 AM',
+      duration: '3.5 hrs',
+      category: 'Morning Deep Work',
+      badgeType: 'morning',
+      subjectCode: 'EET401',
+      subjectName: 'Advanced Control Systems (ACS)',
+      sem: 'S7 Regular',
+      module: 'Module 3: Non-Linear Systems & Phase Plane Analysis',
+      topics: [
+        'Common physical non-linearities: Saturation, dead-zone, backlash, relay with hysteresis',
+        'Phase plane analysis: Phase portraits, singular points (stable/unstable nodes, saddles, focus, centers)',
+        'Construction of phase trajectories using the Isocline method: dx₂/dx₁ = m',
+        'Limit cycles and structural stability concepts in non-linear feedback loops'
+      ],
+      tip: 'Isocline slope equation: slope = f₂(x₁, x₂)/f₁(x₁, x₂). Plot 4 slope marks before drawing the curve.',
+      isClass: false
+    },
+    {
+      id: 'thu-2',
+      day: 'Thursday',
+      startTime: '12:00',
+      endTime: '17:00',
+      timeFormatted: '12:00 PM – 05:00 PM',
+      duration: '5.0 hrs',
+      category: '⚡ Industrial Automation Class',
+      badgeType: 'class',
+      subjectCode: 'AUTO',
+      subjectName: 'Industrial Automation & Control Lecture & Lab',
+      sem: 'Mandatory Class',
+      module: 'Industrial Automation Curriculum',
+      topics: [
+        'Safety PLCs, emergency stop dual-channel circuits, safety relays & SIL ratings',
+        'Process instrumentation Piping & Instrumentation Diagram (P&ID) standards and symbology'
+      ],
+      tip: 'Mandatory training block.',
+      isClass: true
+    },
+    {
+      id: 'thu-3',
+      day: 'Thursday',
+      startTime: '18:00',
+      endTime: '20:30',
+      timeFormatted: '06:00 PM – 08:30 PM',
+      duration: '2.5 hrs',
+      category: 'Evening Core Session',
+      badgeType: 'evening',
+      subjectCode: 'MCN401',
+      subjectName: 'Industrial Safety Engineering (ISE)',
+      sem: 'S7 Regular',
+      module: 'Module 1 & 2: Accident Models & Hazard Identification',
+      topics: [
+        'Heinrich Domino Theory & Multiple Causation accident sequence models',
+        'Hazard Identification techniques: Hazard and Operability Study (HAZOP), Job Safety Analysis (JSA)',
+        'OSHA regulatory framework, factory safety acts & safety committee responsibilities'
+      ],
+      tip: 'Structure answers with headings: Objectives, Procedural Steps, Flowchart, Industrial Case Example.',
+      isClass: false
+    },
+    {
+      id: 'thu-4',
+      day: 'Thursday',
+      startTime: '21:30',
+      endTime: '23:00',
+      timeFormatted: '09:30 PM – 11:00 PM',
+      duration: '1.5 hrs',
+      category: 'Night Active Recall & PYQ',
+      badgeType: 'night',
+      subjectCode: 'EET401',
+      subjectName: 'Advanced Control Systems',
+      sem: 'S7 Regular',
+      module: 'Describing Function Derivations',
+      topics: [
+        'Derivation of describing function for ideal relay: N(X) = 4M/(πX)',
+        'Derivation for relay with dead-zone and saturation non-linearities',
+        'Limit cycle evaluation using -1/N(X) intersection with Nyquist plot G(jω)'
+      ],
+      tip: 'Derivation is repeatedly asked in Part B Module 3.',
+      isClass: false
+    }
+  ],
+  Friday: [
+    {
+      id: 'fri-1',
+      day: 'Friday',
+      startTime: '08:00',
+      endTime: '11:30',
+      timeFormatted: '08:00 AM – 11:30 AM',
+      duration: '3.5 hrs',
+      category: 'Morning Deep Work',
+      badgeType: 'morning',
+      subjectCode: 'EET413',
+      subjectName: 'Electric Drives',
+      sem: 'S7 Elective',
+      module: 'Module 3: Induction Motor Drives & V/f Control',
+      topics: [
+        'Scalar V/f speed control: Constant torque vs constant power operational regions',
+        'Stator voltage control using AC voltage controllers and torque derating',
+        'Static rotor resistance control using chopper and slip ring induction motor',
+        'Slip Power Recovery schemes: Static Scherbius and Static Kramer drives'
+      ],
+      tip: 'Understand why V/f must remain constant below base speed to maintain flux without saturation.',
+      isClass: false
+    },
+    {
+      id: 'fri-2',
+      day: 'Friday',
+      startTime: '12:00',
+      endTime: '17:00',
+      timeFormatted: '12:00 PM – 05:00 PM',
+      duration: '5.0 hrs',
+      category: '⚡ Industrial Automation Class',
+      badgeType: 'class',
+      subjectCode: 'AUTO',
+      subjectName: 'Industrial Automation & Control Lecture & Lab',
+      sem: 'Mandatory Class',
+      module: 'Industrial Automation Curriculum',
+      topics: [
+        'Weekly project practical evaluation & ladder logic verification on industrial test bench',
+        'Industrial automation case studies, motion control & factory floor wrap-up'
+      ],
+      tip: 'Mandatory training block. Weekend starts at 5:00 PM!',
+      isClass: true
+    },
+    {
+      id: 'fri-3',
+      day: 'Friday',
+      startTime: '18:00',
+      endTime: '20:30',
+      timeFormatted: '06:00 PM – 08:30 PM',
+      duration: '2.5 hrs',
+      category: 'Evening Backlog Session',
+      badgeType: 'evening',
+      subjectCode: 'EET306',
+      subjectName: 'Power Electronics (S6 Backlog Focus)',
+      sem: 'S6 Supple',
+      module: 'Module 1 & 2: Power Converters & Inverters',
+      topics: [
+        'Thyristor firing and natural/forced commutation methods (Class A to F)',
+        'Buck, Boost, and Buck-Boost DC-DC converters: Operating modes, duty ratio D',
+        'Continuous vs discontinuous conduction mode and output voltage ripple formulas'
+      ],
+      tip: 'Memorize: Boost converter V_o = V_in / (1 - D). Buck converter V_o = D * V_in.',
+      isClass: false
+    },
+    {
+      id: 'fri-4',
+      day: 'Friday',
+      startTime: '21:30',
+      endTime: '23:00',
+      timeFormatted: '09:30 PM – 11:00 PM',
+      duration: '1.5 hrs',
+      category: 'Night Active Recall & PYQ',
+      badgeType: 'night',
+      subjectCode: 'S7 Weekly Drill',
+      subjectName: 'S7 Weekly PYQ Drill',
+      sem: 'S7 Regular',
+      module: 'KTU Exam Simulation',
+      topics: [
+        'Solve 2 complete Part B questions (14 marks each) from KTU 2023 question bank',
+        'Self-evaluation against university scheme: Speed, handwriting legibility, neat diagrams'
+      ],
+      tip: 'Time each 14-mark question to exactly 25 minutes.',
+      isClass: false
+    }
+  ],
+  Saturday: [
+    {
+      id: 'sat-1',
+      day: 'Saturday',
+      startTime: '08:30',
+      endTime: '12:00',
+      timeFormatted: '08:30 AM – 12:00 PM',
+      duration: '3.5 hrs',
+      category: 'Morning Power Sprint',
+      badgeType: 'morning',
+      subjectCode: 'EET401',
+      subjectName: 'Advanced Control Systems',
+      sem: 'S7 Regular',
+      module: 'Module 4 & 5: Lyapunov Stability Theory',
+      topics: [
+        'Stability definitions in sense of Lyapunov, asymptotic stability, global stability',
+        'Lyapunov direct method for autonomous systems: V(x) positive definite, V_dot negative definite',
+        'Solving linear continuous systems: A^T * P + P * A = -Q with positive definite Q',
+        'Krasovskii method and Variable Gradient method for non-linear systems'
+      ],
+      tip: 'Set Q = I (Identity) when solving A^T*P + P*A = -Q to simplify equations.',
+      isClass: false
+    },
+    {
+      id: 'sat-2',
+      day: 'Saturday',
+      startTime: '13:30',
+      endTime: '16:30',
+      timeFormatted: '01:30 PM – 04:30 PM',
+      duration: '3.0 hrs',
+      category: 'Afternoon Deep Work',
+      badgeType: 'weekend',
+      subjectCode: 'EET413',
+      subjectName: 'Electric Drives',
+      sem: 'S7 Elective',
+      module: 'Module 4 & 5: Synchronous & Special Drives',
+      topics: [
+        'Synchronous motor drives fed from VSI and CSI (Self-controlled vs separate control)',
+        'Brushless DC (BLDC) motor drive principles, Hall effect sensor switching sequence',
+        'Solar PV-powered water pumping drive configurations',
+        'Electric Vehicle (EV) powertrain drive topologies and regenerative braking'
+      ],
+      tip: 'Draw 3-phase inverter bridge connected to BLDC with trapezoidal back-EMF waveforms.',
+      isClass: false
+    },
+    {
+      id: 'sat-3',
+      day: 'Saturday',
+      startTime: '17:30',
+      endTime: '20:00',
+      timeFormatted: '05:30 PM – 08:00 PM',
+      duration: '2.5 hrs',
+      category: 'Evening Focus Block',
+      badgeType: 'evening',
+      subjectCode: 'CST415',
+      subjectName: 'Mobile Computing',
+      sem: 'S7 Open Elec',
+      module: 'Module 3 & 4: Wireless LAN & MANETs',
+      topics: [
+        'IEEE 802.11 architecture, BSS, ESS, CSMA/CA protocol, RTS/CTS handshaking',
+        'Mobile IP: Agent discovery, registration, triangular routing, reverse tunneling',
+        'Mobile Ad-hoc Networks (MANET): Table-driven (DSDV) vs on-demand (AODV) routing'
+      ],
+      tip: 'RTS/CTS solves the hidden and exposed terminal problem — diagram is mandatory.',
+      isClass: false
+    },
+    {
+      id: 'sat-4',
+      day: 'Saturday',
+      startTime: '21:30',
+      endTime: '23:00',
+      timeFormatted: '09:30 PM – 11:00 PM',
+      duration: '1.5 hrs',
+      category: 'Night Recall & PYQ',
+      badgeType: 'night',
+      subjectCode: 'Backlog Maintenance',
+      subjectName: 'S1 MAT101 / S6 LCS',
+      sem: 'S1/S6',
+      module: 'Weekend Numerical Test',
+      topics: [
+        'Solve 4 university problems: Eigenvalues/Cayley-Hamilton and Bode plot gain margin',
+        'Audit formulas and verify steps with calculator'
+      ],
+      tip: 'Consistent weekend backlog maintenance prevents the December cramming panic.',
+      isClass: false
+    }
+  ],
+  Sunday: [
+    {
+      id: 'sun-1',
+      day: 'Sunday',
+      startTime: '09:00',
+      endTime: '12:30',
+      timeFormatted: '09:00 AM – 12:30 PM',
+      duration: '3.5 hrs',
+      category: 'Simulated 3-Hr Exam',
+      badgeType: 'morning',
+      subjectCode: 'KTU MOCK',
+      subjectName: 'Full Length Timed University Paper',
+      sem: 'S7 Regular',
+      module: 'Simulated Exam Hall',
+      topics: [
+        'Strict KTU conditions: 100 Marks (Part A 30 marks + Part B 70 marks)',
+        'Alternate weekly between EET401 ACS and EET413 Electric Drives',
+        'Calculator and pen only, zero interruptions, timed 9:30 AM to 12:30 PM'
+      ],
+      tip: 'Write fast, box numeric results with units, and leave 10 minutes to verify Part A.',
+      isClass: false
+    },
+    {
+      id: 'sun-2',
+      day: 'Sunday',
+      startTime: '14:00',
+      endTime: '16:30',
+      timeFormatted: '02:00 PM – 04:30 PM',
+      duration: '2.5 hrs',
+      category: 'Afternoon Audit',
+      badgeType: 'weekend',
+      subjectCode: 'ANALYSIS',
+      subjectName: 'Mock Exam Error Correction & Mistake Log',
+      sem: 'Review',
+      module: 'Targeted Fixes',
+      topics: [
+        'Grade paper strictly against KTU valuation scheme',
+        'Record every lost mark in Mistake Log: Conceptual error vs Calculation slip',
+        'Re-derive all steps that lost points until completely mastered'
+      ],
+      tip: 'Analyzing mistakes produces 3x more learning than solving problems you already know.',
+      isClass: false
+    },
+    {
+      id: 'sun-3',
+      day: 'Sunday',
+      startTime: '17:30',
+      endTime: '20:00',
+      timeFormatted: '05:30 PM – 08:00 PM',
+      duration: '2.5 hrs',
+      category: 'Evening Theory Sprint',
+      badgeType: 'evening',
+      subjectCode: 'MCN401',
+      subjectName: 'Industrial Safety Engineering',
+      sem: 'S7 Regular',
+      module: 'Module 3, 4 & 5: Fire & Chemical Safety',
+      topics: [
+        'Fire dynamics, classification of fires, fire extinguishing agents and sprinkler systems',
+        'Chemical process safety, toxic release models, industrial ventilation designs',
+        'Environmental protection acts and disaster management protocols in industry'
+      ],
+      tip: 'Memorize the Fire Triangle / Tetrahedron diagram and Class A, B, C, D extinguisher types.',
+      isClass: false
+    },
+    {
+      id: 'sun-4',
+      day: 'Sunday',
+      startTime: '21:00',
+      endTime: '22:30',
+      timeFormatted: '09:00 PM – 10:30 PM',
+      duration: '1.5 hrs',
+      category: 'Night Strategy & Reset',
+      badgeType: 'night',
+      subjectCode: 'PLANNING',
+      subjectName: 'Weekly Formula Review & Next Week Goals',
+      sem: 'Strategy',
+      module: 'Mental Reset',
+      topics: [
+        'Compile newly learned formulas onto master A4 cheat sheet',
+        'Audit completion checkboxes for the week',
+        'Reset goals and recharge for Monday morning deep work!'
+      ],
+      tip: 'Clean desk, early sleep, wake up ready for the week ahead.',
+      isClass: false
+    }
+  ]
+};
+
+let spSelectedDay = 'today';
+
+function getPlannerDayName(dayKey) {
+  if (dayKey === 'today') {
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    return dayNames[new Date().getDay()];
+  }
+  return dayKey;
+}
+
+function parseTimeToMinutes(timeStr) {
+  const [h, m] = timeStr.split(':').map(Number);
+  return h * 60 + m;
+}
+
+function getLiveTimeframeState() {
+  const now = new Date();
+  const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const todayName = dayNames[now.getDay()];
+  const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+  const todaySlots = WEEKLY_STUDY_PLAN[todayName] || [];
+  let currentSlot = null;
+  let minsLeft = 0;
+  let nextSlot = null;
+
+  for (const slot of todaySlots) {
+    const start = parseTimeToMinutes(slot.startTime);
+    const end = parseTimeToMinutes(slot.endTime);
+    if (currentMinutes >= start && currentMinutes < end) {
+      currentSlot = slot;
+      minsLeft = end - currentMinutes;
+      break;
+    } else if (currentMinutes < start && !nextSlot) {
+      nextSlot = slot;
+    }
+  }
+
+  return { todayName, currentMinutes, currentSlot, minsLeft, nextSlot, now };
+}
+
+/** Render Master Study Planner */
+function renderStudyPlanner() {
+  const container = document.getElementById('spScheduleGrid');
+  if (!container) return;
+
+  const liveState = getLiveTimeframeState();
+  const activeDayName = getPlannerDayName(spSelectedDay);
+
+  // Update clock & live indicator in hero
+  const timeEl = document.getElementById('spCurrentTimeText');
+  const dayEl = document.getElementById('spCurrentDayText');
+  const slotTextEl = document.getElementById('spCurrentSlotText');
+  const framePill = document.getElementById('spCurrentFramePill');
+
+  if (timeEl && dayEl && slotTextEl) {
+    const hours = liveState.now.getHours();
+    const minutes = liveState.now.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const displayHours = hours % 12 || 12;
+    const displayMins = minutes < 10 ? '0' + minutes : minutes;
+    timeEl.textContent = `${displayHours}:${displayMins} ${ampm}`;
+    dayEl.textContent = `${liveState.todayName} · Live Tracker`;
+
+    if (liveState.currentSlot) {
+      slotTextEl.textContent = `${liveState.currentSlot.category}: ${liveState.currentSlot.subjectName} (${liveState.minsLeft}m left)`;
+      if (framePill) {
+        framePill.style.background = liveState.currentSlot.isClass 
+          ? 'rgba(245, 158, 11, 0.15)' 
+          : 'rgba(56, 189, 248, 0.15)';
+        framePill.style.borderColor = liveState.currentSlot.isClass 
+          ? 'rgba(245, 158, 11, 0.4)' 
+          : 'rgba(56, 189, 248, 0.4)';
+      }
+    } else if (liveState.nextSlot) {
+      slotTextEl.textContent = `Rest / Break · Next: ${liveState.nextSlot.category} at ${liveState.nextSlot.startTime}`;
+      if (framePill) {
+        framePill.style.background = 'rgba(148, 163, 184, 0.12)';
+        framePill.style.borderColor = 'rgba(148, 163, 184, 0.25)';
+      }
+    } else {
+      slotTextEl.textContent = `🌙 Rest & Sleep Window · Next session: 08:00 AM tomorrow`;
+      if (framePill) {
+        framePill.style.background = 'rgba(148, 163, 184, 0.12)';
+        framePill.style.borderColor = 'rgba(148, 163, 184, 0.25)';
+      }
+    }
+  }
+
+  // Determine which days to display
+  let daysToRender = [];
+  if (spSelectedDay === 'all') {
+    daysToRender = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  } else {
+    daysToRender = [activeDayName];
+  }
+
+  // Calculate completion progress
+  let totalSlots = 0;
+  let completedSlots = 0;
+  daysToRender.forEach(d => {
+    const slots = WEEKLY_STUDY_PLAN[d] || [];
+    slots.forEach(s => {
+      totalSlots++;
+      if (state.plannerCompletedSlots && state.plannerCompletedSlots[s.id]) {
+        completedSlots++;
+      }
+    });
+  });
+
+  const progressPct = totalSlots > 0 ? Math.round((completedSlots / totalSlots) * 100) : 0;
+  const progressTextEl = document.getElementById('spProgressText');
+  const progressFillEl = document.getElementById('spProgressFill');
+  if (progressTextEl) {
+    progressTextEl.textContent = `${completedSlots} / ${totalSlots} Blocks Done (${progressPct}%)`;
+  }
+  if (progressFillEl) {
+    progressFillEl.style.width = `${progressPct}%`;
+  }
+
+  // Update tabs active state
+  document.querySelectorAll('.sp-day-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.day === spSelectedDay);
+  });
+
+  // Render slots
+  let html = '';
+  daysToRender.forEach(dayName => {
+    const slots = WEEKLY_STUDY_PLAN[dayName] || [];
+    if (spSelectedDay === 'all') {
+      html += `<h3 style="font-size: 1.15rem; color: #38bdf8; margin: 1.25rem 0 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.35rem;">📅 ${dayName}</h3>`;
+    }
+
+    slots.forEach(slot => {
+      const isCurrent = (dayName === liveState.todayName) && (liveState.currentSlot && liveState.currentSlot.id === slot.id);
+      const isDone = Boolean(state.plannerCompletedSlots && state.plannerCompletedSlots[slot.id]);
+      const cardClasses = [
+        'sp-slot-card',
+        slot.isClass ? 'is-automation-class' : '',
+        isCurrent ? 'is-current-timeframe' : '',
+        isDone ? 'is-completed' : ''
+      ].filter(Boolean).join(' ');
+
+      html += `
+        <div class="${cardClasses}" id="sp-slot-card-${slot.id}">
+          <div class="sp-slot-header">
+            <div class="sp-slot-header-left">
+              <span class="sp-slot-time-badge">${slot.timeFormatted}</span>
+              <span class="sp-slot-duration">(${slot.duration})</span>
+              <span class="sp-slot-category-badge badge-${slot.badgeType}">${slot.category}</span>
+              ${isCurrent ? `
+                <span class="sp-slot-live-tag">
+                  <span class="sp-pulse-dot"></span>
+                  HAPPENING NOW · ${liveState.minsLeft}m left
+                </span>
+              ` : ''}
+            </div>
+            <div class="sp-slot-header-right">
+              <span class="badge ${slot.sem.includes('S7') ? 'badge-dangerous' : 'badge-status'}">${slot.sem}</span>
+            </div>
+          </div>
+
+          <div class="sp-slot-body">
+            <h4 class="sp-slot-title">${escapeHtml(slot.subjectName)}</h4>
+            <div class="sp-slot-module">📌 ${escapeHtml(slot.module)}</div>
+            
+            <ul class="sp-slot-topics-list">
+              ${slot.topics.map(topic => `
+                <li class="sp-topic-item">
+                  <span class="sp-topic-bullet">▸</span>
+                  <span>${escapeHtml(topic)}</span>
+                </li>
+              `).join('')}
+            </ul>
+
+            ${slot.tip ? `
+              <div class="sp-slot-tip">
+                <strong>💡 Focus Strategy:</strong> ${escapeHtml(slot.tip)}
+              </div>
+            ` : ''}
+          </div>
+
+          <div class="sp-slot-footer">
+            <label class="sp-checkbox-toggle">
+              <input type="checkbox" class="sp-checkbox-input" data-slot-id="${slot.id}" ${isDone ? 'checked' : ''}>
+              <span>${isDone ? '✓ Block Completed' : 'Mark as Completed'}</span>
+            </label>
+            <span class="sp-slot-day-tag">${dayName} · Slot ${slot.id}</span>
+          </div>
+        </div>
+      `;
+    });
+  });
+
+  container.innerHTML = html;
+
+  // Wire up checkbox events
+  container.querySelectorAll('.sp-checkbox-input').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const slotId = cb.dataset.slotId;
+      state.plannerCompletedSlots = state.plannerCompletedSlots || {};
+      state.plannerCompletedSlots[slotId] = cb.checked;
+      saveState();
+      renderStudyPlanner();
+      if (cb.checked) {
+        showToast('Block marked completed! Keep the momentum going! 🔥');
+      }
+    });
+  });
+}
+
+/** Initialize Study Planner Controls */
+function initStudyPlanner() {
+  const tabsContainer = document.getElementById('spDayTabs');
+  if (tabsContainer) {
+    tabsContainer.addEventListener('click', (e) => {
+      const btn = e.target.closest('.sp-day-btn');
+      if (!btn) return;
+      spSelectedDay = btn.dataset.day;
+      renderStudyPlanner();
+    });
+  }
+
+  const focusBtn = document.getElementById('spFocusCurrentBtn');
+  if (focusBtn) {
+    focusBtn.addEventListener('click', () => {
+      spSelectedDay = 'today';
+      renderStudyPlanner();
+      setTimeout(() => {
+        const activeCard = document.querySelector('.sp-slot-card.is-current-timeframe');
+        if (activeCard) {
+          activeCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          showToast('Currently in recovery / outside scheduled blocks.');
+        }
+      }, 50);
+    });
+  }
+
+  const resetBtn = document.getElementById('spResetDayBtn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (!confirm('Reset completion checkboxes for this day?')) return;
+      const activeDayName = getPlannerDayName(spSelectedDay);
+      const slots = WEEKLY_STUDY_PLAN[activeDayName] || [];
+      state.plannerCompletedSlots = state.plannerCompletedSlots || {};
+      slots.forEach(s => {
+        delete state.plannerCompletedSlots[s.id];
+      });
+      saveState();
+      renderStudyPlanner();
+      showToast('Day completion checkboxes reset.');
+    });
+  }
+
+  const markAllBtn = document.getElementById('spMarkAllDoneBtn');
+  if (markAllBtn) {
+    markAllBtn.addEventListener('click', () => {
+      const activeDayName = getPlannerDayName(spSelectedDay);
+      const slots = WEEKLY_STUDY_PLAN[activeDayName] || [];
+      state.plannerCompletedSlots = state.plannerCompletedSlots || {};
+      slots.forEach(s => {
+        state.plannerCompletedSlots[s.id] = true;
+      });
+      saveState();
+      renderStudyPlanner();
+      showToast('All blocks marked completed for this day! Outstanding work! 🎉');
+    });
+  }
+
+  renderStudyPlanner();
+}
+
+// ========== Study Planner (Custom Ad-hoc) ==========
 
 /** Render daily schedule */
 function renderDaily() {
@@ -7135,6 +8020,7 @@ function renderAll() {
   populateSubjectSelects();
   renderDashboard();
   renderTimetable();
+  renderStudyPlanner();
   renderSubjects(document.getElementById('subjectSearch')?.value || '');
   renderCategories();
   renderDaily();
@@ -7151,6 +8037,7 @@ function init() {
   loadState();
   initNavigation();
   initForms();
+  initStudyPlanner();
   initPomodoro();
   updateQuotes();
   renderAll();
@@ -7158,6 +8045,9 @@ function init() {
 
   // Live countdown update every second
   setInterval(updateExamCountdown, 1000);
+
+  // Live study planner clock & active slot update every 30 seconds
+  setInterval(renderStudyPlanner, 30000);
 }
 
 document.addEventListener('DOMContentLoaded', init);

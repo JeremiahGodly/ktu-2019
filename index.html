@@ -460,37 +460,101 @@
 
     <!-- ========== STUDY PLANNER ========== -->
     <section id="planner" class="section">
-      <div class="planner-grid">
-        <article class="card glass">
-          <h3>📆 Daily Study Schedule</h3>
-          <form id="dailyForm" class="inline-form">
-            <input type="text" id="dailyTask" placeholder="e.g. Power Electronics — Module 3" required>
-            <input type="time" id="dailyTime" value="09:00">
-            <button type="submit" class="btn btn-primary btn-sm">Add</button>
-          </form>
-          <ul class="planner-list" id="dailyList"></ul>
-        </article>
+      <!-- Master Study Planner Hero / Live Bar -->
+      <div class="sp-hero card glass">
+        <div class="sp-hero-header">
+          <div class="sp-hero-title-group">
+            <span class="badge badge-status" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">⚡ AUTOMATION-ALIGNED STUDY ARCHITECTURE</span>
+            <h3 class="sp-hero-title">Master Engineering Study Planner</h3>
+            <p class="sp-hero-subtitle">
+              Engineered around your <strong>12:00 PM – 5:00 PM Automation Class</strong> (Mon–Fri) + upcoming KTU exam targets.
+            </p>
+          </div>
+          <div class="sp-live-clock-card">
+            <div class="sp-live-time-val" id="spCurrentTimeText">--:--</div>
+            <div class="sp-live-day-lbl" id="spCurrentDayText">Loading day...</div>
+            <div class="sp-active-frame-pill" id="spCurrentFramePill">
+              <span class="sp-pulse-dot"></span>
+              <span id="spCurrentSlotText">Calculating current timeframe...</span>
+            </div>
+          </div>
+        </div>
 
-        <article class="card glass">
-          <h3>🎯 Weekly Goals</h3>
-          <form id="weeklyForm" class="inline-form">
-            <input type="text" id="weeklyGoal" placeholder="e.g. Complete 2 modules of Machines" required>
-            <button type="submit" class="btn btn-primary btn-sm">Add</button>
-          </form>
-          <ul class="planner-list" id="weeklyList"></ul>
-        </article>
-
-        <article class="card glass full-width">
-          <h3>🔁 Revision Tracker</h3>
-          <form id="revisionForm" class="inline-form">
-            <select id="revisionSubject"></select>
-            <input type="text" id="revisionTopic" placeholder="Topic / module to revise" required>
-            <input type="date" id="revisionDate">
-            <button type="submit" class="btn btn-primary btn-sm">Track</button>
-          </form>
-          <ul class="planner-list revision-list" id="revisionList"></ul>
-        </article>
+        <!-- Daily Completion & Quick Action Bar -->
+        <div class="sp-progress-container">
+          <div class="sp-progress-info">
+            <span class="sp-progress-title">Today's Block Completion:</span>
+            <span class="sp-progress-stats" id="spProgressText">0 / 4 Completed (0%)</span>
+          </div>
+          <div class="sp-progress-bar-wrap">
+            <div class="sp-progress-bar-fill" id="spProgressFill" style="width: 0%;"></div>
+          </div>
+          <div class="sp-hero-actions">
+            <button type="button" class="btn btn-secondary btn-sm" id="spFocusCurrentBtn">🎯 Focus Current Slot</button>
+            <button type="button" class="btn btn-ghost btn-sm" id="spResetDayBtn">🔄 Reset Day</button>
+            <button type="button" class="btn btn-ghost btn-sm" id="spMarkAllDoneBtn">✨ Mark Day Complete</button>
+          </div>
+        </div>
       </div>
+
+      <!-- Day Selector Navigation Tabs -->
+      <div class="sp-tabs-card card glass">
+        <div class="sp-day-tabs" id="spDayTabs">
+          <button type="button" class="sp-day-btn active" data-day="today">🌟 Today</button>
+          <button type="button" class="sp-day-btn" data-day="Monday">Mon</button>
+          <button type="button" class="sp-day-btn" data-day="Tuesday">Tue</button>
+          <button type="button" class="sp-day-btn" data-day="Wednesday">Wed</button>
+          <button type="button" class="sp-day-btn" data-day="Thursday">Thu</button>
+          <button type="button" class="sp-day-btn" data-day="Friday">Fri</button>
+          <button type="button" class="sp-day-btn" data-day="Saturday">Sat</button>
+          <button type="button" class="sp-day-btn" data-day="Sunday">Sun</button>
+          <button type="button" class="sp-day-btn" data-day="all">📋 Full Week (All 7 Days)</button>
+        </div>
+      </div>
+
+      <!-- Schedule Cards Container -->
+      <div class="sp-schedule-grid" id="spScheduleGrid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <!-- Custom Goals & Personal Tasks Drawer -->
+      <details class="sp-custom-drawer card glass" style="margin-top: 1.5rem;">
+        <summary class="sp-drawer-summary">
+          <span>📝 Personal Daily Tasks, Weekly Goals & Revision Tracker</span>
+          <span class="sp-drawer-hint">Click to expand / add ad-hoc items ▾</span>
+        </summary>
+        <div class="planner-grid" style="margin-top: 1.25rem;">
+          <article class="card glass">
+            <h4>📆 Ad-hoc Daily Tasks</h4>
+            <form id="dailyForm" class="inline-form">
+              <input type="text" id="dailyTask" placeholder="e.g. Solve PE Question 4" required>
+              <input type="time" id="dailyTime" value="09:00">
+              <button type="submit" class="btn btn-primary btn-sm">Add</button>
+            </form>
+            <ul class="planner-list" id="dailyList"></ul>
+          </article>
+
+          <article class="card glass">
+            <h4>🎯 Custom Weekly Milestones</h4>
+            <form id="weeklyForm" class="inline-form">
+              <input type="text" id="weeklyGoal" placeholder="e.g. Master ACS Lyapunov module" required>
+              <button type="submit" class="btn btn-primary btn-sm">Add</button>
+            </form>
+            <ul class="planner-list" id="weeklyList"></ul>
+          </article>
+
+          <article class="card glass full-width">
+            <h4>🔁 Topic Revision Tracker</h4>
+            <form id="revisionForm" class="inline-form">
+              <select id="revisionSubject"></select>
+              <input type="text" id="revisionTopic" placeholder="Topic / module to revise" required>
+              <input type="date" id="revisionDate">
+              <button type="submit" class="btn btn-primary btn-sm">Track</button>
+            </form>
+            <ul class="planner-list revision-list" id="revisionList"></ul>
+          </article>
+        </div>
+      </details>
     </section>
 
     <!-- ========== PYQ TRACKER ========== -->
