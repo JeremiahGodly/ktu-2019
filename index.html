@@ -50,6 +50,9 @@
       <a href="#dashboard" class="nav-link active" data-section="dashboard">
         <span class="nav-icon">📊</span> Dashboard
       </a>
+      <a href="#timetable" class="nav-link" data-section="timetable">
+        <span class="nav-icon">🗓️</span> Exam Timetable
+      </a>
       <a href="#subjects" class="nav-link" data-section="subjects">
         <span class="nav-icon">📚</span> Subjects
       </a>
@@ -393,6 +396,65 @@
           <p class="category-desc">Heavy backlogs — allocate extra time.</p>
           <div class="category-list" id="catKiller"></div>
         </article>
+      </div>
+    </section>
+
+    <!-- ========== EXAM TIMETABLE ========== -->
+    <section id="timetable" class="section">
+      <!-- Quick Countdown & Header Banner -->
+      <div class="timetable-hero card glass">
+        <div class="timetable-hero-content">
+          <div>
+            <span class="badge badge-dangerous" style="margin-bottom:0.5rem;display:inline-block;">⚡ KTU 2019 SCHEME — NOV 2026 / FEB 2027 EXAM TIMETABLE</span>
+            <h3 style="font-size:1.35rem;margin-bottom:0.35rem;letter-spacing:0.02em;">Official University Examination Timetable & Countdown</h3>
+            <p style="color:var(--text-muted);font-size:0.82rem;line-height:1.5;">Decoded directly from university calendars for S7 Regular + S1–S6 Supplementary sessions. Click any exam to set it as your core countdown target or access notes & classes.</p>
+          </div>
+          <div class="timetable-hero-stats">
+            <div class="hero-stat-box">
+              <span class="hero-stat-val" id="ttDaysToS7">41</span>
+              <span class="hero-stat-lbl">Days to S7 (Nov 23)</span>
+            </div>
+            <div class="hero-stat-box">
+              <span class="hero-stat-val">39</span>
+              <span class="hero-stat-lbl">Total Exams</span>
+            </div>
+            <div class="hero-stat-box">
+              <span class="hero-stat-val" id="ttNextExamSub">ACS</span>
+              <span class="hero-stat-lbl">Next: 23 Nov (EET401)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tt-clash-hero-banner">
+          <span class="tt-clash-hero-icon">⚠️</span>
+          <div class="tt-clash-hero-text">
+            <strong>December Same-Day Overlaps Detected:</strong> KTU has scheduled S1/S2 supplementary in <strong>Forenoon (FN: 9:30 AM – 12:30 PM)</strong> and S6 supplementary in <strong>Afternoon (AN: 1:30 PM – 4:30 PM)</strong> on the exact same dates: <em>Dec 11, 14, 16, 18, 28, and 30</em>. If you registered for backlogs in both semesters on these dates, you have two 3-hour exams in one day!
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls & Filter Tabs -->
+      <article class="card glass timetable-controls-card">
+        <div class="timetable-controls-row">
+          <div class="timetable-tab-group" id="timetableTabs">
+            <button class="tt-tab-btn active" data-sem="all">🌐 All Exams (39)</button>
+            <button class="tt-tab-btn" data-sem="S7">🔴 S7 Regular (Nov 26)</button>
+            <button class="tt-tab-btn tt-clash-tab-btn" data-sem="clashes">⚠️ Dec Clashes (6 Dates)</button>
+            <button class="tt-tab-btn" data-sem="S1/S2">🟡 S1, S2 Supple (Dec 26)</button>
+            <button class="tt-tab-btn" data-sem="S6">🟠 S6 Supple (Dec 26)</button>
+            <button class="tt-tab-btn" data-sem="S5">🔵 S5 Supple (Jan 27)</button>
+            <button class="tt-tab-btn" data-sem="S3">🟣 S3 Supple (Jan 27)</button>
+            <button class="tt-tab-btn" data-sem="S4">🟢 S4 Supple (Feb 27)</button>
+          </div>
+          <div class="timetable-search-wrap">
+            <input type="text" id="timetableSearchInput" placeholder="🔍 Search subject name, code, slot, or date...">
+          </div>
+        </div>
+      </article>
+
+      <!-- Exam List Grid -->
+      <div class="timetable-grid" id="timetableList">
+        <!-- Dynamically rendered by script.js -->
       </div>
     </section>
 
